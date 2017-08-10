@@ -1,15 +1,9 @@
 yii2-widgets
 ============
 
-[![Latest Stable Version](https://poser.pugx.org/kartik-v/yii2-widgets/v/stable)](https://packagist.org/packages/kartik-v/yii2-widgets)
-[![License](https://poser.pugx.org/kartik-v/yii2-widgets/license)](https://packagist.org/packages/kartik-v/yii2-widgets)
-[![Total Downloads](https://poser.pugx.org/kartik-v/yii2-widgets/downloads)](https://packagist.org/packages/kartik-v/yii2-widgets)
-[![Monthly Downloads](https://poser.pugx.org/kartik-v/yii2-widgets/d/monthly)](https://packagist.org/packages/kartik-v/yii2-widgets)
-[![Daily Downloads](https://poser.pugx.org/kartik-v/yii2-widgets/d/daily)](https://packagist.org/packages/kartik-v/yii2-widgets)
-
 This extension enhances or adds functionality to existing Yii Framework 2 Widgets to make available other bundled features available in Bootstrap 3.0, new HTML 5 features and affiliated Bootstrap extras.
 
-> NOTE: This extension has been revamped with release v3.4.1 on 05-Dec-2015. With release v3.4.0, each widget within this extension bundle has been logically regrouped and split into separate sub repositories. 
+> NOTE: This extension has been revamped with release v3.4.0 on 09-Nov-2014. With release v3.4.0, each widget within this extension bundle has been logically regrouped and split into separate sub repositories. 
 This change has been done to allow developers flexibility to install separately or specific widgets only (via composer) if needed. However, for new users installing this bundle 
 should be the easiest way to give you access to all these important widget sub repositories in one shot. This change would not affect backward compatibility for any users already using the previous extension versions.
 
@@ -63,7 +57,7 @@ this extension's requirements and dependencies.
 
 ### Pre-requisites
 
-> Note: Check the [composer.json](https://github.com/kartik-v/yii2-widgets/blob/master/composer.json) for this extension's requirements and dependencies. 
+> Note: Check the [composer.json](https://github.com/kartik-v/yii2-dropdown-x/blob/master/composer.json) for this extension's requirements and dependencies. 
 Read this [web tip /wiki](http://webtips.krajee.com/setting-composer-minimum-stability-application/) on setting the `minimum-stability` settings for your application's composer.json.
 
 ### Install
