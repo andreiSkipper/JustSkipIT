@@ -1,0 +1,78 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<title>Chat</title>-->
+<!--<link rel="stylesheet" href="style.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="chat">-->
+<!--<div id="chat-section">-->
+<!--<input type="text" id="username" disabled/>-->
+
+<!--<div id="general-chat">-->
+<!--<ul id="messages">-->
+<!--</ul>-->
+<!--</div>-->
+<!--<textarea id="message" placeholder="type a message"/></textarea>-->
+<!--<button id="send-message">Send Message</button>-->
+<!--</div>-->
+<!--<div id="users">-->
+<!--<p>Users Online</p>-->
+<!--<ul id="users-list">-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--<script src="/socket.io/socket.io.js"></script>-->
+<!--<script src="http://code.jquery.com/jquery-1.11.1.js"></script>-->
+<!--<script src="client.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<div class="container">
+    <div class="col-xs-9" id="chat-section">
+        <div class="panel panel-default" id="chat">
+            <div class="panel-heading text-center">
+                Chat Box -
+                <input type="text" id="username" disabled/>
+            </div>
+            <div class="panel-body">
+                <div id="general-chat">
+                    <ul id="messages" class="no-padding">
+                    </ul>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-xs-9">
+                        <input type="text" class="form-control" id="message" placeholder="Send a message...">
+                    </div>
+                    <div class="col-xs-3">
+                        <button class="btn btn-danger col-xs-12" id="send-message">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-3">
+        <div class="text-center" id="users">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    Users Online
+                </div>
+                <div class="panel-body">
+                    <ul id="users-list" class="no-padding">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="client.js"></script>
+
