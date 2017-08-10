@@ -2,4 +2,9 @@ main-local.php
 params-local.php
 .idea/*
 .idea
+/.idea
+/.idea*
+vendor
+vendor/*
 /vendor
+/vendor/*
