@@ -11,10 +11,10 @@ use yii\helpers\Url;
 use common\models\Translations;
 
 /* @var $this yii\web\View */
-/* @var $actions Actions */
+/* @var $actions array */
 /* @var $pages string */
 
-$this->title = 'Just Skip IT';
+$this->title = Translations::translate('app', 'Home');
 ?>
 
 <div class="row">
@@ -116,7 +116,8 @@ $this->title = 'Just Skip IT';
             } ?>
         </div>
 
-        <p id="loading" class="text-center" data-offset="<?= count($actions) ?>" style="display: none;">
+        <p id="loading" class="text-center" data-offset="<?= count($actions) ?>" data-total="<?= $pages->totalCount ?>"
+           style="display: none;">
             <span class="fa fa-spinner fa-pulse fa-4x"></span>
         </p>
     </div>
@@ -132,26 +133,29 @@ $this->title = 'Just Skip IT';
             var loading = $('#loading');
             if ($(document).height() - win.height() == win.scrollTop() && !loading.is(":visible")) {
                 var offset = loading.data('offset');
-                loading.show();
+                var total = loading.data('total');
 
-                $.ajax({
-                    url: '',
-                    type: 'POST',
-                    data: {
-                        offset: offset
-                    },
-                    success: function (response) {
-                        result = JSON.parse(response);
-                        if (result.html.length != 0) {
-                            $("#actions-group").append(result.html).fadeIn(10000);
-                            loading.data('offset', offset + result.actions);
+                if (offset < total) {
+                    loading.show();
+                    $.ajax({
+                        url: '',
+                        type: 'POST',
+                        data: {
+                            offset: offset
+                        },
+                        success: function (response) {
+                            result = JSON.parse(response);
+                            if (result.html.length != 0) {
+                                $("#actions-group").append(result.html).fadeIn(10000);
+                                loading.data('offset', offset + result.actions);
+                            }
+                            loading.hide();
+                        },
+                        error: function (request, status, error) {
+                            window.alert(error);
                         }
-                        loading.hide();
-                    },
-                    error: function (request, status, error) {
-                        window.alert(error);
-                    }
-                });
+                    });
+                }
             }
         });
     });

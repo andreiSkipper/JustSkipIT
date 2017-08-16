@@ -271,6 +271,17 @@ class Actions extends \yii\db\ActiveRecord
                 'hinge' => 'hinge',
                 'rollOut' => 'rollOut',
             ],
+            'attention' => [
+                'bounce' => 'bounce',
+                'flash' => 'flash',
+                'pulse' => 'pulse',
+                'rubberBand' => 'rubberBand',
+                'shake' => 'shake',
+                'swing' => 'swing',
+                'tada' => 'tada',
+                'wobble' => 'wobble',
+                'jello' => 'jello',
+            ],
             'all' => [
                 // Attention Seekers
                 'bounce' => 'bounce',

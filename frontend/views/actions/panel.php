@@ -8,9 +8,11 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use common\models\Profiles;
 use common\models\Actions;
+use common\models\Comments;
 use yii\bootstrap\Modal;
 use yii\bootstrap\ButtonDropdown;
 use yii\web\View;
+use kartik\form\ActiveForm;
 
 $profile = Profiles::findOne($action->user_id);
 $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
@@ -166,6 +168,39 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
                 <?php } ?>
             </div>
         <?php } ?>
+        <div class="panel-footer">
+            <div class="action-comments">
+                <div id="comments-<?= $action->id ?>">
+                    <?php
+                    /* @var $comments Comments[] */
+                    $comments = Comments::find()->where(['action_id' => $action->id, 'reply_id' => null])->all();
+                    foreach ($comments as $comment) {
+                        echo $this->render('/comments/comment-details', ['comment' => $comment]);
+                        ?>
+                    <?php } ?>
+                </div>
+                <?php
+                $model = new Comments();
+                $model->action_id = $action->id;
+                $form = ActiveForm::begin([
+                    'enableClientValidation' => false,
+                    'id' => 'add-comment-form-' . $action->id
+                ]); ?>
+
+                <?= $form->field($model, 'action_id')->hiddenInput()->label(false) ?>
+
+                <?= $form->field($model, 'content', [
+                    'addon' => [
+                        'prepend' => ['content' => '<i class="fa fa-comment-o"></i>'],
+//                        'append' => [
+//                            'content' => Html::submitButton('Go', ['class' => 'btn btn-default', 'id' => 'add_comment']),
+//                            'asButton' => true
+//                        ]
+                    ]
+                ])->textInput(['placeholder' => "Click to add Comment..."])->label(false) ?>
+                <?php ActiveForm::end(); ?>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -194,5 +229,36 @@ $this->registerJs("
     tooltip" . $action->id . ".get().mouseout(function() {
         tooltip" . $action->id . ".remove();
     });
+    
+    $('#add-comment-form-" . $action->id . "').on('beforeSubmit', function (e) {
+        e.preventDefault();
+        if($(this).find('.has-error').length == 0) {
+            var commentText = $('#add-comment-form-" . $action->id . " #comments-content');
+            var commentActionID = $('#add-comment-form-" . $action->id . " #comments-action_id');
+            if(commentText[0].value.length != 0){
+                $.ajax({
+                    url: '" . Url::to(['/add-comment']) . "',
+                    type: 'POST',
+                    data:{
+                        'Comments':{
+                            'content': commentText[0].value,
+                            'action_id': commentActionID[0].value
+                        }
+                    },
+                    success: function(response) {
+                        result = JSON.parse(response);
+                        if (result.html.length != 0) {
+                            $('#comments-" . $action->id . "').append(result.html).show('slow');
+                            document.getElementById('add-comment-form-" . $action->id . "').reset();
+                        }
+                    },
+                    error: function (request, status, error) {
+                        window.alert(error);
+                    }
+                });
+            }
+        }
+        return false;
+    }).submit(function (e) {e.preventDefault();});
 ", View::POS_END);
 ?>

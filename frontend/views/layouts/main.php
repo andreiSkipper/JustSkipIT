@@ -127,6 +127,7 @@ $this->title = "JustSkipIT | " . $this->title;
                                success: function(response) {
                                     result = JSON.parse(response);
                                     if (result != null) {
+                                        loginNotice.attention('" . Actions::getNotificationAnimation('attention') . "');
                                         for (var k in $('.help-block')) {
                                             $('.help-block')[k].innerText = '';
                                         }
@@ -185,6 +186,7 @@ $this->title = "JustSkipIT | " . $this->title;
                                success: function(response) {
                                     result = JSON.parse(response);
                                     if (result != null) {
+                                        signupNotice.attention('" . Actions::getNotificationAnimation('attention') . "');
                                         for (var k in $('.help-block')) {
                                             $('.help-block')[k].innerText = '';
                                         }

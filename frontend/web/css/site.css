@@ -597,6 +597,24 @@ body {
     }
 }
 
+.comment-buttons {
+    cursor: default;
+}
+
+.comment-buttons i {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.comments-reply {
+    margin-left: 8.33333333%;
+    width: 91.66666667%;
+}
+
+.field-comments-action_id, .field-comments-reply_id{
+    display: none;
+}
+
 /* PNotify custom */
 .ui-pnotify.custom .ui-pnotify-container {
     background-color: #404040 !important;

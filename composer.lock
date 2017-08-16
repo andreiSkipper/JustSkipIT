@@ -48,7 +48,7 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2017-03-15T23:37:23+00:00"
+            "time": "2017-03-15 23:37:23"
         },
         {
             "name": "andrewblake1/yii2-credit-card",
@@ -104,7 +104,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2016-06-28T23:14:46+00:00"
+            "time": "2016-06-28 23:14:46"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -783,7 +783,7 @@
                 "extension",
                 "yii2"
             ],
-            "time": "2017-06-12T14:11:53+00:00"
+            "time": "2017-06-12 14:11:53"
         },
         {
             "name": "intervention/httpauth",
@@ -1261,7 +1261,7 @@
                 "state",
                 "three"
             ],
-            "time": "2016-11-26T10:46:54+00:00"
+            "time": "2016-11-26 10:46:54"
         },
         {
             "name": "kartik-v/yii2-date-range",
@@ -1367,7 +1367,7 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2017-01-14T11:34:27+00:00"
+            "time": "2017-01-14 11:34:27"
         },
         {
             "name": "kartik-v/yii2-detail-view",
@@ -1422,7 +1422,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2017-05-05T05:14:12+00:00"
+            "time": "2017-05-05 05:14:12"
         },
         {
             "name": "kartik-v/yii2-dialog",
@@ -1634,7 +1634,7 @@
                 "popover-x",
                 "widget"
             ],
-            "time": "2017-06-28T05:11:45+00:00"
+            "time": "2017-06-28 05:11:45"
         },
         {
             "name": "kartik-v/yii2-export",
@@ -1695,7 +1695,7 @@
                 "xlsx",
                 "yii2"
             ],
-            "time": "2017-06-20T19:38:22+00:00"
+            "time": "2017-06-20 19:38:22"
         },
         {
             "name": "kartik-v/yii2-field-range",
@@ -1746,7 +1746,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2016-09-04T09:29:14+00:00"
+            "time": "2016-09-04 09:29:14"
         },
         {
             "name": "kartik-v/yii2-grid",
@@ -1898,7 +1898,7 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2017-02-24T18:03:31+00:00"
+            "time": "2017-02-24 18:03:31"
         },
         {
             "name": "kartik-v/yii2-krajee-base",
@@ -1949,7 +1949,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2017-05-04T12:34:30+00:00"
+            "time": "2017-05-04 12:34:30"
         },
         {
             "name": "kartik-v/yii2-mpdf",
@@ -2053,7 +2053,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2017-05-13T20:13:03+00:00"
+            "time": "2017-05-13 20:13:03"
         },
         {
             "name": "kartik-v/yii2-password",
@@ -2104,7 +2104,7 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2017-05-01T12:47:45+00:00"
+            "time": "2017-05-01 12:47:45"
         },
         {
             "name": "kartik-v/yii2-popover-x",
@@ -2294,7 +2294,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2015-04-21T15:23:11+00:00"
+            "time": "2015-04-21 15:23:11"
         },
         {
             "name": "kartik-v/yii2-tabs-x",
@@ -2759,7 +2759,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2017-06-24T19:36:32+00:00"
+            "time": "2017-06-24 19:36:32"
         },
         {
             "name": "kartik-v/yii2-widget-growl",
@@ -3427,7 +3427,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2017-07-14T19:28:20+00:00"
+            "time": "2017-07-14 19:28:20"
         },
         {
             "name": "monolog/monolog",

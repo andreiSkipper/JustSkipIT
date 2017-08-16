@@ -49,7 +49,7 @@ return [
                 'user/edit-profile' => 'profiles/update',
                 'edit-profile' => 'profiles/update',
                 'user/<any>' => 'profiles/index',
-                // action routest
+                // action routes
                 'add-post' => 'actions/create',
                 'delete-post' => 'actions/delete',
                 'edit-post' => 'actions/edit',
@@ -60,8 +60,12 @@ return [
                 // chat routes
                 'chat' => 'chat/index',
                 'chat/index' => 'chat/index',
+                // comments routes
+                'add-comment' => 'comments/create',
+                'delete-comment' => 'comments/delete',
+                'edit-comment' => 'comments/edit',
                 // profile shortURL
-                '<any>' => 'profiles/find-by-username'
+                '<any>' => 'profiles/find-by-username',
             ],
         ],
     ],

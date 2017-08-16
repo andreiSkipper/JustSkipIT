@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use common\models\Profiles;
 use common\models\Actions;
+use common\models\Comments;
+use kartik\form\ActiveForm;
 use yii\bootstrap\Modal;
 use yii\web\View;
 
@@ -41,6 +43,40 @@ Modal::begin([
             <img src="<?= Url::base() . '/' . $action->imagePath; ?>" class="action-photo"
                  alt="">
         </div>
+    </div>
+
+    <br>
+
+    <div class="action-comments">
+        <div id="comments-<?= $action->id ?>">
+            <?php
+            /* @var $comments Comments[] */
+            $comments = Comments::find()->where(['action_id' => $action->id, 'reply_id' => null])->all();
+            foreach ($comments as $comment) {
+                echo $this->render('/comments/comment-details', ['comment' => $comment]);
+                ?>
+            <?php } ?>
+        </div>
+        <?php
+        $model = new Comments();
+        $model->action_id = $action->id;
+        $form = ActiveForm::begin([
+            'enableClientValidation' => false,
+            'id' => 'add-comment-form-' . $action->id
+        ]); ?>
+
+        <?= $form->field($model, 'action_id')->hiddenInput()->label(false) ?>
+
+        <?= $form->field($model, 'content', [
+            'addon' => [
+                'prepend' => ['content' => '<i class="fa fa-comment-o"></i>'],
+//                        'append' => [
+//                            'content' => Html::submitButton('Go', ['class' => 'btn btn-default', 'id' => 'add_comment']),
+//                            'asButton' => true
+//                        ]
+            ]
+        ])->textInput(['placeholder' => "Click to add Comment..."])->label(false) ?>
+        <?php ActiveForm::end(); ?>
     </div>
 
 <?php

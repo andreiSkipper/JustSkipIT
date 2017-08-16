@@ -81,6 +81,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+//        return $this->renderPartial('/mails/signup-success');
 //        return $this->render('/actions/user-heading', ['action' => Actions::findOne(83)]);
         $searchModel = new Actions();
         $actions = $searchModel->search([]);
@@ -199,6 +200,11 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 if (Yii::$app->getUser()->login($user)) {
+                    Yii::$app->mailer->compose('/mails/signup-success')
+                        ->setFrom([Yii::$app->params['supportEmail'] => 'SkipIT'])
+                        ->setTo($user->email)
+                        ->setSubject('Welcome to SkipIT')
+                        ->send();
                     if (Yii::$app->request->isAjax) {
                         return json_encode(null);
                     } else {
