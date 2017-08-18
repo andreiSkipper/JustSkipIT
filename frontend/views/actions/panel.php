@@ -249,6 +249,7 @@ $this->registerJs("
                         result = JSON.parse(response);
                         if (result.html.length != 0) {
                             $('#comments-" . $action->id . "').append(result.html).show('slow');
+                            $('#modal-comments-" . $action->id . "').append(result.html).show('slow');
                             document.getElementById('add-comment-form-" . $action->id . "').reset();
                         }
                     },

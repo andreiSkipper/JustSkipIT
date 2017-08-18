@@ -48,12 +48,12 @@ Modal::begin([
     <br>
 
     <div class="action-comments">
-        <div id="comments-<?= $action->id ?>">
+        <div id="modal-comments-<?= $action->id ?>">
             <?php
             /* @var $comments Comments[] */
             $comments = Comments::find()->where(['action_id' => $action->id, 'reply_id' => null])->all();
             foreach ($comments as $comment) {
-                echo $this->render('/comments/comment-details', ['comment' => $comment]);
+                echo $this->render('/comments/comment-details', ['comment' => $comment, 'modal' => true]);
                 ?>
             <?php } ?>
         </div>
@@ -62,7 +62,7 @@ Modal::begin([
         $model->action_id = $action->id;
         $form = ActiveForm::begin([
             'enableClientValidation' => false,
-            'id' => 'add-comment-form-' . $action->id
+            'id' => 'add-comment-form-modal-' . $action->id
         ]); ?>
 
         <?= $form->field($model, 'action_id')->hiddenInput()->label(false) ?>
@@ -78,6 +78,42 @@ Modal::begin([
         ])->textInput(['placeholder' => "Click to add Comment..."])->label(false) ?>
         <?php ActiveForm::end(); ?>
     </div>
+
+<?php
+$this->registerJs("
+    $('#add-comment-form-modal-" . $action->id . "').on('beforeSubmit', function (e) {
+        e.preventDefault();
+        if($(this).find('.has-error').length == 0) {
+            var commentText = $('#add-comment-form-modal-" . $action->id . " #comments-content');
+            var commentActionID = $('#add-comment-form-modal-" . $action->id . " #comments-action_id');
+            if(commentText[0].value.length != 0){
+                $.ajax({
+                    url: '" . Url::to(['/add-comment']) . "',
+                    type: 'POST',
+                    data:{
+                        'Comments':{
+                            'content': commentText[0].value,
+                            'action_id': commentActionID[0].value
+                        }
+                    },
+                    success: function(response) {
+                        result = JSON.parse(response);
+                        if (result.html.length != 0) {
+                            $('#modal-comments-" . $action->id . "').append(result.html).show('slow');
+                            $('#comments-" . $action->id . "').append(result.html).show('slow');
+                            document.getElementById('add-comment-form-modal-" . $action->id . "').reset();
+                        }
+                    },
+                    error: function (request, status, error) {
+                        window.alert(error);
+                    }
+                });
+            }
+        }
+        return false;
+    }).submit(function (e) {e.preventDefault();});
+", View::POS_END);
+?>
 
 <?php
 Modal::end();

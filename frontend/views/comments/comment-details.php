@@ -13,12 +13,15 @@ use common\models\Translations;
 /* @var $comment Comments */
 /* @var $user User */
 /* @var $profile Profiles */
+/* @var $modal null|boolean */
 
 $user = $comment->user;
 $profile = $user->profile;
 $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
+$modal = isset($modal) ? $modal : false;
+$modalClass = empty($modal) ? '' : 'modal-';
 ?>
-<div id="comment-<?= $comment->id ?>">
+<div id="<?= $modalClass ?>comment-<?= $comment->id ?>">
     <div class="panel panel-default">
         <div class="panel-heading" id="comment-<?= $comment->id ?>-heading">
             <a href="<?= Profiles::getProfileLinkByUserID($comment->user_id) ?>" class="action-link">
@@ -89,6 +92,7 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
                                }
                                });
                                $('#comment-<?= $comment->id ?>').animate({height: 'toggle'});
+                               $('#modal-comment-<?= $comment->id ?>').animate({height: 'toggle'});
                                },
                                error: function (request, status, error) {
                                window.alert(error);
@@ -106,10 +110,10 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
         </div>
     </div>
     <div class="comments-reply">
-        <div id="comments-reply-<?= $comment->id ?>">
+        <div id="<?= $modalClass ?>comments-reply-<?= $comment->id ?>">
             <?php
             foreach ($comment->replies as $reply) {
-                echo $this->render('/comments/comment-details', ['comment' => $reply]);
+                echo $this->render('/comments/comment-details', ['comment' => $reply, 'modal' => $modal]);
             }
             ?>
         </div>
@@ -120,7 +124,7 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
             $model->reply_id = $comment->id;
             $form = ActiveForm::begin([
                 'enableClientValidation' => false,
-                'id' => 'add-comment-reply-form-' . $comment->id
+                'id' => 'add-comment-reply-form-' . $modalClass . $comment->id
             ]); ?>
 
             <?= $form->field($model, 'action_id')->hiddenInput()->label(false) ?>
@@ -140,11 +144,11 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
             ActiveForm::end();
 
             $this->registerJs("
-                                    $('#add-comment-reply-form-" . $comment->id . "').on('beforeSubmit', function (e) {
+                                    $('#add-comment-reply-form-" . $modalClass . $comment->id . "').on('beforeSubmit', function (e) {
                                         e.preventDefault();
                                         if($(this).find('.has-error').length == 0) {
-                                            var commentText = $('#add-comment-reply-form-" . $comment->id . " #comments-content');
-                                            var commentActionID = $('#add-comment-reply-form-" . $comment->id . " #comments-action_id');
+                                            var commentText = $('#add-comment-reply-form-" . $modalClass . $comment->id . " #comments-content');
+                                            var commentActionID = $('#add-comment-reply-form-" . $modalClass . $comment->id . " #comments-action_id');
                                             var commentReplyID = " . $comment->id . ";
                                             if(commentText[0].value.length != 0){
                                                 $.ajax({
@@ -160,8 +164,9 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
                                                     success: function(response) {
                                                         result = JSON.parse(response);
                                                         if (result.html.length != 0) {
+                                                            $('#modal-comments-reply-" . $comment->id . "').append(result.html).show('slow');
                                                             $('#comments-reply-" . $comment->id . "').append(result.html).show('slow');
-                                                            document.getElementById('add-comment-reply-form-" . $comment->id . "').reset();
+                                                            document.getElementById('add-comment-reply-form-" . $modalClass . $comment->id . "').reset();
                                                         }
                                                     },
                                                     error: function (request, status, error) {
