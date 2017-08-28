@@ -52,7 +52,8 @@
     "rmrevin/yii2-minify-view": "~1.9",
     "kartik-v/yii2-tabs-x": "*",
     "andrewblake1/yii2-credit-card": "@dev",
-    "kartik-v/yii2-field-range": "dev-master"
+    "kartik-v/yii2-field-range": "dev-master",
+    "devleaks/yii2-weather": "*"
   },
   "require-dev": {
     "yiisoft/yii2-codeception": "*",

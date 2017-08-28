@@ -2,341 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74bf72ab-bf50-4f95-bab0-3555bfa04124" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/fonts/FontAwesome.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/uploads/1/58677b73b2b7d5.37984425.jpg" afterPath="$PROJECT_DIR$/backend/web/uploads/1/58677b73b2b7d5.37984425.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/Icons/loading.gif" afterPath="$PROJECT_DIR$/frontend/web/Icons/loading.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/Icons/loading2.gif" afterPath="$PROJECT_DIR$/frontend/web/Icons/loading2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/Icons/loading3.gif" afterPath="$PROJECT_DIR$/frontend/web/Icons/loading3.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/fonts/FontAwesome.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/5981cda7659e89.69519676.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/5981cda7659e89.69519676.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/59830857ccaa37.10808772.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/59830857ccaa37.10808772.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/5984271daaad49.54528249.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/5984271daaad49.54528249.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/5984271dad3a49.76206480.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/5984271dad3a49.76206480.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/59843e374bd9f7.45329329.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/59843e374bd9f7.45329329.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/59843e456daf92.42229193.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/59843e456daf92.42229193.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/598440d808d620.68187944.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/598440d808d620.68187944.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/598440d80c3589.47398991.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/598440d80c3589.47398991.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/598465cbd66fd7.23581671.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/598465cbd66fd7.23581671.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/59846641daf7e7.08189978.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/59846641daf7e7.08189978.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/5984aac314fa71.03004458.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/5984aac314fa71.03004458.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/5984ad47e671a2.23253589.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/5984ad47e671a2.23253589.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/5984b2c956a1c1.54609173.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/5984b2c956a1c1.54609173.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/59881823207268.37286654.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/59881823207268.37286654.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/598954381913b3.58170843.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/1/598954381913b3.58170843.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/3/5989a6c71cc598.64204579.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/3/5989a6c71cc598.64204579.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/3/598aa69dea8b97.67796151.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/3/598aa69dea8b97.67796151.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/3/598ab637a081f9.76390669.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/3/598ab637a081f9.76390669.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/3/598ab875183661.94281411.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/3/598ab875183661.94281411.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/3/598abca6629916.93604788.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/3/598abca6629916.93604788.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/3/598acf21b840f9.68314785.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/3/598acf21b840f9.68314785.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/4/598b07828ba499.69899449.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/4/598b07828ba499.69899449.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/4/598b07828eec31.56907292.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/4/598b07828eec31.56907292.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/4/598b0c94039f98.57784181.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/4/598b0c94039f98.57784181.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/uploads/profiles/4/598b0cae16aa44.83829831.jpg" afterPath="$PROJECT_DIR$/frontend/web/uploads/profiles/4/598b0cae16aa44.83829831.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/error.png" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/error.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/info.png" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/info.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/notice.png" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/notice.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/original/error.png" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/original/error.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/original/info.png" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/original/info.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/original/notice.png" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/original/notice.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/original/success.png" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/original/success.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/success.png" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/desktop/success.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/github-icon.png" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/github-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/le_happy_face_by_luchocas-32.png" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/le_happy_face_by_luchocas-32.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/le_happy_face_by_luchocas.png" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/le_happy_face_by_luchocas.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/source-screen.png" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/source-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/JustSkipIT.iml" afterPath="$PROJECT_DIR$/.idea/JustSkipIT.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/HELP-US-OUT.txt" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/HELP-US-OUT.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/css/font-awesome.css" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/css/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/animated.less" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/animated.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/bordered-pulled.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/core.less" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/core.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/fixed-width.less" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/fixed-width.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/font-awesome.less" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/font-awesome.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/icons.less" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/icons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/larger.less" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/larger.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/list.less" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/list.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/mixins.less" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/path.less" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/path.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/rotated-flipped.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/screen-reader.less" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/screen-reader.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/stacked.less" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/stacked.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/variables.less" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_animated.scss" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_animated.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_bordered-pulled.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_core.scss" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_core.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_fixed-width.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_icons.scss" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_icons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_larger.scss" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_larger.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_list.scss" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_list.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_mixins.scss" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_path.scss" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_path.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_rotated-flipped.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_screen-reader.scss" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_screen-reader.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_stacked.scss" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_stacked.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_variables.scss" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/_variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/backend/web/resources/font-awesome-4.7.0/scss/font-awesome.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/migrations/m161231_091939_runSqlFromOldDB.php" afterPath="$PROJECT_DIR$/console/migrations/m161231_091939_runSqlFromOldDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/migrations/m170803_094925_createTranslationsTable.php" afterPath="$PROJECT_DIR$/console/migrations/m170803_094925_createTranslationsTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/migrations/m170811_123945_createCommentsTable.php" afterPath="$PROJECT_DIR$/console/migrations/m170811_123945_createCommentsTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/actions/modal.php" afterPath="$PROJECT_DIR$/frontend/views/actions/modal.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/actions/panel.php" afterPath="$PROJECT_DIR$/frontend/views/actions/panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/actions/user-heading.php" afterPath="$PROJECT_DIR$/frontend/views/actions/user-heading.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/comments/comment-details.php" afterPath="$PROJECT_DIR$/frontend/views/comments/comment-details.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/mails/signup-success.php" afterPath="$PROJECT_DIR$/frontend/views/mails/signup-success.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/site/modal-test.php" afterPath="$PROJECT_DIR$/frontend/views/site/modal-test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/css/animate.css" afterPath="$PROJECT_DIR$/frontend/web/css/animate.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/css/pnotify.custom.min.css" afterPath="$PROJECT_DIR$/frontend/web/css/pnotify.custom.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/js/app.js" afterPath="$PROJECT_DIR$/frontend/web/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/js/pnotify.custom.min.js" afterPath="$PROJECT_DIR$/frontend/web/js/pnotify.custom.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/HELP-US-OUT.txt" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/HELP-US-OUT.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/css/font-awesome-animation.min.css" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/css/font-awesome-animation.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/css/font-awesome.css" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/css/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/animated.less" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/animated.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/bordered-pulled.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/core.less" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/core.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/fixed-width.less" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/fixed-width.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/font-awesome.less" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/font-awesome.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/icons.less" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/icons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/larger.less" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/larger.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/list.less" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/list.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/mixins.less" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/path.less" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/path.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/rotated-flipped.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/screen-reader.less" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/screen-reader.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/stacked.less" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/stacked.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/variables.less" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_animated.scss" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_animated.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_bordered-pulled.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_core.scss" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_core.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_fixed-width.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_icons.scss" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_icons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_larger.scss" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_larger.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_list.scss" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_list.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_mixins.scss" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_path.scss" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_path.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_rotated-flipped.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_screen-reader.scss" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_screen-reader.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_stacked.scss" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_stacked.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_variables.scss" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/_variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/frontend/web/resources/font-awesome-4.7.0/scss/font-awesome.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/AUTHORS.txt" afterPath="$PROJECT_DIR$/node_modules/jquery/AUTHORS.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/LICENSE.txt" afterPath="$PROJECT_DIR$/node_modules/jquery/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/README.md" afterPath="$PROJECT_DIR$/node_modules/jquery/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/bower.json" afterPath="$PROJECT_DIR$/node_modules/jquery/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/dist/core.js" afterPath="$PROJECT_DIR$/node_modules/jquery/dist/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.min.js" afterPath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.min.map" afterPath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.min.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.slim.js" afterPath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.slim.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.slim.min.js" afterPath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.slim.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.slim.min.map" afterPath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.slim.min.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/LICENSE.txt" afterPath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/dist/sizzle.js" afterPath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/dist/sizzle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/dist/sizzle.min.js" afterPath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/dist/sizzle.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/dist/sizzle.min.map" afterPath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/dist/sizzle.min.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/package.json" afterPath="$PROJECT_DIR$/node_modules/jquery/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/.eslintrc.json" afterPath="$PROJECT_DIR$/node_modules/jquery/src/.eslintrc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/jsonp.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/ajax/jsonp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/load.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/ajax/load.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/parseXML.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/ajax/parseXML.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/script.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/ajax/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/var/location.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/ajax/var/location.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/var/nonce.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/ajax/var/nonce.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/var/rquery.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/ajax/var/rquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/xhr.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/ajax/xhr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/attributes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/attr.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/attributes/attr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/classes.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/attributes/classes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/prop.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/attributes/prop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/support.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/attributes/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/val.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/attributes/val.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/callbacks.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/callbacks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/DOMEval.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/core/DOMEval.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/access.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/core/access.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/init.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/core/init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/nodeName.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/core/nodeName.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/parseHTML.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/core/parseHTML.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/ready-no-deferred.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/core/ready-no-deferred.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/ready.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/core/ready.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/readyException.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/core/readyException.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/stripAndCollapse.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/core/stripAndCollapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/support.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/core/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/var/rsingleTag.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/core/var/rsingleTag.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/addGetHookIf.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/css/addGetHookIf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/adjustCSS.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/css/adjustCSS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/curCSS.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/css/curCSS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/hiddenVisibleSelectors.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/css/hiddenVisibleSelectors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/showHide.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/css/showHide.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/support.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/css/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/cssExpand.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/css/var/cssExpand.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/getStyles.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/css/var/getStyles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/isHiddenWithinTree.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/css/var/isHiddenWithinTree.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/rmargin.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/css/var/rmargin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/rnumnonpx.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/css/var/rnumnonpx.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/swap.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/css/var/swap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/data.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/Data.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/data/Data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/var/acceptData.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/data/var/acceptData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/var/dataPriv.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/data/var/dataPriv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/var/dataUser.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/data/var/dataUser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/deferred.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/deferred.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/deferred/exceptionHook.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/deferred/exceptionHook.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/deprecated.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/deprecated.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/dimensions.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/dimensions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/effects.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/effects.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/effects/Tween.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/effects/Tween.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/effects/animatedSelector.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/effects/animatedSelector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/event.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/event.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/ajax.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/event/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/alias.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/event/alias.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/focusin.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/event/focusin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/support.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/event/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/trigger.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/event/trigger.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/exports/amd.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/exports/amd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/exports/global.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/exports/global.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/jquery.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/manipulation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/_evalUrl.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/_evalUrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/buildFragment.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/buildFragment.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/getAll.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/getAll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/setGlobalEval.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/setGlobalEval.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/support.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/var/rcheckableType.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/var/rcheckableType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/var/rscriptType.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/var/rscriptType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/var/rtagName.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/var/rtagName.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/wrapMap.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/wrapMap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/offset.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/offset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/queue.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/queue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/queue/delay.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/queue/delay.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/selector-native.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/selector-native.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/selector-sizzle.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/selector-sizzle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/selector.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/selector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/serialize.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/serialize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/traversing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing/findFilter.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/traversing/findFilter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing/var/dir.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/traversing/var/dir.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing/var/rneedsContext.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/traversing/var/rneedsContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing/var/siblings.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/traversing/var/siblings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/ObjectFunctionString.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/ObjectFunctionString.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/arr.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/arr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/class2type.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/class2type.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/concat.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/concat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/document.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/document.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/documentElement.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/documentElement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/fnToString.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/fnToString.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/getProto.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/getProto.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/hasOwn.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/hasOwn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/indexOf.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/indexOf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/pnum.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/pnum.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/push.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/push.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/rcssNum.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/rcssNum.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/rnothtmlwhite.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/rnothtmlwhite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/slice.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/slice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/support.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/toString.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/var/toString.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jquery/src/wrap.js" afterPath="$PROJECT_DIR$/node_modules/jquery/src/wrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/.npmignore" afterPath="$PROJECT_DIR$/node_modules/pnotify/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/LICENSE" afterPath="$PROJECT_DIR$/node_modules/pnotify/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/README.md" afterPath="$PROJECT_DIR$/node_modules/pnotify/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/bower.json" afterPath="$PROJECT_DIR$/node_modules/pnotify/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/buildcustom.php" afterPath="$PROJECT_DIR$/node_modules/pnotify/buildcustom.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/composer.json" afterPath="$PROJECT_DIR$/node_modules/pnotify/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/devnote-stable.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/devnote-stable.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/devnote.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/devnote.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.animate.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.animate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.animate.js.map" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.animate.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.brighttheme.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.brighttheme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.buttons.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.buttons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.buttons.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.buttons.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.buttons.js.map" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.buttons.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.callbacks.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.callbacks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.callbacks.js.map" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.callbacks.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.confirm.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.confirm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.confirm.js.map" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.confirm.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.desktop.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.desktop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.desktop.js.map" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.desktop.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.history.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.history.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.history.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.history.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.history.js.map" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.history.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.js.map" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.mobile.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.mobile.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.mobile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.mobile.js.map" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.mobile.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.nonblock.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.nonblock.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.nonblock.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.nonblock.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.nonblock.js.map" afterPath="$PROJECT_DIR$/node_modules/pnotify/dist/pnotify.nonblock.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/beautify.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/beautify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-apollo.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-apollo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-clj.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-clj.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-css.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-go.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-go.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-hs.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-hs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-lisp.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-lisp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-lua.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-lua.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-ml.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-ml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-n.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-n.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-proto.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-proto.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-scala.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-scala.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-sql.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-sql.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-tex.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-tex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-vb.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-vb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-vhdl.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-vhdl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-wiki.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-wiki.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-xq.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-xq.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-yaml.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/lang-yaml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/prettify.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/prettify.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/prettify.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/google-code-prettify/prettify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/includes/style.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/includes/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/index.html" afterPath="$PROJECT_DIR$/node_modules/pnotify/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/libtests/browserify/index.html" afterPath="$PROJECT_DIR$/node_modules/pnotify/libtests/browserify/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/libtests/browserify/index.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/libtests/browserify/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/libtests/browserify/package.json" afterPath="$PROJECT_DIR$/node_modules/pnotify/libtests/browserify/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/libtests/requirejs/index.html" afterPath="$PROJECT_DIR$/node_modules/pnotify/libtests/requirejs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/make.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/make.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/package.json" afterPath="$PROJECT_DIR$/node_modules/pnotify/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.animate.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.animate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.brighttheme.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.brighttheme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.buttons.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.buttons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.buttons.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.buttons.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.callbacks.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.callbacks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.confirm.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.confirm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.desktop.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.desktop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.history.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.history.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.history.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.history.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.material.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.material.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.mobile.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.mobile.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.mobile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.nonblock.css" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.nonblock.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.nonblock.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.nonblock.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.reference.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.reference.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.tooltip.js" afterPath="$PROJECT_DIR$/node_modules/pnotify/src/pnotify.tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pnotify/testing.html" afterPath="$PROJECT_DIR$/node_modules/pnotify/testing.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -364,7 +30,7 @@
       <file leaf-file-name="panel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/views/actions/panel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1680">
+            <state relative-caret-position="1005">
               <caret line="75" column="54" lean-forward="false" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
               <folding>
                 <element signature="e#104#125#0#PHP" expanded="true" />
@@ -376,7 +42,7 @@
       <file leaf-file-name="modal.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/views/actions/modal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-80">
+            <state relative-caret-position="720">
               <caret line="55" column="106" lean-forward="false" selection-start-line="55" selection-start-column="106" selection-end-line="55" selection-end-column="106" />
               <folding>
                 <element signature="e#7#28#0#PHP" expanded="true" />
@@ -388,8 +54,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/views/site/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="88" column="68" lean-forward="true" selection-start-line="88" selection-start-column="68" selection-end-line="88" selection-end-column="68" />
+            <state relative-caret-position="210">
+              <caret line="101" column="68" lean-forward="false" selection-start-line="101" selection-start-column="68" selection-end-line="101" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -558,7 +224,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -989,6 +654,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1087,17 +753,18 @@
       <workItem from="1502861380523" duration="12610000" />
       <workItem from="1502947803367" duration="5884000" />
       <workItem from="1503035845356" duration="3037000" />
+      <workItem from="1503560637593" duration="28000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47189000" />
+    <option name="totallyTimeSpent" value="47217000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2932761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29756796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1375,7 +1042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
           <caret line="415" column="37" lean-forward="false" selection-start-line="415" selection-start-column="37" selection-end-line="415" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1397,7 +1063,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="83" column="63" lean-forward="false" selection-start-line="83" selection-start-column="63" selection-end-line="83" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1405,9 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="28" column="78" lean-forward="false" selection-start-line="28" selection-start-column="78" selection-end-line="28" selection-end-column="78" />
-          <folding>
-            <element signature="e#40#48#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1464,7 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-504">
           <caret line="99" column="41" lean-forward="false" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1488,7 +1149,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/actions/panel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1680">
+        <state relative-caret-position="1005">
           <caret line="75" column="54" lean-forward="false" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
           <folding>
             <element signature="e#104#125#0#PHP" expanded="true" />
@@ -1500,15 +1161,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2000">
           <caret line="54" column="30" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
-          <folding>
-            <marker date="1502873518000" expanded="true" signature="2390:2406" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/actions/modal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
+        <state relative-caret-position="720">
           <caret line="55" column="106" lean-forward="false" selection-start-line="55" selection-start-column="106" selection-end-line="55" selection-end-column="106" />
           <folding>
             <element signature="e#7#28#0#PHP" expanded="true" />
@@ -1518,8 +1176,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/site/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="88" column="68" lean-forward="true" selection-start-line="88" selection-start-column="68" selection-end-line="88" selection-end-column="68" />
+        <state relative-caret-position="210">
+          <caret line="101" column="68" lean-forward="false" selection-start-line="101" selection-start-column="68" selection-end-line="101" selection-end-column="68" />
           <folding />
         </state>
       </provider>
