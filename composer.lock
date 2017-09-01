@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "74a15d0c1e420bf77ae26bb20461fe4a",
+    "content-hash": "f08a290549683daa0375ec0d94d1f0a6",
     "packages": [
         {
             "name": "amnah/yii2-user",
@@ -322,16 +322,16 @@
         },
         {
             "name": "bower-asset/jquery.inputmask",
-            "version": "3.3.7",
+            "version": "3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobinHerbots/Inputmask.git",
-                "reference": "9835731cb78cac749734d94a1cb5bd70da4d3b10"
+                "reference": "791d84990c4a98df1597e9d155be53a3725805dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/9835731cb78cac749734d94a1cb5bd70da4d3b10",
-                "reference": "9835731cb78cac749734d94a1cb5bd70da4d3b10",
+                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/791d84990c4a98df1597e9d155be53a3725805dd",
+                "reference": "791d84990c4a98df1597e9d155be53a3725805dd",
                 "shasum": ""
             },
             "require": {
@@ -640,6 +640,64 @@
             "time": "2017-06-03T02:28:16+00:00"
         },
         {
+            "name": "facebook/graph-sdk",
+            "version": "5.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/facebook/php-graph-sdk.git",
+                "reference": "2f9639c15ae043911f40ffe44080b32bac2c5280"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/facebook/php-graph-sdk/zipball/2f9639c15ae043911f40ffe44080b32bac2c5280",
+                "reference": "2f9639c15ae043911f40ffe44080b32bac2c5280",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4|^7.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "~5.0",
+                "mockery/mockery": "~0.8",
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "Allows for implementation of the Guzzle HTTP client",
+                "paragonie/random_compat": "Provides a better CSPRNG option in PHP 5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Facebook\\": "src/Facebook/"
+                },
+                "files": [
+                    "src/Facebook/polyfills.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Facebook Platform"
+            ],
+            "authors": [
+                {
+                    "name": "Facebook",
+                    "homepage": "https://github.com/facebook/php-graph-sdk/contributors"
+                }
+            ],
+            "description": "Facebook SDK for PHP",
+            "homepage": "https://github.com/facebook/php-graph-sdk",
+            "keywords": [
+                "facebook",
+                "sdk"
+            ],
+            "time": "2017-08-16T17:28:07+00:00"
+        },
+        {
             "name": "fortawesome/font-awesome",
             "version": "v4.7.0",
             "source": {
@@ -884,16 +942,16 @@
         },
         {
             "name": "kartik-v/bootstrap-fileinput",
-            "version": "v4.4.2",
+            "version": "v4.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-                "reference": "28c89de2708f32814879241b6f112ee27b8f4ec8"
+                "reference": "e35391eb28e6c8d2f280d5d2b025437733058131"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/28c89de2708f32814879241b6f112ee27b8f4ec8",
-                "reference": "28c89de2708f32814879241b6f112ee27b8f4ec8",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/e35391eb28e6c8d2f280d5d2b025437733058131",
+                "reference": "e35391eb28e6c8d2f280d5d2b025437733058131",
                 "shasum": ""
             },
             "type": "library",
@@ -933,7 +991,7 @@
                 "progress",
                 "upload"
             ],
-            "time": "2017-06-24T05:15:30+00:00"
+            "time": "2017-08-27T18:51:18+00:00"
         },
         {
             "name": "kartik-v/bootstrap-popover-x",
@@ -986,16 +1044,16 @@
         },
         {
             "name": "kartik-v/bootstrap-star-rating",
-            "version": "v4.0.1",
+            "version": "v4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-star-rating.git",
-                "reference": "d66083c14f9386ede23fccb76dea1a380db67ded"
+                "reference": "599c10e2456bc2215da7c6337d6b1c65892bff72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-star-rating/zipball/d66083c14f9386ede23fccb76dea1a380db67ded",
-                "reference": "d66083c14f9386ede23fccb76dea1a380db67ded",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-star-rating/zipball/599c10e2456bc2215da7c6337d6b1c65892bff72",
+                "reference": "599c10e2456bc2215da7c6337d6b1c65892bff72",
                 "shasum": ""
             },
             "type": "library",
@@ -1026,7 +1084,7 @@
                 "star",
                 "svg"
             ],
-            "time": "2016-02-28T16:13:18+00:00"
+            "time": "2017-08-27T08:23:59+00:00"
         },
         {
             "name": "kartik-v/bootstrap-tabs-x",
@@ -1754,12 +1812,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-grid.git",
-                "reference": "1e275959ff0042359b461e9d86d983f99d91f407"
+                "reference": "e7c986d229b472c02d17882bc8f62104e0ce320b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/1e275959ff0042359b461e9d86d983f99d91f407",
-                "reference": "1e275959ff0042359b461e9d86d983f99d91f407",
+                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/e7c986d229b472c02d17882bc8f62104e0ce320b",
+                "reference": "e7c986d229b472c02d17882bc8f62104e0ce320b",
                 "shasum": ""
             },
             "require": {
@@ -1799,7 +1857,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2017-08-07 16:20:15"
+            "time": "2017-08-31 11:34:16"
         },
         {
             "name": "kartik-v/yii2-helpers",
@@ -2200,6 +2258,59 @@
                 "yii2"
             ],
             "time": "2016-01-10T17:24:24+00:00"
+        },
+        {
+            "name": "kartik-v/yii2-social",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/yii2-social.git",
+                "reference": "7b0f259ae7cc853b5b08dc8edc5267297e2a8585"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-social/zipball/7b0f259ae7cc853b5b08dc8edc5267297e2a8585",
+                "reference": "7b0f259ae7cc853b5b08dc8edc5267297e2a8585",
+                "shasum": ""
+            },
+            "require": {
+                "facebook/graph-sdk": "~5.0",
+                "kartik-v/yii2-krajee-base": "~1.7"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "kartik\\social\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "Module containing useful widgets for Yii Framework 2.0 that integrates social functionalities from DISQUS, Facebook, Google etc.",
+            "homepage": "https://github.com/kartik-v/yii2-social",
+            "keywords": [
+                "disqus",
+                "extension",
+                "facebook",
+                "social",
+                "twitter",
+                "widget",
+                "yii2"
+            ],
+            "time": "2017-03-15 12:18:32"
         },
         {
             "name": "kartik-v/yii2-sortable",
@@ -4957,7 +5068,8 @@
         "kartik-v/yii2-password": 20,
         "kartik-v/yii2-widget-select2": 20,
         "andrewblake1/yii2-credit-card": 20,
-        "kartik-v/yii2-field-range": 20
+        "kartik-v/yii2-field-range": 20,
+        "kartik-v/yii2-social": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

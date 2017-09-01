@@ -53,7 +53,7 @@
     "kartik-v/yii2-tabs-x": "*",
     "andrewblake1/yii2-credit-card": "@dev",
     "kartik-v/yii2-field-range": "dev-master",
-    "devleaks/yii2-weather": "*"
+    "kartik-v/yii2-social": "dev-master"
   },
   "require-dev": {
     "yiisoft/yii2-codeception": "*",
