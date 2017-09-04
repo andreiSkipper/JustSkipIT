@@ -118,7 +118,7 @@ $modalClass = empty($modal) ? '' : 'modal-';
             ?>
         </div>
         <?php
-        if (empty($comment->reply_id)) {
+        if (empty($comment->reply_id) AND !Yii::$app->user->isGuest) {
             $model = new Comments();
             $model->action_id = $comment->action_id;
             $model->reply_id = $comment->id;

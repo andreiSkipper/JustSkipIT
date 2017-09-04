@@ -180,25 +180,29 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
                     <?php } ?>
                 </div>
                 <?php
-                $model = new Comments();
-                $model->action_id = $action->id;
-                $form = ActiveForm::begin([
-                    'enableClientValidation' => false,
-                    'id' => 'add-comment-form-' . $action->id
-                ]); ?>
+                if (!Yii::$app->user->isGuest) {
+                    $model = new Comments();
+                    $model->action_id = $action->id;
+                    $form = ActiveForm::begin([
+                        'enableClientValidation' => false,
+                        'id' => 'add-comment-form-' . $action->id
+                    ]); ?>
 
-                <?= $form->field($model, 'action_id')->hiddenInput()->label(false) ?>
+                    <?= $form->field($model, 'action_id')->hiddenInput()->label(false) ?>
 
-                <?= $form->field($model, 'content', [
-                    'addon' => [
-                        'prepend' => ['content' => '<i class="fa fa-comment-o"></i>'],
+                    <?= $form->field($model, 'content', [
+                        'addon' => [
+                            'prepend' => ['content' => '<i class="fa fa-comment-o"></i>'],
 //                        'append' => [
 //                            'content' => Html::submitButton('Go', ['class' => 'btn btn-default', 'id' => 'add_comment']),
 //                            'asButton' => true
 //                        ]
-                    ]
-                ])->textInput(['placeholder' => "Click to add Comment..."])->label(false) ?>
-                <?php ActiveForm::end(); ?>
+                        ]
+                    ])->textInput(['placeholder' => "Click to add Comment..."])->label(false) ?>
+                    <?php
+                    ActiveForm::end();
+                }
+                ?>
             </div>
         </div>
     </div>
