@@ -19,65 +19,66 @@ $this->title = Translations::translate('app', 'Home');
 
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
-        <?php $form = ActiveForm::begin(['id' => 'add-post-form', 'action' => ['/add-post'], 'options' => ['enctype' => 'multipart/form-data']]); ?>
-        <div class="panel panel-default action-new">
-            <!--            <div class="panel-heading action-header"></div>-->
-            <div class="panel-body ">
-                <div class="col-xs-12">
-                    <?php
-                    $newAction = new Actions();
-                    $newAction->privacy = 'Public';
-                    ?>
-                    <?= $form->field($newAction, 'description')->textarea(
-                        [
-                            'maxlength' => true,
-                            'placeholder' => 'What are you thinking about?',
-                            'style' => 'resize: vertical;min-height: 50px'
-                        ])->label(false);
-                    ?>
-                </div>
-                <div class="col-xs-12">
-                    <?= $form->field($newAction, 'imagePath')->widget(FileInput::classname(), [
-                        'options' => [
-                            'accept' => 'image/*',
-                            'multiple' => true
-                        ],
-                        'pluginOptions' => [
-                            'showPreview' => true,
-                            'showCaption' => true,
-                            'showRemove' => true,
-                            'showUpload' => false
-                        ]
-                    ])->label(false) ?>
-                </div>
-                <div class="col-xs-12 no-padding">
-                    <div class="col-xs-6">
-                        <?= $form->field($newAction, 'privacy')->widget(Select2::classname(),
+        <?php if (!Yii::$app->user->isGuest) { ?>
+            <?php $form = ActiveForm::begin(['id' => 'add-post-form', 'action' => ['/add-post'], 'options' => ['enctype' => 'multipart/form-data']]); ?>
+            <div class="panel panel-default action-new">
+                <!--            <div class="panel-heading action-header"></div>-->
+                <div class="panel-body ">
+                    <div class="col-xs-12">
+                        <?php
+                        $newAction = new Actions();
+                        $newAction->privacy = 'Public';
+                        ?>
+                        <?= $form->field($newAction, 'description')->textarea(
                             [
-                                'name' => 'Actions[type]',
-                                'data' => $newAction->privacyEnum,
-                                'theme' => Select2::THEME_BOOTSTRAP,
-                                'hideSearch' => true,
-                                'options' => [
-                                    'placeholder' => 'Privacy',
-                                ],
-                                'pluginOptions' => [
-                                    'allowClear' => false
-                                ],
-                                'addon' => [
-                                    'prepend' => [
-                                        'content' => Html::icon('globe')
-                                    ],
-                                ]
-                            ])->label(false) ?>
+                                'maxlength' => true,
+                                'placeholder' => 'What are you thinking about?',
+                                'style' => 'resize: vertical;min-height: 50px'
+                            ])->label(false);
+                        ?>
                     </div>
-                    <div class="col-xs-6">
-                        <div class="form-group">
-                            <?= Html::submitButton('<i class="fa fa-pencil-square-o"></i> Post',
+                    <div class="col-xs-12">
+                        <?= $form->field($newAction, 'imagePath')->widget(FileInput::classname(), [
+                            'options' => [
+                                'accept' => 'image/*',
+                                'multiple' => true
+                            ],
+                            'pluginOptions' => [
+                                'showPreview' => true,
+                                'showCaption' => true,
+                                'showRemove' => true,
+                                'showUpload' => false
+                            ]
+                        ])->label(false) ?>
+                    </div>
+                    <div class="col-xs-12 no-padding">
+                        <div class="col-xs-6">
+                            <?= $form->field($newAction, 'privacy')->widget(Select2::classname(),
                                 [
-                                    'class' => 'btn btn-orange col-xs-12',
-                                    'name' => 'action-edit-button',
-                                    'onclick' => "
+                                    'name' => 'Actions[type]',
+                                    'data' => $newAction->privacyEnum,
+                                    'theme' => Select2::THEME_BOOTSTRAP,
+                                    'hideSearch' => true,
+                                    'options' => [
+                                        'placeholder' => 'Privacy',
+                                    ],
+                                    'pluginOptions' => [
+                                        'allowClear' => false
+                                    ],
+                                    'addon' => [
+                                        'prepend' => [
+                                            'content' => Html::icon('globe')
+                                        ],
+                                    ]
+                                ])->label(false) ?>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <?= Html::submitButton('<i class="fa fa-pencil-square-o"></i> Post',
+                                    [
+                                        'class' => 'btn btn-orange col-xs-12',
+                                        'name' => 'action-edit-button',
+                                        'onclick' => "
 //                                                        var formData = $('#add-post-form').serializeArray().reduce(function(obj, item) {
 //                                                                    obj[item.name.replace('Actions[', '')] = item.value;
 //                                                                    return obj;
@@ -101,14 +102,15 @@ $this->title = Translations::translate('app', 'Home');
 //                                                           }
 //                                                       });                                                
                                         ",
-                                ]) ?>
+                                    ]) ?>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!--            <div class="panel-footer"></div>-->
             </div>
-            <!--            <div class="panel-footer"></div>-->
-        </div>
-        <?php ActiveForm::end(); ?>
+            <?php ActiveForm::end(); ?>
+        <?php } ?>
         <div id="actions-group">
             <?php
             foreach ($actions as $action) {

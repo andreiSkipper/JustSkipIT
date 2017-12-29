@@ -24,10 +24,16 @@ $modalClass = empty($modal) ? '' : 'modal-';
 <div id="<?= $modalClass ?>comment-<?= $comment->id ?>">
     <div class="panel panel-default">
         <div class="panel-heading" id="comment-<?= $comment->id ?>-heading">
-            <a href="<?= Profiles::getProfileLinkByUserID($comment->user_id) ?>" class="action-link">
-                <img src="<?= $avatar; ?>" class="action-avatar" alt="">
-                <?= (isset($profile->lastname) AND isset($profile->firstname)) ? $profile->lastname . ' ' . $profile->firstname : $user->username ?>
-            </a>
+            <div id="comment-<?= $comment->id ?>-user" style="display: inline-block"
+                 onmouseover="comment_tooltip<?= $comment->id ?>.open();"
+                 onmousemove="comment_tooltip<?= $comment->id ?>.get().css({'top': event.clientY+12, 'left': event.clientX+12});"
+                 onmouseout="comment_tooltip<?= $comment->id ?>.remove();"
+            >
+                <a href="<?= Profiles::getProfileLinkByUserID($comment->user_id) ?>" class="action-link">
+                    <img src="<?= $avatar; ?>" class="action-avatar" alt="">
+                    <?= (isset($profile->lastname) AND isset($profile->firstname)) ? $profile->lastname . ' ' . $profile->firstname : $user->username ?>
+                </a>
+            </div>
             added comment
             <?= date("Y-m-d H:i", $comment->updated_at) ?>
             <?php
@@ -114,6 +120,31 @@ $modalClass = empty($modal) ? '' : 'modal-';
             <?php
             foreach ($comment->replies as $reply) {
                 echo $this->render('/comments/comment-details', ['comment' => $reply, 'modal' => $modal]);
+
+                $this->registerJs("
+                                    comment_tooltip" . $reply->id . " = new PNotify({
+                                        text: '" . preg_replace('#\s+#', ' ', trim($this->render('/actions/user-heading', ['action' => $reply]))) . "',
+                                        hide: false,
+                                        width: '30%',
+                                        addclass: 'custom-action-user',
+                                        buttons: {
+                                            closer: false,
+                                            sticker: false
+                                        },
+                                        history: {
+                                            history: false
+                                        },
+                                        animate_speed: \"fast\",
+                                        icon: '',
+                                        // Setting stack to false causes PNotify to ignore this notice when positioning.
+                                        stack: false,
+                                        auto_display: false
+                                    });
+                                    // Remove the notice if the user mouses over it.
+                                    comment_tooltip" . $reply->id . ".get().mouseout(function() {
+                                        comment_tooltip" . $reply->id . ".remove();
+                                    });
+                            ", View::POS_END);
             }
             ?>
         </div>
@@ -122,28 +153,46 @@ $modalClass = empty($modal) ? '' : 'modal-';
             $model = new Comments();
             $model->action_id = $comment->action_id;
             $model->reply_id = $comment->id;
-            $form = ActiveForm::begin([
-                'enableClientValidation' => false,
-                'id' => 'add-comment-reply-form-' . $modalClass . $comment->id
-            ]); ?>
+            $form = ActiveForm::begin(['enableClientValidation' => false,
+                'id' => 'add-comment-reply-form-' . $modalClass . $comment->id]); ?>
 
             <?= $form->field($model, 'action_id')->hiddenInput()->label(false) ?>
 
             <?= $form->field($model, 'reply_id')->hiddenInput()->label(false) ?>
 
-            <?= $form->field($model, 'content', [
-                'addon' => [
-                    'prepend' => ['content' => '<i class="fa fa-comments-o"></i>'],
-//                                    'append' => [
-//                                        'content' => Html::submitButton('Go', ['class' => 'btn btn-default', 'id' => 'add_comment']),
-//                                        'asButton' => true
-//                                    ]
-                ]
-            ])->textInput(['placeholder' => "Click to add reply..."])->label(false) ?>
+            <?= $form->field($model, 'content', ['addon' => ['prepend' => ['content' => '<i class="fa fa-comments-o"></i>'],
+                //                                    'append' => [
+                //                                        'content' => Html::submitButton('Go', ['class' => 'btn btn-default', 'id' => 'add_comment']),
+                //                                        'asButton' => true
+                //                                    ]
+            ]])->textInput(['placeholder' => "Click to add reply..."])->label(false) ?>
             <?php
             ActiveForm::end();
 
             $this->registerJs("
+                                    comment_tooltip" . $comment->id . " = new PNotify({
+                                        text: '" . preg_replace('#\s+#', ' ', trim($this->render('/actions/user-heading', ['action' => $comment]))) . "',
+                                        hide: false,
+                                        width: '30%',
+                                        addclass: 'custom-action-user',
+                                        buttons: {
+                                            closer: false,
+                                            sticker: false
+                                        },
+                                        history: {
+                                            history: false
+                                        },
+                                        animate_speed: \"fast\",
+                                        icon: '',
+                                        // Setting stack to false causes PNotify to ignore this notice when positioning.
+                                        stack: false,
+                                        auto_display: false
+                                    });
+                                    // Remove the notice if the user mouses over it.
+                                    comment_tooltip" . $comment->id . ".get().mouseout(function() {
+                                        comment_tooltip" . $comment->id . ".remove();
+                                    });
+                                    
                                     $('#add-comment-reply-form-" . $modalClass . $comment->id . "').on('beforeSubmit', function (e) {
                                         e.preventDefault();
                                         if($(this).find('.has-error').length == 0) {
