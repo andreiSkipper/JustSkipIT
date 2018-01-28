@@ -108,6 +108,24 @@ class Actions extends \yii\db\ActiveRecord
         }
     }
 
+    public function getTypes()
+    {
+        foreach ($this->typeEnum as $key => $type) {
+            $this->typeEnum[$key] = Translations::translate('model', $type);
+        }
+
+        return $this->typeEnum;
+    }
+
+    public function getPrivacies()
+    {
+        foreach ($this->privacyEnum as $key => $privacy) {
+            $this->privacyEnum[$key] = Translations::translate('model', $privacy);
+        }
+
+        return $this->privacyEnum;
+    }
+
     public function search($params)
     {
         // get models

@@ -32,7 +32,7 @@ $this->title = Translations::translate('app', 'Home');
                         <?= $form->field($newAction, 'description')->textarea(
                             [
                                 'maxlength' => true,
-                                'placeholder' => 'What are you thinking about?',
+                                'placeholder' => Translations::translate('app', 'What are you thinking about?'),
                                 'style' => 'resize: vertical;min-height: 50px'
                             ])->label(false);
                         ?>
@@ -47,7 +47,8 @@ $this->title = Translations::translate('app', 'Home');
                                 'showPreview' => true,
                                 'showCaption' => true,
                                 'showRemove' => true,
-                                'showUpload' => false
+                                'showUpload' => false,
+                                'browseLabel' => Translations::translate('app', 'Browse') . ' ...',
                             ]
                         ])->label(false) ?>
                     </div>
@@ -56,11 +57,11 @@ $this->title = Translations::translate('app', 'Home');
                             <?= $form->field($newAction, 'privacy')->widget(Select2::classname(),
                                 [
                                     'name' => 'Actions[type]',
-                                    'data' => $newAction->privacyEnum,
+                                    'data' => $newAction->getPrivacies(),
                                     'theme' => Select2::THEME_BOOTSTRAP,
                                     'hideSearch' => true,
                                     'options' => [
-                                        'placeholder' => 'Privacy',
+                                        'placeholder' => Translations::translate('app', 'Privacy'),
                                     ],
                                     'pluginOptions' => [
                                         'allowClear' => false
@@ -74,7 +75,7 @@ $this->title = Translations::translate('app', 'Home');
                         </div>
                         <div class="col-xs-6">
                             <div class="form-group">
-                                <?= Html::submitButton('<i class="fa fa-pencil-square-o"></i> Post',
+                                <?= Html::submitButton('<i class="fa fa-pencil-square-o"></i> ' . Translations::translate('app', 'Post'),
                                     [
                                         'class' => 'btn btn-orange col-xs-12',
                                         'name' => 'action-edit-button',

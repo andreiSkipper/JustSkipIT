@@ -6,10 +6,11 @@
 
 use yii\helpers\Html;
 use kartik\widgets\ActiveForm;
+use common\models\Translations;
 
 ?>
 <div class="col-xs-12">
-    <h3 class="text-center">CREATE YOUR ACCOUNT</h3>
+    <h3 class="text-center"><?= Translations::translate('app', 'CREATE YOUR ACCOUNT') ?></h3>
     <?php $form = ActiveForm::begin(['id' => 'signup-form', 'action' => ['/signup']]); ?>
 
 
@@ -22,7 +23,7 @@ use kartik\widgets\ActiveForm;
         ]
     ])->textInput(
         [
-            'placeholder' => 'USERNAME',
+            'placeholder' => Translations::translate('app', 'USERNAME'),
             'name' => 'username'
         ]
     )->label(false);
@@ -37,7 +38,7 @@ use kartik\widgets\ActiveForm;
         ]
     ])->textInput(
         [
-            'placeholder' => 'EMAIL',
+            'placeholder' => Translations::translate('app', 'EMAIL'),
             'name' => 'email'
         ]
     )->label(false);
@@ -52,7 +53,7 @@ use kartik\widgets\ActiveForm;
         ]
     ])->passwordInput(
         [
-            'placeholder' => 'PASSWORD',
+            'placeholder' => Translations::translate('app', 'PASSWORD'),
             'name' => 'password'
         ]
     )->label(false);
@@ -67,7 +68,7 @@ use kartik\widgets\ActiveForm;
         ]
     ])->textInput(
         [
-            'placeholder' => 'FIRST NAME',
+            'placeholder' => Translations::translate('app', 'FIRST NAME'),
             'name' => 'firstname'
         ]
     )->label(false);
@@ -82,7 +83,7 @@ use kartik\widgets\ActiveForm;
         ]
     ])->textInput(
         [
-            'placeholder' => 'LAST NAME',
+            'placeholder' => Translations::translate('app', 'LAST NAME'),
             'name' => 'lastname'
         ]
     )->label(false);

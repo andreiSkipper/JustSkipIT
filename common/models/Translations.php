@@ -5,6 +5,7 @@ namespace common\models;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\data\ActiveDataProvider;
+use Statickidz\GoogleTranslate;
 
 /**
  * This is the model class for table "translations".
@@ -134,7 +135,12 @@ class Translations extends \yii\db\ActiveRecord
             $translation->category = $category;
             $translation->message = $message;
             $translation->en = $message;
-            $translation->ro = $message;
+            $translation->ro = GoogleTranslate::translate('en', 'ro', $message);
+            $translation->save();
+        }
+
+        if ($translation->en == $translation->ro) {
+            $translation->ro = GoogleTranslate::translate('en', 'ro', $message);
             $translation->save();
         }
 

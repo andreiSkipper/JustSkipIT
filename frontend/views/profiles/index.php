@@ -105,7 +105,7 @@ $currentUser = User::findOne(Yii::$app->user->getId());
                         <?php if ($profile->knownLanguages) { ?>
                             <div class="col-xs-6">
                                 <i class="fa fa-language"></i>
-                                <?= $profile->knownLanguages ?>
+                                <?= Translations::translate('app', $profile->knownLanguages) ?>
                             </div>
                         <?php } ?>
                         <?php if ($profile->birthday) { ?>
@@ -137,13 +137,13 @@ $currentUser = User::findOne(Yii::$app->user->getId());
                         <?php if ($profile->sex) { ?>
                             <div class="col-xs-6">
                                 <i class="fa fa-transgender"></i>
-                                <?= $profile->sexEnum[$profile->sex] ?>
+                                <?= Translations::translate('app', $profile->sexEnum[$profile->sex]) ?>
                             </div>
                         <?php } ?>
                         <?php if ($profile->interestedIn) { ?>
                             <div class="col-xs-6">
                                 <i class="fa fa-hand-o-right"></i>
-                                <?= $profile->sexEnum[$profile->interestedIn] ?>
+                                <?= Translations::translate('app', $profile->sexEnum[$profile->interestedIn]) ?>
                             </div>
                         <?php } ?>
                     </div>
@@ -173,7 +173,7 @@ $currentUser = User::findOne(Yii::$app->user->getId());
                         <?= $form->field($newAction, 'description')->textarea(
                             [
                                 'maxlength' => true,
-                                'placeholder' => 'What are you thinking about?',
+                                'placeholder' => Translations::translate('app', 'What are you thinking about?'),
                                 'style' => 'resize: vertical;min-height: 50px'
                             ])->label(false);
                         ?>
@@ -188,7 +188,8 @@ $currentUser = User::findOne(Yii::$app->user->getId());
                                 'showPreview' => true,
                                 'showCaption' => true,
                                 'showRemove' => true,
-                                'showUpload' => false
+                                'showUpload' => false,
+                                'browseLabel' => Translations::translate('app', 'Browse') . ' ...',
                             ]
                         ])->label(false) ?>
                     </div>
@@ -197,11 +198,11 @@ $currentUser = User::findOne(Yii::$app->user->getId());
                             <?= $form->field($newAction, 'privacy')->widget(Select2::classname(),
                                 [
                                     'name' => 'Actions[type]',
-                                    'data' => $newAction->privacyEnum,
+                                    'data' => $newAction->getPrivacies(),
                                     'theme' => Select2::THEME_BOOTSTRAP,
                                     'hideSearch' => true,
                                     'options' => [
-                                        'placeholder' => 'Privacy',
+                                        'placeholder' => Translations::translate('app', 'Privacy'),
                                     ],
                                     'pluginOptions' => [
                                         'allowClear' => false
@@ -215,7 +216,7 @@ $currentUser = User::findOne(Yii::$app->user->getId());
                         </div>
                         <div class="col-xs-6">
                             <div class="form-group">
-                                <?= Html::submitButton('<i class="fa fa-pencil-square-o"></i> Post',
+                                <?= Html::submitButton('<i class="fa fa-pencil-square-o"></i> ' . Translations::translate('app', 'Post'),
                                     [
                                         'class' => 'btn btn-orange col-xs-12',
                                         'name' => 'action-edit-button',
