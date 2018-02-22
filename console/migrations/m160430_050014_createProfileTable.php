@@ -26,7 +26,7 @@ class m160430_050014_createProfileTable extends Migration
             'relationship' => $this->string(255),
             'description' => $this->string(255),
             'shortUrl' => $this->string(20),
-        ]);
+        ], 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB');
     }
 
     public function down()

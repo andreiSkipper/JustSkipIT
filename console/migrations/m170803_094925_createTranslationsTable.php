@@ -14,7 +14,7 @@ class m170803_094925_createTranslationsTable extends Migration
             'ro' => $this->text()->notNull(),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
-        ]);
+        ],'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB');
 
         $this->addColumn('user', 'language', $this->string(5)->defaultValue('en-US'));
     }

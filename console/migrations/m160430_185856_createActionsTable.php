@@ -20,7 +20,7 @@ class m160430_185856_createActionsTable extends Migration
             'likes' => 'longtext NULL',
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
-        ]);
+        ],'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB');
     }
 
     public function down()

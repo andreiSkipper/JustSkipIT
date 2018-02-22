@@ -14,7 +14,7 @@ class m151220_071839_createTableToDoList extends Migration
             'ddl' => $this->date(),
             'created_at' => $this->dateTime()->notNull(),
             'updated_at' => $this->dateTime()->notNull(),
-        ]);
+        ],'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB');
     }
 
     public function down()

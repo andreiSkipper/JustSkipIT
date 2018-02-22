@@ -93,18 +93,19 @@ $this->title = "JustSkipIT | " . $this->title;
                         var loginNotice = new PNotify({
                             text: '" . preg_replace('#\s+#', ' ', trim($this->render('/site/modal-login', ['model' => new LoginForm()]))) . "',
                             icon: false,
-                            width: 'auto',
+//                            width: 'auto',
                             hide: false,
                             buttons: {
                                 closer: false,
                                 sticker: false
                             },
-                            stack: {
-                                'dir1': 'down',
-                                'dir2': 'right',
-                                'modal': true
-                            },
-                            addclass: 'stack-modal custom-login',
+//                            stack: {
+//                                'dir1': 'down',
+//                                'dir2': 'right',
+//                                'modal': true
+//                            },
+//                            addclass: 'stack-modal custom-login',
+                            addclass: 'custom-login',
                             animate: {
                                 animate: true,
                                 in_class: '" . Actions::getNotificationAnimation('in') . "',
@@ -152,18 +153,19 @@ $this->title = "JustSkipIT | " . $this->title;
                         var signupNotice = new PNotify({
                             text: '" . preg_replace('#\s+#', ' ', trim($this->render('/site/modal-signup', ['model' => new SignupForm()]))) . "',
                             icon: false,
-                            width: 'auto',
+//                            width: 'auto',
                             hide: false,
                             buttons: {
                                 closer: false,
                                 sticker: false
                             },
-                            stack: {
-                                'dir1': 'down',
-                                'dir2': 'right',
-                                'modal': true
-                            },
-                            addclass: 'stack-modal custom-login',
+//                            stack: {
+//                                'dir1': 'down',
+//                                'dir2': 'right',
+//                                'modal': true
+//                            },
+//                            addclass: 'stack-modal custom-login',
+                            addclass: 'custom-login',
                             animate: {
                                 animate: true,
                                 in_class: '" . Actions::getNotificationAnimation('in') . "',

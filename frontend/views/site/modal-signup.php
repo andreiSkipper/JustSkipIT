@@ -9,7 +9,7 @@ use kartik\widgets\ActiveForm;
 use common\models\Translations;
 
 ?>
-<div class="col-xs-12">
+<div class="col-xs-12 no-padding">
     <h3 class="text-center"><?= Translations::translate('app', 'CREATE YOUR ACCOUNT') ?></h3>
     <?php $form = ActiveForm::begin(['id' => 'signup-form', 'action' => ['/signup']]); ?>
 
