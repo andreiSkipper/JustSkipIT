@@ -159,6 +159,8 @@ $currentUser = User::findOne(Yii::$app->user->getId());
         </div>
     </div>
 
+    <div class="clearfix hidden-md hidden-lg"></div>
+
     <div class="col-md-8" id="profile-activity">
         <?php if (!Yii::$app->user->isGuest) { ?>
             <?php $form = ActiveForm::begin(['action' => ['/add-post'], 'options' => ['enctype' => 'multipart/form-data']]); ?>

@@ -24,11 +24,10 @@ $modalClass = empty($modal) ? '' : 'modal-';
 <div id="<?= $modalClass ?>comment-<?= $comment->id ?>">
     <div class="panel panel-default">
         <div class="panel-heading" id="comment-<?= $comment->id ?>-heading">
-            <div id="comment-<?= $comment->id ?>-user" style="display: inline-block"
-                 onmouseover="comment_tooltip<?= $comment->id ?>.open();"
-                 onmousemove="comment_tooltip<?= $comment->id ?>.get().css({'top': event.clientY+12, 'left': event.clientX+12});"
-                 onmouseout="comment_tooltip<?= $comment->id ?>.remove();"
-            >
+            <div id="comment-<?= $comment->id ?>-user" style="display: inline-block" class="action-tooltip">
+                <div class="hidden action-tooltip-content">
+                    <?= $this->render('/actions/user-heading', ['action' => $comment]) ?>
+                </div>
                 <a href="<?= Profiles::getProfileLinkByUserID($comment->user_id) ?>" class="action-link">
                     <img src="<?= $avatar; ?>" class="action-avatar" alt="">
                     <?= (isset($profile->lastname) AND isset($profile->firstname)) ? $profile->lastname . ' ' . $profile->firstname : $user->username ?>
@@ -51,7 +50,7 @@ $modalClass = empty($modal) ? '' : 'modal-';
                                event.preventDefault();
                                (new PNotify({
                                title: 'Confirmation Needed',
-                               text: 'Are you sure you want to delete this post?',
+                               text: 'Are you sure you want to delete this comment?',
                                icon: 'fa fa-question-circle faa-pulse animated',
                                hide: false,
                                confirm: {

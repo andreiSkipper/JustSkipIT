@@ -63,7 +63,12 @@ Modal::begin([
             $model->action_id = $action->id;
             $form = ActiveForm::begin([
                 'enableClientValidation' => false,
-                'id' => 'add-comment-form-modal-' . $action->id
+                'id' => 'add-comment-form-modal-' . $action->id,
+                'options' => [
+                    'data-url' => Url::to(['/add-comment']),
+                    'class' => 'add-comment-form',
+                    'onsubmit' => 'return addCommentAJAX(this);'
+                ],
             ]); ?>
 
             <?= $form->field($model, 'action_id')->hiddenInput()->label(false) ?>
@@ -85,37 +90,37 @@ Modal::begin([
 
 <?php
 $this->registerJs("
-    $('#add-comment-form-modal-" . $action->id . "').on('beforeSubmit', function (e) {
-        e.preventDefault();
-        if($(this).find('.has-error').length == 0) {
-            var commentText = $('#add-comment-form-modal-" . $action->id . " #comments-content');
-            var commentActionID = $('#add-comment-form-modal-" . $action->id . " #comments-action_id');
-            if(commentText[0].value.length != 0){
-                $.ajax({
-                    url: '" . Url::to(['/add-comment']) . "',
-                    type: 'POST',
-                    data:{
-                        'Comments':{
-                            'content': commentText[0].value,
-                            'action_id': commentActionID[0].value
-                        }
-                    },
-                    success: function(response) {
-                        result = JSON.parse(response);
-                        if (result.html.length != 0) {
-                            $('#modal-comments-" . $action->id . "').append(result.html).show('slow');
-                            $('#comments-" . $action->id . "').append(result.html).show('slow');
-                            document.getElementById('add-comment-form-modal-" . $action->id . "').reset();
-                        }
-                    },
-                    error: function (request, status, error) {
-                        window.alert(error);
-                    }
-                });
-            }
-        }
-        return false;
-    }).submit(function (e) {e.preventDefault();});
+//    $('#add-comment-form-modal-" . $action->id . "').on('beforeSubmit', function (e) {
+//        e.preventDefault();
+//        if($(this).find('.has-error').length == 0) {
+//            var commentText = $('#add-comment-form-modal-" . $action->id . " #comments-content');
+//            var commentActionID = $('#add-comment-form-modal-" . $action->id . " #comments-action_id');
+//            if(commentText[0].value.length != 0){
+//                $.ajax({
+//                    url: '" . Url::to(['/add-comment']) . "',
+//                    type: 'POST',
+//                    data:{
+//                        'Comments':{
+//                            'content': commentText[0].value,
+//                            'action_id': commentActionID[0].value
+//                        }
+//                    },
+//                    success: function(response) {
+//                        result = JSON.parse(response);
+//                        if (result.html.length != 0) {
+//                            $('#modal-comments-" . $action->id . "').append(result.html).show('slow');
+//                            $('#comments-" . $action->id . "').append(result.html).show('slow');
+//                            document.getElementById('add-comment-form-modal-" . $action->id . "').reset();
+//                        }
+//                    },
+//                    error: function (request, status, error) {
+//                        window.alert(error);
+//                    }
+//                });
+//            }
+//        }
+//        return false;
+//    }).submit(function (e) {e.preventDefault();});
 ", View::POS_END);
 ?>
 
