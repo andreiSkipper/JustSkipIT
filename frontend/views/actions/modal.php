@@ -20,13 +20,15 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
 Modal::begin([
     'id' => 'action-modal-' . $action->id,
     'header' => '
-            <a href="' . Profiles::getProfileLinkByUserID($action->user_id) . '" class="action-link">
-                <img src="' . $avatar . '" class="action-avatar" alt="">
-            </a>
-
-            <a href="' . Profiles::getProfileLinkByUserID($action->user_id) . '" class="action-link">
-                ' . $profile->firstname . ' ' . $profile->lastname . '
-            </a>
+            <div class="action-tooltip">
+                <div class="hidden action-tooltip-content">
+                    ' . $this->render("/actions/user-heading", ["action" => $action]) . '
+                </div>
+                <a href="' . Profiles::getProfileLinkByUserID($action->user_id) . '" class="action-link">
+                    <img src="' . $avatar . '" class="action-avatar" alt="">
+                    ' . $profile->firstname . ' ' . $profile->lastname . '
+                </a>
+            </div>
             ' . $action->getActionTextByType($action->type) . '
             ' . date("d M Y H:i:s", $action->created_at),
     'size' => 'modal-lg',

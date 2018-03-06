@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74bf72ab-bf50-4f95-bab0-3555bfa04124" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/JustSkipIT.iml" afterPath="$PROJECT_DIR$/.idea/JustSkipIT.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/CommentsController.php" afterPath="$PROJECT_DIR$/frontend/controllers/CommentsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/actions/panel.php" afterPath="$PROJECT_DIR$/frontend/views/actions/panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/comments/comment-details.php" afterPath="$PROJECT_DIR$/frontend/views/comments/comment-details.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/layouts/main.php" afterPath="$PROJECT_DIR$/frontend/views/layouts/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/actions/modal.php" afterPath="$PROJECT_DIR$/frontend/views/actions/modal.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/css/site.css" afterPath="$PROJECT_DIR$/frontend/web/css/site.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/js/app.js" afterPath="$PROJECT_DIR$/frontend/web/js/app.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,12 +27,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modal.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="modal.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/views/actions/modal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="55" column="103" lean-forward="false" selection-start-line="55" selection-start-column="86" selection-end-line="55" selection-end-column="103" />
-              <folding />
+            <state relative-caret-position="289">
+              <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+              <folding>
+                <marker date="1520342876645" expanded="true" signature="500:971" ph="..." />
+                <marker date="1520342876645" expanded="true" signature="560:581" ph="..." />
+                <marker date="1520342876645" expanded="true" signature="560:582" ph="..." />
+                <marker date="1520342876645" expanded="true" signature="560:673" ph="..." />
+                <marker date="1520342876645" expanded="true" signature="779:952" ph="..." />
+                <marker date="1520342876645" expanded="true" signature="1149:1404" ph="..." />
+                <marker date="1520342876645" expanded="true" signature="1249:1312" ph="..." />
+                <marker date="1520342876645" expanded="true" signature="1363:1404" ph="..." />
+                <marker date="1520342876645" expanded="true" signature="1550:1715" ph="..." />
+                <marker date="1520342876645" expanded="true" signature="1603:1715" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,8 +51,8 @@
       <file leaf-file-name="comment-details.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/views/comments/comment-details.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="122" column="35" lean-forward="false" selection-start-line="122" selection-start-column="35" selection-end-line="122" selection-end-column="35" />
+            <state relative-caret-position="298">
+              <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="29" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -66,7 +71,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/web/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
+            <state relative-caret-position="1224">
               <caret line="84" column="56" lean-forward="false" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="56" />
               <folding />
             </state>
@@ -77,17 +82,17 @@
         <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="429">
-              <caret line="129" column="66" lean-forward="true" selection-start-line="129" selection-start-column="66" selection-end-line="129" selection-end-column="66" />
+              <caret line="129" column="66" lean-forward="false" selection-start-line="129" selection-start-column="66" selection-end-line="129" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginForm.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginForm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/models/LoginForm.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="383">
-              <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+              <caret line="60" column="25" lean-forward="false" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -106,11 +111,11 @@
       <file leaf-file-name="site.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/web/css/site.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="718" column="26" lean-forward="false" selection-start-line="718" selection-start-column="26" selection-end-line="718" selection-end-column="26" />
+            <state relative-caret-position="553">
+              <caret line="716" column="26" lean-forward="true" selection-start-line="716" selection-start-column="26" selection-end-line="716" selection-end-column="26" />
               <folding>
-                <marker date="1520341026752" expanded="false" signature="9322:9642" ph="data:image/svg+xml" />
-                <marker date="1520341026752" expanded="false" signature="9890:10622" ph="data:image/svg+xml" />
+                <marker date="1520342772937" expanded="false" signature="9333:9653" ph="data:image/svg+xml" />
+                <marker date="1520342772937" expanded="false" signature="9901:10633" ph="data:image/svg+xml" />
               </folding>
             </state>
           </provider>
@@ -127,9 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>u</find>
-      <find>custom-login</find>
-      <find>your</find>
       <find>profile-sidebar</find>
       <find>notification-count</find>
       <find>app.js</find>
@@ -155,8 +157,11 @@
       <find>action-tooltip-layout</find>
       <find>toolti</find>
       <find>@media</find>
-      <find>login</find>
       <find>modal</find>
+      <find>login</find>
+      <find>text-decora</find>
+      <find>action-tooltip</find>
+      <find>action-tool</find>
     </findStrings>
     <replaceStrings>
       <replace>Translations::translate</replace>
@@ -207,14 +212,14 @@
         <option value="$PROJECT_DIR$/frontend/views/site/modal-login.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/index.php" />
         <option value="$PROJECT_DIR$/frontend/views/profiles/index.php" />
-        <option value="$PROJECT_DIR$/frontend/views/actions/modal.php" />
         <option value="$PROJECT_DIR$/frontend/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/frontend/controllers/CommentsController.php" />
         <option value="$PROJECT_DIR$/frontend/views/actions/panel.php" />
         <option value="$PROJECT_DIR$/frontend/views/comments/comment-details.php" />
-        <option value="$PROJECT_DIR$/frontend/web/css/site.css" />
         <option value="$PROJECT_DIR$/frontend/web/js/app.js" />
         <option value="$PROJECT_DIR$/frontend/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/frontend/web/css/site.css" />
+        <option value="$PROJECT_DIR$/frontend/views/actions/modal.php" />
       </list>
     </option>
   </component>
@@ -234,7 +239,7 @@
       <path value="$PROJECT_DIR$/../../xamppfiles/lib/php" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -502,15 +507,15 @@
       <workItem from="1520232309586" duration="2929000" />
       <workItem from="1520242618683" duration="11346000" />
       <workItem from="1520317604372" duration="25000" />
-      <workItem from="1520327498150" duration="8706000" />
+      <workItem from="1520327498150" duration="9413000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90624000" />
+    <option name="totallyTimeSpent" value="91331000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17590618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -851,14 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/actions/modal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="55" column="103" lean-forward="false" selection-start-line="55" selection-start-column="86" selection-end-line="55" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/controllers/CommentsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -883,37 +880,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/comments/comment-details.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="122" column="35" lean-forward="false" selection-start-line="122" selection-start-column="35" selection-end-line="122" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="718" column="26" lean-forward="false" selection-start-line="718" selection-start-column="26" selection-end-line="718" selection-end-column="26" />
-          <folding>
-            <marker date="1520341026752" expanded="false" signature="9322:9642" ph="data:image/svg+xml" />
-            <marker date="1520341026752" expanded="false" signature="9890:10622" ph="data:image/svg+xml" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="84" column="56" lean-forward="false" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
-          <caret line="129" column="66" lean-forward="true" selection-start-line="129" selection-start-column="66" selection-end-line="129" selection-end-column="66" />
+          <caret line="129" column="66" lean-forward="false" selection-start-line="129" selection-start-column="66" selection-end-line="129" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -929,8 +899,54 @@
     <entry file="file://$PROJECT_DIR$/common/models/LoginForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
-          <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+          <caret line="60" column="25" lean-forward="false" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="84" column="56" lean-forward="false" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="716" column="26" lean-forward="true" selection-start-line="716" selection-start-column="26" selection-end-line="716" selection-end-column="26" />
+          <folding>
+            <marker date="1520342772937" expanded="false" signature="9333:9653" ph="data:image/svg+xml" />
+            <marker date="1520342772937" expanded="false" signature="9901:10633" ph="data:image/svg+xml" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/comments/comment-details.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="29" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/actions/modal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+          <folding>
+            <marker date="1520342876645" expanded="true" signature="500:971" ph="..." />
+            <marker date="1520342876645" expanded="true" signature="560:581" ph="..." />
+            <marker date="1520342876645" expanded="true" signature="560:582" ph="..." />
+            <marker date="1520342876645" expanded="true" signature="560:673" ph="..." />
+            <marker date="1520342876645" expanded="true" signature="779:952" ph="..." />
+            <marker date="1520342876645" expanded="true" signature="1149:1404" ph="..." />
+            <marker date="1520342876645" expanded="true" signature="1249:1312" ph="..." />
+            <marker date="1520342876645" expanded="true" signature="1363:1404" ph="..." />
+            <marker date="1520342876645" expanded="true" signature="1550:1715" ph="..." />
+            <marker date="1520342876645" expanded="true" signature="1603:1715" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

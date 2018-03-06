@@ -312,7 +312,7 @@ body {
 
 .action-link {
     color: darkblue !important;
-    text-decoration: none;
+    text-decoration: none !important;
     font-weight: bold;
 }
 
@@ -711,6 +711,10 @@ body {
     text-align: center;
     font-weight: bold;
     color: white;
+}
+
+.action-tooltip {
+    display: inline-block;
 }
 
 .custom-action-user.action-tooltip-layout > .ui-pnotify-container{
