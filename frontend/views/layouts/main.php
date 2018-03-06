@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this \yii\web\View */
+
 /* @var $content string */
 
 use yii\helpers\Html;
@@ -41,6 +42,11 @@ $this->title = "JustSkipIT | " . $this->title;
     <?php $this->head() ?>
 </head>
 <body>
+
+<div class="loading">
+    <div class="loading-wheel"></div>
+</div>
+
 <?php $this->beginBody() ?>
 
 <div class="wrap">

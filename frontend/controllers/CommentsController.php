@@ -26,7 +26,9 @@ class CommentsController extends \yii\web\Controller
                 if (Yii::$app->request->isAjax) {
                     $result = array();
                     $html = $this->renderPartial('/comments/comment-details', ['comment' => $model]);
+                    $modalHtml = $this->renderPartial('/comments/comment-details', ['comment' => $model, 'modal' => true]);
                     $result['html'] = preg_replace('#\s+#', ' ', trim($html));
+                    $result['modalHtml'] = preg_replace('#\s+#', ' ', trim($modalHtml));
 
                     return json_encode($result);
                 } else {

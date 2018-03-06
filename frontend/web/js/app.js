@@ -55,7 +55,7 @@ $(document).on('mouseover', '.action-tooltip', function () {
         text: $(this).find('.action-tooltip-content').html().trim().replace(/(?:\r\n|\r|\n)/g, ''),
         hide: false,
         width: '30%',
-        addclass: 'custom-action-user',
+        addclass: 'custom-action-user action-tooltip-layout',
         buttons: {
             closer: false,
             sticker: false
@@ -79,49 +79,23 @@ $(document).on('mouseover', '.action-tooltip', function () {
         tooltip.remove();
     });
 });
+
+$(document).mousemove(function (e) {
+    if ($(e.target).closest('.action-tooltip').length === 0) {
+        $('.ui-pnotify.action-tooltip-layout').remove();
+    }
+});
+
 $(document).ready(function () {
-    // $('.add-comment-form').on('beforeSubmit', function (e) {
-    //     e.preventDefault();
-    //     if ($(this).find('.has-error').length === 0) {
-    //         var commentText = $(this).find('#comments-content')[0].value;
-    //         var commentActionID = $(this).find('#comments-action_id')[0].value;
-    //         if (commentText.length !== 0) {
-    //             $.ajax({
-    //                 url: $(this).attr('data-url'),
-    //                 type: 'POST',
-    //                 data: {
-    //                     'Comments': {
-    //                         'content': commentText,
-    //                         'action_id': commentActionID
-    //                     }
-    //                 },
-    //                 success: function (response) {
-    //                     result = JSON.parse(response);
-    //                     if (result.html.length !== 0) {
-    //                         $('#comments-' + commentActionID).append(result.html).show('slow');
-    //                         $('#modal-comments-' + commentActionID).append(result.html).show('slow');
-    //                         document.getElementById('add-comment-form-' + commentActionID).reset();
-    //                     }
-    //                 },
-    //                 error: function (request, status, error) {
-    //                     window.alert(error);
-    //                 }
-    //             });
-    //         }
-    //     }
-    //     return false;
-    // }).submit(function (e) {
-    //     e.preventDefault();
-    // });
+
 });
 
 function addCommentAJAX(_this) {
-    if ($(_this).find('.has-error').length === 0) {
+    if ($(_this).find('.has-error').length === 0 && $('body .loading.active').length === 0) {
         var commentText = $(_this).find('#comments-content')[0].value;
         var commentActionID = $(_this).find('#comments-action_id')[0].value;
         if (commentText.length !== 0) {
-            console.log(_this);
-            //todo: execute twice ?!?! add loading overlay and check if active
+            $('body .loading').addClass('active');
             $.ajax({
                 url: $(_this).attr('data-url'),
                 type: 'POST',
@@ -135,12 +109,14 @@ function addCommentAJAX(_this) {
                     result = JSON.parse(response);
                     if (result.html.length !== 0) {
                         $('#comments-' + commentActionID).append(result.html).show('slow');
-                        $('#modal-comments-' + commentActionID).append(result.html).show('slow');
-                        document.getElementById('add-comment-form-' + commentActionID).reset();
+                        $('#modal-comments-' + commentActionID).append(result.modalHtml).show('slow');
+                        _this.reset();
                     }
+                    $('body .loading').removeClass('active');
                 },
                 error: function (request, status, error) {
                     window.alert(error);
+                    $('body .loading').removeClass('active');
                 }
             });
         }
@@ -149,34 +125,37 @@ function addCommentAJAX(_this) {
 }
 
 function addReplyAJAX(_this) {
-    // if ($(_this).find('.has-error').length === 0) {
-    //     var commentText = $('#add-comment-reply-form-" . $modalClass . $comment->id . " #comments-content');
-    //     var commentActionID = $('#add-comment-reply-form-" . $modalClass . $comment->id . " #comments-action_id');
-    //     var commentReplyID = " . $comment->id . ";
-    //     if (commentText[0].value.length != 0) {
-    //         $.ajax({
-    //             url: '" . Url::to([' / add - comment']) . "',
-    //             type: 'POST',
-    //             data: {
-    //                 'Comments': {
-    //                     'content': commentText[0].value,
-    //                     'action_id': commentActionID[0].value,
-    //                     'reply_id': commentReplyID
-    //                 }
-    //             },
-    //             success: function (response) {
-    //                 result = JSON.parse(response);
-    //                 if (result.html.length != 0) {
-    //                     $('#modal-comments-reply-" . $comment->id . "').append(result.html).show('slow');
-    //                     $('#comments-reply-" . $comment->id . "').append(result.html).show('slow');
-    //                     document.getElementById('add-comment-reply-form-" . $modalClass . $comment->id . "').reset();
-    //                 }
-    //             },
-    //             error: function (request, status, error) {
-    //                 window.alert(error);
-    //             }
-    //         });
-    //     }
-    // }
-    // return false;
+    if ($(_this).find('.has-error').length === 0 && $('body .loading.active').length === 0) {
+        var commentText = $(_this).find('#comments-content')[0].value;
+        var commentActionID = $(_this).find('#comments-action_id')[0].value;
+        var commentReplyID = $(_this).attr('data-comment_id');
+        if (commentText.length !== 0) {
+            $('body .loading').addClass('active');
+            $.ajax({
+                url: $(_this).attr('data-url'),
+                type: 'POST',
+                data: {
+                    'Comments': {
+                        'content': commentText,
+                        'action_id': commentActionID,
+                        'reply_id': commentReplyID
+                    }
+                },
+                success: function (response) {
+                    result = JSON.parse(response);
+                    if (result.html.length !== 0) {
+                        $('#modal-comments-reply-' + commentReplyID).append(result.html).show('slow');
+                        $('#comments-reply-' + commentReplyID).append(result.modalHtml).show('slow');
+                        _this.reset();
+                        $('body .loading').removeClass('active');
+                    }
+                },
+                error: function (request, status, error) {
+                    window.alert(error);
+                    $('body .loading').removeClass('active');
+                }
+            });
+        }
+    }
+    return false;
 }

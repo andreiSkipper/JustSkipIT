@@ -217,59 +217,6 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
 
 <?php
 $this->registerJs("
-    tooltip" . $action->id . " = new PNotify({
-        text: '" . preg_replace('#\s+#', ' ', trim($this->render('/actions/user-heading', ['action' => $action]))) . "',
-        hide: false,
-        width: '30%',
-        addclass: 'custom-action-user',
-        buttons: {
-            closer: false,
-            sticker: false
-        },
-        history: {
-            history: false
-        },
-        animate_speed: \"fast\",
-        icon: '',
-        // Setting stack to false causes PNotify to ignore this notice when positioning.
-        stack: false,
-        auto_display: false
-    });
-    // Remove the notice if the user mouses over it.
-    tooltip" . $action->id . ".get().mouseout(function() {
-        tooltip" . $action->id . ".remove();
-    });
     
-//    $('#add-comment-form-" . $action->id . "').on('beforeSubmit', function (e) {
-//        e.preventDefault();
-//        if($(this).find('.has-error').length == 0) {
-//            var commentText = $('#add-comment-form-" . $action->id . " #comments-content');
-//            var commentActionID = $('#add-comment-form-" . $action->id . " #comments-action_id');
-//            if(commentText[0].value.length != 0){
-//                $.ajax({
-//                    url: '" . Url::to(['/add-comment']) . "',
-//                    type: 'POST',
-//                    data:{
-//                        'Comments':{
-//                            'content': commentText[0].value,
-//                            'action_id': commentActionID[0].value
-//                        }
-//                    },
-//                    success: function(response) {
-//                        result = JSON.parse(response);
-//                        if (result.html.length != 0) {
-//                            $('#comments-" . $action->id . "').append(result.html).show('slow');
-//                            $('#modal-comments-" . $action->id . "').append(result.html).show('slow');
-//                            document.getElementById('add-comment-form-" . $action->id . "').reset();
-//                        }
-//                    },
-//                    error: function (request, status, error) {
-//                        window.alert(error);
-//                    }
-//                });
-//            }
-//        }
-//        return false;
-//    }).submit(function (e) {e.preventDefault();});
 ", View::POS_END);
 ?>

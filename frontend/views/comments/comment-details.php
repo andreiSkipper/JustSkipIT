@@ -120,30 +120,7 @@ $modalClass = empty($modal) ? '' : 'modal-';
             foreach ($comment->replies as $reply) {
                 echo $this->render('/comments/comment-details', ['comment' => $reply, 'modal' => $modal]);
 
-                $this->registerJs("
-                                    comment_tooltip" . $reply->id . " = new PNotify({
-                                        text: '" . preg_replace('#\s+#', ' ', trim($this->render('/actions/user-heading', ['action' => $reply]))) . "',
-                                        hide: false,
-                                        width: '30%',
-                                        addclass: 'custom-action-user',
-                                        buttons: {
-                                            closer: false,
-                                            sticker: false
-                                        },
-                                        history: {
-                                            history: false
-                                        },
-                                        animate_speed: \"fast\",
-                                        icon: '',
-                                        // Setting stack to false causes PNotify to ignore this notice when positioning.
-                                        stack: false,
-                                        auto_display: false
-                                    });
-                                    // Remove the notice if the user mouses over it.
-                                    comment_tooltip" . $reply->id . ".get().mouseout(function() {
-                                        comment_tooltip" . $reply->id . ".remove();
-                                    });
-                            ", View::POS_END);
+                $this->registerJs("", View::POS_END);
             }
             ?>
         </div>
@@ -152,8 +129,16 @@ $modalClass = empty($modal) ? '' : 'modal-';
             $model = new Comments();
             $model->action_id = $comment->action_id;
             $model->reply_id = $comment->id;
-            $form = ActiveForm::begin(['enableClientValidation' => false,
-                'id' => 'add-comment-reply-form-' . $modalClass . $comment->id]); ?>
+            $form = ActiveForm::begin([
+                'enableClientValidation' => false,
+                'id' => 'add-comment-reply-form-' . $modalClass . $comment->id,
+                'options' => [
+                    'data-url' => Url::to(['/add-comment']),
+                    'data-comment_id' => $comment->id,
+                    'class' => 'add-comment-reply-form',
+                    'onsubmit' => 'return addReplyAJAX(this);'
+                ],
+            ]); ?>
 
             <?= $form->field($model, 'action_id')->hiddenInput()->label(false) ?>
 
@@ -169,62 +154,7 @@ $modalClass = empty($modal) ? '' : 'modal-';
             ActiveForm::end();
 
             $this->registerJs("
-                                    comment_tooltip" . $comment->id . " = new PNotify({
-                                        text: '" . preg_replace('#\s+#', ' ', trim($this->render('/actions/user-heading', ['action' => $comment]))) . "',
-                                        hide: false,
-                                        width: '30%',
-                                        addclass: 'custom-action-user',
-                                        buttons: {
-                                            closer: false,
-                                            sticker: false
-                                        },
-                                        history: {
-                                            history: false
-                                        },
-                                        animate_speed: \"fast\",
-                                        icon: '',
-                                        // Setting stack to false causes PNotify to ignore this notice when positioning.
-                                        stack: false,
-                                        auto_display: false
-                                    });
-                                    // Remove the notice if the user mouses over it.
-                                    comment_tooltip" . $comment->id . ".get().mouseout(function() {
-                                        comment_tooltip" . $comment->id . ".remove();
-                                    });
                                     
-                                    $('#add-comment-reply-form-" . $modalClass . $comment->id . "').on('beforeSubmit', function (e) {
-                                        e.preventDefault();
-                                        if($(this).find('.has-error').length == 0) {
-                                            var commentText = $('#add-comment-reply-form-" . $modalClass . $comment->id . " #comments-content');
-                                            var commentActionID = $('#add-comment-reply-form-" . $modalClass . $comment->id . " #comments-action_id');
-                                            var commentReplyID = " . $comment->id . ";
-                                            if(commentText[0].value.length != 0){
-                                                $.ajax({
-                                                    url: '" . Url::to(['/add-comment']) . "',
-                                                    type: 'POST',
-                                                    data:{
-                                                        'Comments':{
-                                                            'content': commentText[0].value,
-                                                            'action_id': commentActionID[0].value,
-                                                            'reply_id': commentReplyID
-                                                        }
-                                                    },
-                                                    success: function(response) {
-                                                        result = JSON.parse(response);
-                                                        if (result.html.length != 0) {
-                                                            $('#modal-comments-reply-" . $comment->id . "').append(result.html).show('slow');
-                                                            $('#comments-reply-" . $comment->id . "').append(result.html).show('slow');
-                                                            document.getElementById('add-comment-reply-form-" . $modalClass . $comment->id . "').reset();
-                                                        }
-                                                    },
-                                                    error: function (request, status, error) {
-                                                        window.alert(error);
-                                                    }
-                                                });
-                                            }
-                                        }
-                                        return false;
-                                }).submit(function (e) {e.preventDefault();});
                             ", View::POS_END);
         }
         ?>
