@@ -20,13 +20,14 @@ $cities = ArrayHelper::map(City::find()->where(['CountryCode' => 'ROM'])->orderB
 <div class="action-user-heading">
     <div class="panel panel-default text-center" style="color: black">
         <div class="panel-body text-center no-padding">
-            <?php
-            if ($profile->cover) { ?>
-                <div class="col-xs-12 no-padding profile-heading">
+
+            <div class="col-xs-12 no-padding profile-heading">
+                <?php if ($profile->cover) { ?>
                     <img src="<?= Url::base() . '/' . $profile->cover; ?>" class="profile-cover" alt="">
-                </div>
-            <?php } ?>
-            <div class="col-xs-12 no-padding" style="<?= $profile->cover ? $profile->avatar ? 'margin-top: -70px;' : 'margin-top: -30px;' : 'margin-top: 20px;' ?>">
+                <?php } ?>
+            </div>
+            <div class="col-xs-12 no-padding"
+                 style="<?= $profile->cover ? $profile->avatar ? 'margin-top: -70px;' : 'margin-top: -30px;' : 'margin-top: 20px;' ?>">
                 <?php
                 if ($profile->avatar) { ?>
                     <img src="<?= Url::base() . '/' . $profile->avatar; ?>" class="profile-avatar" alt="">

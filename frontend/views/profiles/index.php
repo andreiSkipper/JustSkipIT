@@ -46,10 +46,7 @@ $currentUser = User::findOne(Yii::$app->user->getId());
         echo $this->render('/actions/modal', ['action' => $action]);
         ?>
         <img src="<?= Url::base() . '/' . $profile->avatar; ?>" class="profile-avatar" alt=""
-            <?php if ($profile->cover) { ?>
-                onclick="$('#action-modal-<?= $action->id ?>').modal()"
-            <?php } ?>
-        >
+                onclick="$('#action-modal-<?= $action->id ?>').modal()">
     <?php } ?>
 
     <div class="profile-name">

@@ -119,6 +119,9 @@ $this->title = "JustSkipIT | " . $this->title;
                                 out_class: '" . Actions::getNotificationAnimation('out') . "'
                             }
                         });
+                        $('#nav-login, #nav-signup').on('click', function (e) {
+                            loginNotice.remove();
+                        });
                         loginNotice.get().find('form#login-form').on('click', '[name=cancel-button]', function() {
                             loginNotice.remove();
                         }).submit(function() {
@@ -178,6 +181,9 @@ $this->title = "JustSkipIT | " . $this->title;
                                 in_class: '" . Actions::getNotificationAnimation('in') . "',
                                 out_class: '" . Actions::getNotificationAnimation('out') . "'
                             }
+                        });
+                        $('#nav-login, #nav-signup').on('click', function (e) {
+                            signupNotice.remove();
                         });
                         signupNotice.get().find('form#signup-form').on('click', '[name=cancel-button]', function() {
                             signupNotice.remove();
