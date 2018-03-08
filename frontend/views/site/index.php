@@ -17,6 +17,14 @@ use common\models\Translations;
 $this->title = Translations::translate('app', 'Home');
 ?>
 
+<?php
+echo \sintret\chat\ChatRoom::widget([
+        'url' => \yii\helpers\Url::to(['/chat/send-chat']),
+        'userModel'=>  \common\models\User::className(),
+        'userField'=>'avatarImage'
+    ]
+);
+?>
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
         <?php if (!Yii::$app->user->isGuest) { ?>
