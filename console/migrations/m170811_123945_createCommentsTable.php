@@ -12,7 +12,7 @@ class m170811_123945_createCommentsTable extends Migration
             'user_id' => $this->integer(11),
             'action_id' => $this->integer(11),
             'content' => $this->text()->notNull(),
-            'location' => $this->string(255),
+            'location' => $this->text(),
             'ip' => $this->string(16),
             'status' => $this->boolean(),
             'created_at' => $this->integer()->notNull(),

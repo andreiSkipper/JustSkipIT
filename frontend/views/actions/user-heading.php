@@ -86,9 +86,8 @@ $cities = ArrayHelper::map(City::find()->where(['CountryCode' => 'ROM'])->orderB
         </div>
         <?php if ($profile->relationship) { ?>
             <div class="panel-footer">
-                <i class="fa fa-heartbeat fa-2x">
-                    <?= Translations::translate('app', $profile->relationshipEnum[$profile->relationship]) ?>
-                </i>
+                <i class="fa fa-heartbeat fa-2x"></i>
+                <?= Translations::translate('app', $profile->relationshipEnum[$profile->relationship]) ?>
             </div>
         <?php } ?>
     </div>

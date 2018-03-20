@@ -1,5 +1,4 @@
 <?php
-
 use common\models\Actions;
 use yii\widgets\LinkPager;
 use kartik\form\ActiveForm;

@@ -30,7 +30,7 @@ Modal::begin([
                 </a>
             </div>
             ' . $action->getActionTextByType($action->type) . '
-            ' . date("d M Y H:i:s", $action->created_at),
+            ' . date("d M Y H:i", $action->created_at),
     'size' => 'modal-lg',
 ]);
 ?>

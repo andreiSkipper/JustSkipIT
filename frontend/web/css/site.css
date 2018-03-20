@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 html,
 body {
     height: 100%;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 /* SCROLLBAR */
@@ -18,6 +21,7 @@ body {
     -webkit-box-shadow: none;
     background-color: orange;
 }
+
 /* END OF SCROLLBAR */
 
 .wrap {
@@ -256,7 +260,8 @@ a.desc:after {
     color: black;
     position: absolute;
     background-color: white;
-    width: 150px !important;
+    /*width: 150px !important;*/
+    width: auto !important;
     bottom: 20px;
     right: 20px;
 }
@@ -279,7 +284,7 @@ a.desc:after {
     text-shadow: 0 0 10px black;
 }
 
-body {
+i.fa, span.fa {
     font-family: FontAwesome;
 }
 
@@ -353,10 +358,59 @@ body {
     border: none;
 }
 
+.navbar-fixed-top .navbar-collapse {
+    max-height: none;
+}
+
 .navbar-avatar {
     height: 21px;
     width: auto;
     border-radius: 25%;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-nav ul.dropdown-menu {
+    width: 330px;
+    text-align: center;
+}
+
+.navbar-nav ul.dropdown-menu:focus, .navbar-nav ul.dropdown-menu > li:focus, .navbar-nav ul.dropdown-menu > li > a:focus {
+    outline: none !important;
+}
+
+.navbar-nav ul.dropdown-menu li.friend-request > a {
+    line-height: 60px;
+    cursor: default;
+    padding-right: 70px;
+}
+
+.navbar-nav ul.dropdown-menu li.friend-request img {
+    width: auto;
+    height: 60px;
+    margin-right: 10px;
+    float: left;
+    cursor: pointer;
+}
+
+.navbar-nav ul.dropdown-menu li.friend-request > a > span {
+    position: absolute;
+    cursor: pointer;
+    margin-top: 17px;
+}
+
+.navbar-nav ul.dropdown-menu li.friend-request > a > span:first-of-type {
+    right: 45px;
+}
+
+.navbar-nav ul.dropdown-menu li.friend-request > a > span:last-of-type {
+    right: 15px;
+}
+
+.navbar-nav ul.dropdown-menu .dropdown-header {
+    border-bottom: solid 1px #e5e5e5 !important;
 }
 
 .ui-link {
@@ -438,7 +492,6 @@ body {
 }
 
 .btn-orange {
-    font-family: FontAwesome;
     background-color: #222;
     /*background-color: orange;*/
     /*border-color: darkorange;*/
@@ -499,10 +552,6 @@ body {
 
 .ui-btn-active {
     text-shadow: none !important;
-}
-
-.btn {
-    font-family: FontAwesome;
 }
 
 .btn:hover, .btn:focus {
@@ -614,6 +663,14 @@ body {
     margin-right: 10px;
 }
 
+#profile-sidebar .panel-heading, #profile-sidebar .panel-footer, .action-user-heading .panel-footer {
+    font-size: 2em;
+}
+
+#profile-sidebar .panel-footer .fa, .action-user-heading .panel-footer .fa {
+    font-size: 1em;
+}
+
 @media (max-width: 992px) {
     #profile-sidebar.container {
         position: static !important;
@@ -621,6 +678,10 @@ body {
 
     .flag-en, .flag-ro {
         width: 33px;
+    }
+
+    .navbar-nav ul.dropdown-menu li.friend-request > a > .pull-right {
+        top: 67px;
     }
 }
 
@@ -642,6 +703,10 @@ body {
     display: none;
 }
 
+.comment-text {
+    word-wrap: break-word;
+}
+
 /* PNotify custom */
 .ui-pnotify.custom .ui-pnotify-container {
     background-color: #404040 !important;
@@ -653,7 +718,7 @@ body {
 }
 
 .ui-pnotify.custom .ui-pnotify-title, .ui-pnotify.custom .ui-pnotify-text {
-    font-family: Arial, Helvetica, sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
     /*text-shadow: 2px 2px 3px black !important;*/
     font-size: 10pt !important;
     color: #FFF !important;
@@ -692,7 +757,7 @@ body {
 }
 
 .ui-pnotify.custom-action-user .ui-pnotify-title, .ui-pnotify.custom-action-user .ui-pnotify-text {
-    font-family: Arial, Helvetica, sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
     font-size: 10pt !important;
     color: #FFF !important;
     /*padding-left: 50px !important;*/
@@ -725,7 +790,7 @@ body {
     display: inline-block;
 }
 
-.custom-action-user.action-tooltip-layout > .ui-pnotify-container{
+.custom-action-user.action-tooltip-layout > .ui-pnotify-container {
     background-color: transparent !important;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;

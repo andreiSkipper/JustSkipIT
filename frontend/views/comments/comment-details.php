@@ -34,7 +34,7 @@ $modalClass = empty($modal) ? '' : 'modal-';
                 </a>
             </div>
             added comment
-            <?= date("Y-m-d H:i", $comment->updated_at) ?>
+            <?= date("d m Y H:i", $comment->updated_at) ?>
             <?php
             if ($comment->user_id == Yii::$app->user->getId()) { ?>
                 <div class="comment-buttons pull-right"
@@ -109,8 +109,13 @@ $modalClass = empty($modal) ? '' : 'modal-';
             <?php } ?>
         </div>
         <div class="panel-body">
-            <div class="col-xs-12" id="comment-<?= $comment->id ?>-text">
+            <div class="col-xs-12 comment-text" id="comment-<?= $comment->id ?>-text">
                 <?= $comment->content ?>
+                <?php if ($comment->location) { ?>
+                    <div class="pull-right">
+                        <?= $comment->getLocation()->city . ', ' . $comment->getLocation()->country ?>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </div>

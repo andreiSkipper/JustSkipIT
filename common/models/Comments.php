@@ -97,9 +97,23 @@ class Comments extends \yii\db\ActiveRecord
         return $this->hasMany(Comments::className(), ['reply_id' => 'id']);
     }
 
+    /*
+    * get action
+    */
+    public function getLocation()
+    {
+        if (empty($this->location)) {
+            return $this->location;
+        } else {
+            return json_decode($this->location);
+        }
+    }
+
     public function beforeSave($insert)
     {
         if (parent::beforeSave($insert)) {
+            $this->ip = Yii::$app->request->getUserIP();
+            $this->location = json_encode(unserialize(file_get_contents('http://ip-api.com/php/')));
             return true;
         } else {
             return false;

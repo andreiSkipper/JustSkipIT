@@ -46,7 +46,7 @@ $currentUser = User::findOne(Yii::$app->user->getId());
         echo $this->render('/actions/modal', ['action' => $action]);
         ?>
         <img src="<?= Url::base() . '/' . $profile->avatar; ?>" class="profile-avatar" alt=""
-                onclick="$('#action-modal-<?= $action->id ?>').modal()">
+             onclick="$('#action-modal-<?= $action->id ?>').modal()">
     <?php } ?>
 
     <div class="profile-name">
@@ -72,6 +72,49 @@ $currentUser = User::findOne(Yii::$app->user->getId());
                     'onclick' => "$('#profile-modal-" . $profile->user_id . "').modal()"
                 ]) ?>
             <?php
+        } else {
+            $friendship = \common\models\Friendship::searchForFriendship($profile->user_id);
+            if (empty($friendship)) {
+                echo Html::button('<i class="fa fa-user-plus" style="font-size: 20px;"></i> ' . Translations::translate('app', 'Add Friend'),
+                    [
+                        'class' => 'btn col-xs-12 profile-button',
+                        'data-user_id' => $profile->user_id,
+                        'id' => 'add-friend',
+                        'onclick' => "return addFriendAJAX(this);",
+                    ]);
+            } else {
+                switch ($friendship->status) {
+                    case \common\models\Friendship::STATUS_REQUESTED:
+                        echo Html::button('<i class="fa fa-remove" style="font-size: 20px;"></i> ' . Translations::translate('app', 'Remove Friend Request'),
+                            [
+                                'class' => 'btn col-xs-12 profile-button',
+                                'data-user_id' => $profile->user_id,
+                                'id' => 'remove-request',
+                                'onclick' => "return removeFriendAJAX(this);",
+                            ]);
+                        break;
+                    case \common\models\Friendship::STATUS_ACCEPTED:
+                        echo Html::button('<i class="fa fa-remove" style="font-size: 20px;"></i> ' . Translations::translate('app', 'Remove Friend'),
+                            [
+                                'class' => 'btn col-xs-12 profile-button',
+                                'data-user_id' => $profile->user_id,
+                                'id' => 'remove-friend',
+                                'onclick' => "return removeFriendAJAX(this);",
+                            ]);
+                        break;
+                    case \common\models\Friendship::STATUS_REFUSED:
+                        echo Html::button('<i class="fa fa-user-plus" style="font-size: 20px;"></i> ' . Translations::translate('app', 'Re-send Friend Request'),
+                            [
+                                'class' => 'btn col-xs-12 profile-button',
+                                'data-user_id' => $profile->user_id,
+                                'id' => 'add-friend',
+                                'onclick' => "return addFriendAJAX(this);",
+                            ]);
+                        break;
+                }
+            }
+            ?>
+            <?php
         }
     }
     ?>
@@ -88,9 +131,7 @@ $currentUser = User::findOne(Yii::$app->user->getId());
             ) { ?>
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <i class="fa fa-2x">
                             <?= Translations::translate('app', 'About') ?>
-                        </i>
                     </div>
                     <div class="panel-body text-center">
                         <?php if ($profile->work) { ?>
@@ -146,9 +187,8 @@ $currentUser = User::findOne(Yii::$app->user->getId());
                     </div>
                     <?php if ($profile->relationship) { ?>
                         <div class="panel-footer">
-                            <i class="fa fa-heartbeat fa-2x">
-                                <?= Translations::translate('app', $profile->relationshipEnum[$profile->relationship]) ?>
-                            </i>
+                            <i class="fa fa-heartbeat fa-2x"></i>
+                            <?= Translations::translate('app', $profile->relationshipEnum[$profile->relationship]) ?>
                         </div>
                     <?php } ?>
                 </div>

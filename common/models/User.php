@@ -1,4 +1,5 @@
 <?php
+
 namespace common\models;
 
 use Yii;
@@ -202,5 +203,10 @@ class User extends ActiveRecord implements IdentityInterface
     public function getProfile()
     {
         return $this->hasOne(Profiles::className(), ['user_id' => 'id']);
+    }
+
+    public function getFullName()
+    {
+        return $this->getProfile()->one()->firstname . ' ' . $this->getProfile()->one()->lastname;
     }
 }

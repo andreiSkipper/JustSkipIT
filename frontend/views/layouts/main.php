@@ -256,6 +256,30 @@ $this->title = "JustSkipIT | " . $this->title;
             'label' => '<span class="fa fa-language">',
             'items' => $languageItems,
         ];
+        $friendships = \common\models\Friendship::getFriendRequestsForCurrent();
+        $items = array();
+        foreach ($friendships['Requests'] as $friendRequest) {
+            /* @var $friendRequest \common\models\Friendship */
+            $items[] = ['label' => "<img src='/" . $friendRequest->getUserFrom()->one()->getProfile()->one()->avatar ."' data-url='" . Profiles::getProfileLinkByUserID($friendRequest->user_from) . "'>" . $friendRequest->getUserFrom()->one()->getFullName() . "<span class='fa fa-check-circle-o fa-2x' onclick='return acceptFriendAJAX(this);'></span> <span class='fa fa-times-circle-o fa-2x'></span>", 'url' => '#', 'options' => ['class' => 'friend-request']];
+        }
+        if(!empty($friendships['Requested'])){
+            $items[] = '<li class="dropdown-header">Requested:</li>';
+        }
+        foreach ($friendships['Requested'] as $friendRequest) {
+            /* @var $friendRequest \common\models\Friendship */
+            $items[] = ['label' => "<img src='/" . $friendRequest->getUserTo()->one()->getProfile()->one()->avatar ."' data-url='" . Profiles::getProfileLinkByUserID($friendRequest->user_to) . "'>" . $friendRequest->getUserTo()->one()->getFullName() . "<span class='fa fa-times-circle-o fa-2x'></span>", 'url' => '#', 'options' => ['class' => 'friend-request']];
+        }
+        if(empty($items)) {
+            $menuItems[] = [
+                'label' => '<span class="fa fa-user-circle-o"></span>',
+                'items' => $items,
+            ];
+        } else {
+            $menuItems[] = [
+                'label' => '<span class="fa fa-user-circle-o faa-pulse animated"></span><span class="badge badge-notify">' . count($friendships['Requests']) .'</span>',
+                'items' => $items,
+            ];
+        }
         $menuItems[] = [
             'label' => '<span class="fa fa-bell faa-ring animated"></span><span class="badge badge-notify">7</span>',
             'items' => [

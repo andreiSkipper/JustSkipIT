@@ -39,7 +39,7 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
             </div>
 
             <?= $action->getActionTextByType($action->type) ?>
-            <?= date('d M Y H:i:s', $action->created_at); ?>
+            <?= date('d M Y H:i', $action->created_at); ?>
             <?php
             if (!Yii::$app->user->isGuest AND $action->user_id == Yii::$app->user->identity->getId()) {
                 echo ButtonDropdown::widget([

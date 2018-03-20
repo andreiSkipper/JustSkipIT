@@ -87,8 +87,86 @@ $(document).mousemove(function (e) {
 });
 
 $(document).ready(function () {
-
+    $('.navbar-nav ul.dropdown-menu').on('click', function(event){
+        event.stopPropagation();
+    });
+    $('.navbar-nav ul.dropdown-menu li.friend-request img').on('click', function(event){
+        $('body .loading').addClass('active');
+        location.replace($(this).attr('data-url'));
+    });
 });
+
+function addFriendAJAX(_this) {
+    $('body .loading').addClass('active');
+    $.ajax({
+        url: 'add-friend',
+        type: 'POST',
+        data: {
+            'Friendship': {
+                'user_to': $(_this).attr('data-user_id')
+            }
+        },
+        success: function (response) {
+            result = JSON.parse(response);
+            if (result.html.length !== 0) {
+                $('.profile-button').replaceWith(result.html);
+            }
+            $('body .loading').removeClass('active');
+        },
+        error: function (request, status, error) {
+            window.alert(error);
+            $('body .loading').removeClass('active');
+        }
+    });
+};
+
+function removeFriendAJAX(_this) {
+    $('body .loading').addClass('active');
+    $.ajax({
+        url: 'delete-friend',
+        type: 'GET',
+        data: {
+            'user_id': $(_this).attr('data-user_id')
+        },
+        success: function (response) {
+            result = JSON.parse(response);
+            if (result.html.length !== 0) {
+                $('.profile-button').replaceWith(result.html);
+            }
+            $('body .loading').removeClass('active');
+        },
+        error: function (request, status, error) {
+            window.alert(error);
+            $('body .loading').removeClass('active');
+        }
+    });
+};
+
+function acceptFriendAJAX(_this) {
+    //todo: accept friend request
+    console.log(_this);
+    // $('body .loading').addClass('active');
+    // $.ajax({
+    //     url: 'add-friend',
+    //     type: 'POST',
+    //     data: {
+    //         'Friendship': {
+    //             'user_to': $(_this).attr('data-user_id')
+    //         }
+    //     },
+    //     success: function (response) {
+    //         result = JSON.parse(response);
+    //         if (result.html.length !== 0) {
+    //             $('.profile-button').replaceWith(result.html);
+    //         }
+    //         $('body .loading').removeClass('active');
+    //     },
+    //     error: function (request, status, error) {
+    //         window.alert(error);
+    //         $('body .loading').removeClass('active');
+    //     }
+    // });
+};
 
 function addCommentAJAX(_this) {
     if ($(_this).find('.has-error').length === 0 && $('body .loading.active').length === 0) {

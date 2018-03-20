@@ -64,6 +64,9 @@ return [
                 'add-comment' => 'comments/create',
                 'delete-comment' => 'comments/delete',
                 'edit-comment' => 'comments/edit',
+                // comments routes
+                'add-friend' => 'friendships/create',
+                'delete-friend' => 'friendships/delete',
                 // profile shortURL
                 '<any>' => 'profiles/find-by-username',
             ],
