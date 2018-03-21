@@ -110,6 +110,11 @@ function addFriendAJAX(_this) {
             result = JSON.parse(response);
             if (result.html.length !== 0) {
                 $('.profile-button').replaceWith(result.html);
+                var parent = $(".navbar-nav span[data-user_id='" + $(_this).attr('data-user_id') + "']").parent();
+                if(parent.length){
+                    parent.find('span').remove();
+                    parent.append('<span class="fa fa-times-circle-o fa-2x" data-user_id="' + $(_this).attr('data-user_id') + '" onclick="return removeFriendAJAX(this);"></span>');
+                }
             }
             $('body .loading').removeClass('active');
         },
@@ -121,51 +126,94 @@ function addFriendAJAX(_this) {
 };
 
 function removeFriendAJAX(_this) {
-    $('body .loading').addClass('active');
+    if($(_this).closest('.navbar-nav').length) {
+        // requested from navbar dropdown
+        $.ajax({
+            url: 'delete-friend',
+            type: 'GET',
+            data: {
+                'user_id': $(_this).attr('data-user_id')
+            },
+            success: function (response) {
+                if(response) {
+                    result = JSON.parse(response);
+                    var parent = $(_this).parent();
+                    parent.find('span.fa').remove();
+                    parent.append('<span data-user_id="' + $(_this).attr('data-user_id') + '" style="margin-top: 0">Removed</span>');
+                    if($(".profile-button[data-user_id='" + $(_this).attr('data-user_id') + "']").length){
+                        $('.profile-button').replaceWith(result.html);
+                    }
+                }
+            },
+            error: function (request, status, error) {
+                window.alert(error);
+            }
+        });
+    } else {
+        // requested from user profile
+        $('body .loading').addClass('active');
+        $.ajax({
+            url: 'delete-friend',
+            type: 'GET',
+            data: {
+                'user_id': $(_this).attr('data-user_id')
+            },
+            success: function (response) {
+                result = JSON.parse(response);
+                if (result.html.length !== 0) {
+                    $('.profile-button').replaceWith(result.html);
+                    var parent = $(".navbar-nav span[data-user_id='" + $(_this).attr('data-user_id') + "']").parent();
+                    parent.find('span.fa').remove();
+                    parent.append('<span data-user_id="' + $(_this).attr('data-user_id') + '" style="margin-top: 0">Removed</span>');
+                }
+                $('body .loading').removeClass('active');
+            },
+            error: function (request, status, error) {
+                window.alert(error);
+                $('body .loading').removeClass('active');
+            }
+        });
+    }
+};
+
+function acceptFriendAJAX(_this) {
     $.ajax({
-        url: 'delete-friend',
+        url: 'accept-friend',
         type: 'GET',
         data: {
             'user_id': $(_this).attr('data-user_id')
         },
         success: function (response) {
-            result = JSON.parse(response);
-            if (result.html.length !== 0) {
-                $('.profile-button').replaceWith(result.html);
+            if(response) {
+                var parent = $(_this).parent();
+                parent.find('span.fa').remove();
+                parent.append('<span data-user_id="' + $(_this).attr('data-user_id') + '" style="margin-top: 0">Accepted</span>');
             }
-            $('body .loading').removeClass('active');
         },
         error: function (request, status, error) {
             window.alert(error);
-            $('body .loading').removeClass('active');
         }
     });
 };
 
-function acceptFriendAJAX(_this) {
-    //todo: accept friend request
-    console.log(_this);
-    // $('body .loading').addClass('active');
-    // $.ajax({
-    //     url: 'add-friend',
-    //     type: 'POST',
-    //     data: {
-    //         'Friendship': {
-    //             'user_to': $(_this).attr('data-user_id')
-    //         }
-    //     },
-    //     success: function (response) {
-    //         result = JSON.parse(response);
-    //         if (result.html.length !== 0) {
-    //             $('.profile-button').replaceWith(result.html);
-    //         }
-    //         $('body .loading').removeClass('active');
-    //     },
-    //     error: function (request, status, error) {
-    //         window.alert(error);
-    //         $('body .loading').removeClass('active');
-    //     }
-    // });
+function refuseFriendAJAX(_this) {
+    $.ajax({
+        url: 'refuse-friend',
+        type: 'GET',
+        data: {
+            'user_id': $(_this).attr('data-user_id')
+        },
+        success: function (response) {
+            if(response) {
+                var parent = $(_this).parent();
+                parent.find('span.fa').remove();
+                parent.append('<span data-user_id="' + $(_this).attr('data-user_id') + '" style="margin-top: 0">Refused</span>');
+            }
+        },
+        error: function (request, status, error) {
+            window.alert(error);
+        }
+    });
 };
 
 function addCommentAJAX(_this) {

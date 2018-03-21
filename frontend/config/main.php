@@ -67,6 +67,8 @@ return [
                 // comments routes
                 'add-friend' => 'friendships/create',
                 'delete-friend' => 'friendships/delete',
+                'accept-friend' => 'friendships/accept',
+                'refuse-friend' => 'friendships/refuse',
                 // profile shortURL
                 '<any>' => 'profiles/find-by-username',
             ],

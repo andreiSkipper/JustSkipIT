@@ -131,7 +131,7 @@ $currentUser = User::findOne(Yii::$app->user->getId());
             ) { ?>
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                            <?= Translations::translate('app', 'About') ?>
+                        <?= Translations::translate('app', 'About') ?>
                     </div>
                     <div class="panel-body text-center">
                         <?php if ($profile->work) { ?>
@@ -199,7 +199,7 @@ $currentUser = User::findOne(Yii::$app->user->getId());
     <div class="clearfix hidden-md hidden-lg"></div>
 
     <div class="col-md-8" id="profile-activity">
-        <?php if (!Yii::$app->user->isGuest) { ?>
+        <?php if (!Yii::$app->user->isGuest AND Yii::$app->user->id == $profile->user_id) { ?>
             <?php $form = ActiveForm::begin(['action' => ['/add-post'], 'options' => ['enctype' => 'multipart/form-data']]); ?>
             <div class="panel panel-default action-new">
                 <!--            <div class="panel-heading action-header"></div>-->

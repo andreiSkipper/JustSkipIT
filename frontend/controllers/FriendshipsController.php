@@ -72,4 +72,38 @@ class FriendshipsController extends \yii\web\Controller
 
         return json_encode($result);
     }
+
+
+    public function actionAccept($user_id)
+    {
+        $model = Friendship::find()
+            ->where(['user_from' => $user_id, 'user_to' => Yii::$app->user->id])
+            ->one();
+
+        if (empty($model)){
+            return false;
+        }
+
+        $model->status = Friendship::STATUS_ACCEPTED;
+        $model->save();
+
+        return true;
+    }
+
+
+    public function actionRefuse($user_id)
+    {
+        $model = Friendship::find()
+            ->where(['user_from' => $user_id, 'user_to' => Yii::$app->user->id])
+            ->one();
+
+        if (empty($model)){
+            return false;
+        }
+
+        $model->status = Friendship::STATUS_REFUSED;
+        $model->save();
+
+        return true;
+    }
 }
