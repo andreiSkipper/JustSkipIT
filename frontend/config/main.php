@@ -36,6 +36,7 @@ return [
             'rules' => [
                 // site routes
                 '' => 'site/index',
+                'navbar' => 'site/navbar',
                 'about' => 'site/about',
                 'contact' => 'site/contact',
                 'logout' => 'site/logout',
@@ -69,6 +70,8 @@ return [
                 'delete-friend' => 'friendships/delete',
                 'accept-friend' => 'friendships/accept',
                 'refuse-friend' => 'friendships/refuse',
+                // notifications
+                'notifications' => 'site/notifications',
                 // profile shortURL
                 '<any>' => 'profiles/find-by-username',
             ],

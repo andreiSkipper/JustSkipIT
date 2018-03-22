@@ -33,6 +33,7 @@ class FriendshipsController extends \yii\web\Controller
                             'onclick' => "return removeFriendAJAX(this);",
                         ]);
                     $result['html'] = preg_replace('#\s+#', ' ', trim($html));
+                    $result['navbar'] = preg_replace('#\s+#', ' ', trim($this->renderPartial('/layouts/navbar_header')));
 
                     return json_encode($result);
                 } else {

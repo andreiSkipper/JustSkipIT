@@ -2,25 +2,25 @@
  * Created by andrei on 16/08/2017.
  */
 
-$.ajax({
-    url: window.location.origin + '/index.php/site/notifications',
-    type: "POST",
-    success: function (data) {
-        var messages = jQuery.parseJSON(data);
-        if (messages.length !== 0) {
-            $.each(messages, function (index, message) {
-                var notification = new Notification(message.title, {
-                    body: message.body,
-                    icon: message.icon,
-                    requireInteraction: true
-                });
-                notification.onclick = function (event) {
-                    window.open(message.url, '_blank');
-                }
-            });
-        }
-    }
-});
+// $.ajax({
+//     url: window.location.origin + '/index.php/site/notifications',
+//     type: "POST",
+//     success: function (data) {
+//         var messages = jQuery.parseJSON(data);
+//         if (messages.length !== 0) {
+//             $.each(messages, function (index, message) {
+//                 var notification = new Notification(message.title, {
+//                     body: message.body,
+//                     icon: message.icon,
+//                     requireInteraction: true
+//                 });
+//                 notification.onclick = function (event) {
+//                     window.open(message.url, '_blank');
+//                 }
+//             });
+//         }
+//     }
+// });
 // setInterval(function () {
 //     $.ajax({
 //         url: window.location.origin + '/index.php/site/notifications',
@@ -49,6 +49,32 @@ $.ajax({
 //         }
 //     });
 // }, 10000);
+
+setInterval(function () {
+    $.ajax({
+        url: 'notifications',
+        type: 'GET',
+        success: function (response) {
+            result = JSON.parse(response);
+            if (result.friend_requests.length !== 0) {
+                var friend_requests_button = $('#friend-requests-dropdown').find('a.dropdown-toggle');
+                if (result.friend_requests.count !== "0") {
+                    friend_requests_button.find('.fa').addClass('faa-pulse animated');
+                    friend_requests_button.find('.badge-notify')[0].innerHTML = result.friend_requests.count;
+                    friend_requests_button.find('.badge-notify').removeClass('hidden');
+                } else {
+                    friend_requests_button.find('.fa').removeClass('faa-pulse animated');
+                    friend_requests_button.find('.badge-notify')[0].innerHTML = result.friend_requests.count;
+                    friend_requests_button.find('.badge-notify').addClass('hidden');
+                }
+                $('#friend-requests-dropdown').find('.dropdown-menu')[0].innerHTML = result.friend_requests.html;
+            }
+        },
+        error: function (request, status, error) {
+            console.log(error);
+        }
+    });
+}, 10000);
 
 $(document).on('mouseover', '.action-tooltip', function () {
     var tooltip = new PNotify({
@@ -87,10 +113,10 @@ $(document).mousemove(function (e) {
 });
 
 $(document).ready(function () {
-    $('.navbar-nav ul.dropdown-menu').on('click', function(event){
+    $('.navbar-nav ul.dropdown-menu').on('click', function (event) {
         event.stopPropagation();
     });
-    $('.navbar-nav ul.dropdown-menu li.friend-request img').on('click', function(event){
+    $('.navbar-nav ul.dropdown-menu li.friend-request img').on('click', function (event) {
         $('body .loading').addClass('active');
         location.replace($(this).attr('data-url'));
     });
@@ -110,8 +136,9 @@ function addFriendAJAX(_this) {
             result = JSON.parse(response);
             if (result.html.length !== 0) {
                 $('.profile-button').replaceWith(result.html);
+                $('nav.navbar#w0').replaceWith(result.navbar);
                 var parent = $(".navbar-nav span[data-user_id='" + $(_this).attr('data-user_id') + "']").parent();
-                if(parent.length){
+                if (parent.length) {
                     parent.find('span').remove();
                     parent.append('<span class="fa fa-times-circle-o fa-2x" data-user_id="' + $(_this).attr('data-user_id') + '" onclick="return removeFriendAJAX(this);"></span>');
                 }
@@ -126,7 +153,7 @@ function addFriendAJAX(_this) {
 };
 
 function removeFriendAJAX(_this) {
-    if($(_this).closest('.navbar-nav').length) {
+    if ($(_this).closest('.navbar-nav').length) {
         // requested from navbar dropdown
         $.ajax({
             url: 'delete-friend',
@@ -135,12 +162,12 @@ function removeFriendAJAX(_this) {
                 'user_id': $(_this).attr('data-user_id')
             },
             success: function (response) {
-                if(response) {
+                if (response) {
                     result = JSON.parse(response);
                     var parent = $(_this).parent();
                     parent.find('span.fa').remove();
                     parent.append('<span data-user_id="' + $(_this).attr('data-user_id') + '" style="margin-top: 0">Removed</span>');
-                    if($(".profile-button[data-user_id='" + $(_this).attr('data-user_id') + "']").length){
+                    if ($(".profile-button[data-user_id='" + $(_this).attr('data-user_id') + "']").length) {
                         $('.profile-button').replaceWith(result.html);
                     }
                 }
@@ -184,7 +211,7 @@ function acceptFriendAJAX(_this) {
             'user_id': $(_this).attr('data-user_id')
         },
         success: function (response) {
-            if(response) {
+            if (response) {
                 var parent = $(_this).parent();
                 parent.find('span.fa').remove();
                 parent.append('<span data-user_id="' + $(_this).attr('data-user_id') + '" style="margin-top: 0">Accepted</span>');
@@ -204,7 +231,7 @@ function refuseFriendAJAX(_this) {
             'user_id': $(_this).attr('data-user_id')
         },
         success: function (response) {
-            if(response) {
+            if (response) {
                 var parent = $(_this).parent();
                 parent.find('span.fa').remove();
                 parent.append('<span data-user_id="' + $(_this).attr('data-user_id') + '" style="margin-top: 0">Refused</span>');

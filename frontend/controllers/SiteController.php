@@ -1,7 +1,9 @@
 <?php
+
 namespace frontend\controllers;
 
 use app\models\Movies;
+use common\models\Friendship;
 use common\models\User;
 use Yii;
 use common\models\LoginForm;
@@ -287,5 +289,26 @@ class SiteController extends Controller
         Yii::$app->session['language'] = $language;
         // redirect to previews page
         return $this->redirect(Yii::$app->request->referrer);
+    }
+
+    public function actionNavbar()
+    {
+        if (Yii::$app->request->isAjax) {
+            return $this->renderPartial('/layouts/navbar_header');
+        }
+        return $this->redirect('/');
+    }
+
+    public function actionNotifications()
+    {
+        if (Yii::$app->request->isAjax) {
+            $result['friend_requests'] = [
+                'count' => Friendship::find()->where(['user_to' => Yii::$app->user->id, 'status' => Friendship::STATUS_REQUESTED])->count(),
+                'html' => $this->renderPartial('/layouts/navbar_header_friend_requests'),
+            ];
+
+            return json_encode($result);
+        }
+        return $this->redirect('/');
     }
 }
