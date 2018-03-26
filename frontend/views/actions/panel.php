@@ -204,7 +204,7 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
 //                            'asButton' => true
 //                        ]
                         ]
-                    ])->textInput(['placeholder' => "Click to add Comment..."])->label(false) ?>
+                    ])->textInput(['placeholder' => "Click to add Comment...", 'autocomplete' => "off"])->label(false) ?>
                     <?php
                     ActiveForm::end();
                 }

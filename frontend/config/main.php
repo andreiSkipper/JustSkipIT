@@ -30,7 +30,7 @@ return [
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => true,
+            'showScriptName' => false,
             'enableStrictParsing' => true,
             //'suffix' => '.html',
             'rules' => [

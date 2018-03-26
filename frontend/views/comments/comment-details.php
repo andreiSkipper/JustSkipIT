@@ -154,7 +154,7 @@ $modalClass = empty($modal) ? '' : 'modal-';
                 //                                        'content' => Html::submitButton('Go', ['class' => 'btn btn-default', 'id' => 'add_comment']),
                 //                                        'asButton' => true
                 //                                    ]
-            ]])->textInput(['placeholder' => "Click to add reply..."])->label(false) ?>
+            ]])->textInput(['placeholder' => "Click to add reply...", 'autocomplete' => "off"])->label(false) ?>
             <?php
             ActiveForm::end();
 
