@@ -155,20 +155,13 @@ $(document).ready(function () {
 
     });
 
-    $(window).on('resize scroll load', function () {
-        $.each($('.type-wrap'), function (key, type_wrap) {
-            $(type_wrap).find('.typed-strings')[0].id = 'typed_strings_' + key;
-            $(type_wrap).find('.typed')[0].id = 'typed_' + key;
-            if ($(type_wrap).isInViewport() && $(type_wrap).find('.typed-cursor').length === 0 && $(type_wrap).find('.typed')[0].innerHTML.length === 0) {
-                new Typed('#typed_' + key, {
-                    stringsElement: '#typed_strings_' + key,
-                    typeSpeed: 40,
-                    onComplete: function (self) {
-                        $(type_wrap).find('.typed-cursor').remove()
-                    }
-                });
-            }
-        });
+    $(window).on('resize scroll load shown.bs.modal', function () {
+        checkTyping();
+    });
+
+
+    $('.modal').on('scroll ', function () {
+        checkTyping();
     });
 
     $.fn.isInViewport = function () {
@@ -181,6 +174,22 @@ $(document).ready(function () {
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };
 });
+
+function checkTyping() {
+    $.each($('.type-wrap'), function (key, type_wrap) {
+        $(type_wrap).find('.typed-strings')[0].id = 'typed_strings_' + key;
+        $(type_wrap).find('.typed')[0].id = 'typed_' + key;
+        if ($(type_wrap).isInViewport() && $(type_wrap).find('.typed-cursor').length === 0 && $(type_wrap).find('.typed')[0].innerHTML.length === 0) {
+            new Typed('#typed_' + key, {
+                stringsElement: '#typed_strings_' + key,
+                typeSpeed: 40,
+                onComplete: function (self) {
+                    $(type_wrap).find('.typed-cursor').remove()
+                }
+            });
+        }
+    });
+}
 
 function addFriendAJAX(_this) {
     $('body .loading').addClass('active');
@@ -326,6 +335,7 @@ function addCommentAJAX(_this) {
                         _this.reset();
                     }
                     $('body .loading').removeClass('active');
+                    checkTyping();
                 },
                 error: function (request, status, error) {
                     window.alert(error);
@@ -361,6 +371,7 @@ function addReplyAJAX(_this) {
                         $('#comments-reply-' + commentReplyID).append(result.modalHtml).show('slow');
                         _this.reset();
                         $('body .loading').removeClass('active');
+                        checkTyping();
                     }
                 },
                 error: function (request, status, error) {
