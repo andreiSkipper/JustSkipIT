@@ -35,6 +35,7 @@ $this->title = "JustSkipIT | " . $this->title;
     <link rel="stylesheet" href="/js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="/js/jquery-1.11.3.min.js"></script>
     <script src="/js/app.js"></script>
+    <script src="/js/typed-js/typed.min.js"></script>
     <!--    <script src="/js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
 
     <?= Html::csrfMetaTags() ?>

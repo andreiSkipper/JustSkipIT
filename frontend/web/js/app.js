@@ -154,6 +154,32 @@ $(document).ready(function () {
         grad.css("filter", "progid:DXImageTransform.Microsoft.gradient( startColorstr='" + convertHex(rand1, 40) + "', endColorstr='" + convertHex(rand2, 40) + "',GradientType=0 )");
 
     });
+
+    $(window).on('resize scroll load', function () {
+        $.each($('.type-wrap'), function (key, type_wrap) {
+            $(type_wrap).find('.typed-strings')[0].id = 'typed_strings_' + key;
+            $(type_wrap).find('.typed')[0].id = 'typed_' + key;
+            if ($(type_wrap).isInViewport() && $(type_wrap).find('.typed-cursor').length === 0 && $(type_wrap).find('.typed')[0].innerHTML.length === 0) {
+                new Typed('#typed_' + key, {
+                    stringsElement: '#typed_strings_' + key,
+                    typeSpeed: 40,
+                    onComplete: function (self) {
+                        $(type_wrap).find('.typed-cursor').remove()
+                    }
+                });
+            }
+        });
+    });
+
+    $.fn.isInViewport = function () {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
+
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
 });
 
 function addFriendAJAX(_this) {

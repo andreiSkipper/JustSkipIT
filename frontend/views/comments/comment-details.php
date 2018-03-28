@@ -110,7 +110,14 @@ $modalClass = empty($modal) ? '' : 'modal-';
         </div>
         <div class="panel-body">
             <div class="col-xs-12 comment-text" id="comment-<?= $comment->id ?>-text">
-                <?= $comment->content ?>
+                <div class="type-wrap">
+                    <div class="typed-strings hidden">
+                        <p>
+                            <?= $comment->content ?>
+                        </p>
+                    </div>
+                    <span class="typed"></span>
+                </div>
                 <?php if ($comment->location) { ?>
                     <div class="pull-right">
                         <?= $comment->getLocation()->city . ', ' . $comment->getLocation()->country ?>

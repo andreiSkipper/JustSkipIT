@@ -29,6 +29,33 @@ body {
 
 /* END OF SCROLLBAR */
 
+.type-wrap {
+    min-height: 20px;
+}
+
+.typed-cursor{
+    font-size: 100px
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    10% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    10% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    10% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
 .wrap {
     min-height: 100%;
     height: auto;
