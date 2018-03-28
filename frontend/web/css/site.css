@@ -33,27 +33,48 @@ body {
     min-height: 20px;
 }
 
-.typed-cursor{
+.typed-cursor {
     font-size: 100px
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
-@keyframes blink{
-    10% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@keyframes blink {
+    10% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-@-webkit-keyframes blink{
-    10% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@-webkit-keyframes blink {
+    10% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-@-moz-keyframes blink{
-    10% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@-moz-keyframes blink {
+    10% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .wrap {
@@ -482,6 +503,32 @@ i.fa, span.fa {
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle {
     background-color: #333;
 }
+
+/* navbar hamburger */
+.navbar-toggle {
+    overflow: hidden;
+}
+
+.navbar-toggle .icon-bar {
+    transition: opacity, transform;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.7, 0, 0, 0.7);
+}
+
+.navbar-toggle[aria-expanded]:not(.collapsed) .icon-bar:nth-child(2) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.navbar-toggle[aria-expanded]:not(.collapsed) .icon-bar:nth-child(3) {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.navbar-toggle[aria-expanded]:not(.collapsed) .icon-bar:nth-child(4) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* end of navbar hamburger */
 
 .ui-checkbox input {
     display: none;
