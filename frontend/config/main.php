@@ -45,6 +45,7 @@ return [
                 'request-password-reset' => 'site/request-password-reset',
                 'reset-password' => 'site/reset-password',
                 'site/language' => 'site/language',
+                'privacy-policy' => 'site/privacy-policy',
                 // profiles routes
                 'profile' => 'profiles/my-profile',
                 'user/edit-profile' => 'profiles/update',
