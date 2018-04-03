@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1da7e51a5334eef8e14d03e0b75460fd",
+    "content-hash": "a9d125764b2de33888b5ef416925aac5",
     "packages": [
         {
             "name": "amnah/yii2-user",
@@ -4527,6 +4527,60 @@
                 "yui"
             ],
             "time": "2018-01-15T15:26:51+00:00"
+        },
+        {
+            "name": "yiimaker/yii2-social-share",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiimaker/yii2-social-share.git",
+                "reference": "df69946b00b0a2b3d09014c3b09b27e0ee2ac634"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiimaker/yii2-social-share/zipball/df69946b00b0a2b3d09014c3b09b27e0ee2ac634",
+                "reference": "df69946b00b0a2b3d09014c3b09b27e0ee2ac634",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0",
+                "yiisoft/yii2": "^2.0.13"
+            },
+            "require-dev": {
+                "codeception/codeception": "~2.3"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ymaker\\social\\share\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Vladimir Kuprienko",
+                    "email": "vldmr.kuprienko@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Extension for sharing on social networks",
+            "keywords": [
+                "media",
+                "networks",
+                "share",
+                "social",
+                "widget",
+                "yii2"
+            ],
+            "time": "2018-03-18T16:31:18+00:00"
         },
         {
             "name": "yiisoft/yii2",

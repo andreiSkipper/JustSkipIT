@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 /* @var $name string */
+
 /* @var $action \common\models\Actions */
 
 use yii\helpers\Html;
@@ -167,6 +168,17 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
                     <!--                        </div>-->
                     <!--                    </div>-->
                 <?php } ?>
+                <div class="clearfix"></div>
+                <div class="social-share">
+                    <?= \common\models\Translations::translate('app', 'Share on:') ?>
+                    <?= \ymaker\social\share\widgets\SocialShare::widget([
+                        'configurator' => 'socialShare',
+                        'url' => \yii\helpers\Url::to('absolute/route/to/page', true),
+                        'title' => 'Title of the page',
+                        'description' => 'Description of the page...',
+                        'imageUrl' => \yii\helpers\Url::to('absolute/route/to/image.png', true),
+                    ]); ?>
+                </div>
             </div>
         <?php } ?>
         <div class="panel-footer">

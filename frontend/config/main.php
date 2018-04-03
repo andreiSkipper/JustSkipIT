@@ -104,6 +104,42 @@ return [
 //                ],
             ],
         ],
+        'socialShare' => [
+            'class' => \ymaker\social\share\configurators\Configurator::class,
+            'socialNetworks' => [
+                'facebook' => [
+                    'class' => \ymaker\social\share\drivers\Facebook::class,
+                    'label' => '',
+                    'options' => ['class' => 'fb fa fa-facebook-square'],
+                ],
+                'twitter' => [
+                    'class' => \ymaker\social\share\drivers\Twitter::class,
+                    'label' => '',
+                    'options' => ['class' => 'tw fa fa-twitter-square'],
+                    'config' => [
+                        'account' => $params['twitterAccount']
+                    ],
+                ],
+                'whatsapp' => [
+                    'class' => \ymaker\social\share\drivers\WhatsApp::class,
+                    'label' => '',
+                    'options' => ['class' => 'wp fa fa-whatsapp'],
+                ],
+                'pinterest' => [
+                    'class' => \ymaker\social\share\drivers\Pinterest::class,
+                    'label' => '',
+                    'options' => ['class' => 'pn fa fa-pinterest'],
+                ],
+                'linkedin' => [
+                    'class' => \ymaker\social\share\drivers\LinkedIn::class,
+                    'label' => '',
+                    'options' => ['class' => 'ln fa fa-linkedin-square'],
+                ],
+            ],
+            'options' => [
+                'class' => 'social-network',
+            ],
+        ],
     ],
     'params' => $params,
     'modules' => [
