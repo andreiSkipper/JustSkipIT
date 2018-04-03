@@ -56,4 +56,8 @@ use common\models\Translations;
     </div>
 
     <?php ActiveForm::end(); ?>
+
+    <div class="hr-sect"><?= Translations::translate('app', 'OR') ?></div>
+
+    <?= \yii\authclient\widgets\AuthChoice::widget(['baseAuthUrl' => ['site/auth']]) ?>
 </div>

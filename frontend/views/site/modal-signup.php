@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
+
 /* @var $model \common\models\LoginForm */
 
 use yii\helpers\Html;
@@ -102,4 +103,8 @@ use common\models\Translations;
     </div>
 
     <?php ActiveForm::end(); ?>
+
+    <div class="hr-sect"><?= Translations::translate('app', 'OR') ?></div>
+
+    <?= \yii\authclient\widgets\AuthChoice::widget(['baseAuthUrl' => ['site/auth']]) ?>
 </div>

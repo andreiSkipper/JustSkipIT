@@ -12,6 +12,7 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use yii\base\InvalidParamException;
+use yii\helpers\Url;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -29,6 +30,8 @@ use common\models\Translations;
  */
 class SiteController extends Controller
 {
+    public $successUrl = 'Success';
+
     /**
      * @inheritdoc
      */
@@ -48,6 +51,10 @@ class SiteController extends Controller
                         'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
+                    ],
+                    [
+                        'actions' => ['auth'],
+                        'allow' => true,
                     ],
                 ],
             ],
@@ -72,6 +79,10 @@ class SiteController extends Controller
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+            ],
+            'auth' => [
+                'class' => 'yii\authclient\AuthAction',
+                'successCallback' => [$this, 'successCallback'],
             ],
         ];
     }
@@ -315,5 +326,84 @@ class SiteController extends Controller
     public function actionPrivacyPolicy()
     {
         return $this->render('privacy-policy');
+    }
+
+    public function successCallback($client)
+    {
+        $attributes = $client->getUserAttributes();
+        $params = array();
+//        var_dump($attributes);die();
+
+        switch (strtolower($client->getTitle())) {
+            case 'google':
+                $params['SignupForm'] = [
+                    'username' => $attributes['emails'][0]['value'],
+                    'email' => $attributes['emails'][0]['value'],
+                    'password' => Yii::$app->getSecurity()->generateRandomString(12),
+                    'firstname' => $attributes['name']['givenName'],
+                    'lastname' => $attributes['name']['familyName'],
+                ];
+                $user = User::find()->where(['email' => $params['SignupForm']['email']])->one();
+                break;
+            case 'twitter':
+                $params['SignupForm'] = [
+                    'username' => $attributes['screen_name'],
+                    'email' => $attributes['screen_name'] . '@skipit.ro',
+                    'password' => Yii::$app->getSecurity()->generateRandomString(12),
+                    'firstname' => $attributes['name'],
+                    'lastname' => '',
+                ];
+                $user = User::find()->where(['email' => $params['SignupForm']['email']])->one();
+                break;
+            case 'linkedin':
+                $params['SignupForm'] = [
+                    'username' => substr($attributes['public-profile-url'], strrpos($attributes['public-profile-url'], '/') + 1),
+                    'email' => $attributes['email'],
+                    'password' => Yii::$app->getSecurity()->generateRandomString(12),
+                    'firstname' => $attributes['first_name'],
+                    'lastname' => $attributes['first_name'],
+                ];
+                $user = User::find()->where(['email' => $params['SignupForm']['email']])->one();
+                break;
+            default:
+                break;
+        }
+        if (!empty($user)) {
+            Yii::$app->user->login($user);
+            if (Yii::$app->request->isAjax) {
+                return json_encode(null);
+            } else {
+                return $this->goBack();
+            }
+        } else {
+            $model = new SignupForm();
+            if ($model->load($params)) {
+                if ($user = $model->signup()) {
+                    if (Yii::$app->getUser()->login($user)) {
+                        Yii::$app->mailer->compose('/mails/signup-success')
+                            ->setFrom([Yii::$app->params['supportEmail'] => 'SkipIT'])
+                            ->setTo($user->email)
+                            ->setSubject('Welcome to SkipIT')
+                            ->send();
+                        if (Yii::$app->request->isAjax) {
+                            return json_encode(null);
+                        } else {
+                            return $this->goHome();
+                        }
+                    }
+                } else {
+                    var_dump($model->getErrors());die();
+                    return json_encode($model->getErrors());
+                }
+            } else {
+                if (Yii::$app->request->isAjax) {
+                    return json_encode($model->getErrors());
+                } else {
+                    return $this->render('signup', [
+                        'model' => $model,
+                    ]);
+                }
+            }
+        }
     }
 }

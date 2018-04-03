@@ -50,32 +50,6 @@
 //     });
 // }, 10000);
 
-setInterval(function () {
-    $.ajax({
-        url: 'notifications',
-        type: 'GET',
-        success: function (response) {
-            result = JSON.parse(response);
-            if (result.friend_requests.length !== 0) {
-                var friend_requests_button = $('#friend-requests-dropdown').find('a.dropdown-toggle');
-                if (result.friend_requests.count !== "0") {
-                    friend_requests_button.find('.fa').addClass('faa-pulse animated');
-                    friend_requests_button.find('.badge-notify')[0].innerHTML = result.friend_requests.count;
-                    friend_requests_button.find('.badge-notify').removeClass('hidden');
-                } else {
-                    friend_requests_button.find('.fa').removeClass('faa-pulse animated');
-                    friend_requests_button.find('.badge-notify')[0].innerHTML = result.friend_requests.count;
-                    friend_requests_button.find('.badge-notify').addClass('hidden');
-                }
-                $('#friend-requests-dropdown').find('.dropdown-menu')[0].innerHTML = result.friend_requests.html;
-            }
-        },
-        error: function (request, status, error) {
-            console.log(error);
-        }
-    });
-}, 10000);
-
 $(document).on('mouseover', '.action-tooltip', function () {
     var tooltip = new PNotify({
         text: $(this).find('.action-tooltip-content').html().trim().replace(/(?:\r\n|\r|\n)/g, ''),
@@ -113,6 +87,32 @@ $(document).mousemove(function (e) {
 });
 
 $(document).ready(function () {
+    setInterval(function () {
+        $.ajax({
+            url: 'notifications',
+            type: 'GET',
+            success: function (response) {
+                result = JSON.parse(response);
+                if (result.friend_requests.length !== 0 && $('#friend-requests-dropdown').length) {
+                    var friend_requests_button = $('#friend-requests-dropdown').find('a.dropdown-toggle');
+                    if (result.friend_requests.count !== "0") {
+                        friend_requests_button.find('.fa').addClass('faa-pulse animated');
+                        friend_requests_button.find('.badge-notify')[0].innerHTML = result.friend_requests.count;
+                        friend_requests_button.find('.badge-notify').removeClass('hidden');
+                    } else {
+                        friend_requests_button.find('.fa').removeClass('faa-pulse animated');
+                        friend_requests_button.find('.badge-notify')[0].innerHTML = result.friend_requests.count;
+                        friend_requests_button.find('.badge-notify').addClass('hidden');
+                    }
+                    $('#friend-requests-dropdown').find('.dropdown-menu')[0].innerHTML = result.friend_requests.html;
+                }
+            },
+            error: function (request, status, error) {
+                console.log(error);
+            }
+        });
+    }, 10000);
+
     $('.navbar-nav ul.dropdown-menu').on('click', function (event) {
         event.stopPropagation();
     });
@@ -152,7 +152,6 @@ $(document).ready(function () {
         grad.css("background-image", "-ms-linear-gradient(top, " + convertHex(rand1, 40) + " 0%," + convertHex(rand2, 40) + " 100%)");
         grad.css("background-image", "linear-gradient(to bottom, " + convertHex(rand1, 40) + " 0%," + convertHex(rand2, 40) + " 100%)");
         grad.css("filter", "progid:DXImageTransform.Microsoft.gradient( startColorstr='" + convertHex(rand1, 40) + "', endColorstr='" + convertHex(rand2, 40) + "',GradientType=0 )");
-
     });
 
     $(window).on('resize scroll load shown.bs.modal', function () {

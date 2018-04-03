@@ -45,6 +45,7 @@ return [
                 'request-password-reset' => 'site/request-password-reset',
                 'reset-password' => 'site/reset-password',
                 'site/language' => 'site/language',
+                'site/auth' => 'site/auth',
                 'privacy-policy' => 'site/privacy-policy',
                 // profiles routes
                 'profile' => 'profiles/my-profile',
@@ -75,6 +76,32 @@ return [
                 'notifications' => 'site/notifications',
                 // profile shortURL
                 '<any>' => 'profiles/find-by-username',
+            ],
+        ],
+        'authClientCollection' => [
+            'class' => 'yii\authclient\Collection',
+            'clients' => [
+                'google' => [
+                    'class' => 'yii\authclient\clients\Google',
+                    'clientId' => '295995674087-2dkh1u5obokosascnj74231hoof3m6cb.apps.googleusercontent.com',
+                    'clientSecret' => 'daMYSddwgejDkhzsVN4hJEtI',
+                ],
+                'twitter' => [
+                    'class' => 'yii\authclient\clients\Twitter',
+                    'consumerKey' => 'UAatvuaGwvrYuUYPcCk83D1KA',
+                    'consumerSecret' => 'gOWHoahMfUrPNy0qg8Of9BUa3Mw9EhyzXSOVtDnzRuLeEvKOVf',
+                ],
+                'linkedin' => [
+                    'class' => 'yii\authclient\clients\LinkedIn',
+                    'clientId' => '78llh9jfc2pfps',
+                    'clientSecret' => '6e2jldcv2fi9Hsyp',
+                ],
+//                'facebook' => [
+//                    'class' => 'yii\authclient\clients\Facebook',
+//                    'authUrl' => 'https://www.facebook.com/dialog/oauth?display=popup',
+//                    'clientId' => '213333686082552',
+//                    'clientSecret' => '6dd01f082481880b84508fbd95c5afe5',
+//                ],
             ],
         ],
     ],

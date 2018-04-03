@@ -500,6 +500,35 @@ i.fa, span.fa {
     transform: translate(-50%, 0%);
 }
 
+ul.auth-clients {
+    padding: 0;
+}
+
+ul.auth-clients > li {
+    width: calc(100% / 3);
+    margin: 0;
+}
+
+.hr-sect {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: #fff;
+    margin: 8px -8px;
+    padding-bottom: 15px;
+}
+
+.hr-sect::before,
+.hr-sect::after {
+    content: "";
+    flex-grow: 1;
+    background: #fff;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+    margin: 0 8px;
+}
+
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle {
     background-color: #333;
 }

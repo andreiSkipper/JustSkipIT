@@ -70,6 +70,10 @@ if (Yii::$app->user->isGuest) {
                         $('#nav-login, #nav-signup').on('click', function (e) {
                             loginNotice.remove();
                         });
+                        $('ul.auth-clients > li > a').on('click', function (e) {
+                            $('body .loading').addClass('active');
+                            loginNotice.remove();
+                        });
                         loginNotice.get().find('form#login-form').on('click', '[name=cancel-button]', function() {
                             loginNotice.remove();
                         }).submit(function() {
@@ -131,6 +135,10 @@ if (Yii::$app->user->isGuest) {
                             }
                         });
                         $('#nav-login, #nav-signup').on('click', function (e) {
+                            signupNotice.remove();
+                        });
+                        $('ul.auth-clients > li > a').on('click', function (e) {
+                            $('body .loading').addClass('active');
                             signupNotice.remove();
                         });
                         signupNotice.get().find('form#signup-form').on('click', '[name=cancel-button]', function() {

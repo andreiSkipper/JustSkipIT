@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
+
 /* @var $model \common\models\LoginForm */
 
 use yii\helpers\Html;
@@ -54,6 +55,7 @@ $this->title = 'Just Skip IT';
                 </div>
 
                 <?php ActiveForm::end(); ?>
+                <?= \yii\authclient\widgets\AuthChoice::widget(['baseAuthUrl' => ['site/auth']]) ?>
             </div>
         </div>
     </div>
