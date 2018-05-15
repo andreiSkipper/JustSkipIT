@@ -120,11 +120,11 @@ return [
                         'account' => $params['twitterAccount']
                     ],
                 ],
-                'whatsapp' => [
-                    'class' => \ymaker\social\share\drivers\WhatsApp::class,
-                    'label' => '',
-                    'options' => ['class' => 'wp fa fa-whatsapp'],
-                ],
+//                'whatsapp' => [
+//                    'class' => \ymaker\social\share\drivers\WhatsApp::class,
+//                    'label' => '',
+//                    'options' => ['class' => 'wp fa fa-whatsapp'],
+//                ],
                 'pinterest' => [
                     'class' => \ymaker\social\share\drivers\Pinterest::class,
                     'label' => '',
