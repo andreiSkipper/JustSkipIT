@@ -347,7 +347,7 @@ Modal::begin([
 //                            ['caption' => 'Moon.jpg', 'size' => '873727'],
 //                        ],
                         'overwriteInitial' => true,
-                        'maxFileSize' => 2800
+                        'maxFileSize' => 5000
                     ]
                 ]) ?>
             </div>
@@ -373,7 +373,7 @@ Modal::begin([
 //                            ['caption' => 'Moon.jpg', 'size' => '873727'],
 //                        ],
                         'overwriteInitial' => true,
-                        'maxFileSize' => 2800
+                        'maxFileSize' => 5000
                     ]
                 ]) ?>
             </div>

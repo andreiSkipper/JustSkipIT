@@ -229,6 +229,7 @@ $currentUser = User::findOne(Yii::$app->user->getId());
                                 'showRemove' => true,
                                 'showUpload' => false,
                                 'browseLabel' => Translations::translate('app', 'Browse') . ' ...',
+                                'maxFileSize' => 5000
                             ]
                         ])->label(false) ?>
                     </div>

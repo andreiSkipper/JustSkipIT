@@ -340,7 +340,7 @@ $this->title = 'Profile';
 //                            ['caption' => 'Moon.jpg', 'size' => '873727'],
 //                        ],
                         'overwriteInitial' => true,
-                        'maxFileSize' => 2800
+                        'maxFileSize' => 5000
                     ]
                 ]) ?>
             </div>
@@ -366,7 +366,7 @@ $this->title = 'Profile';
 //                            ['caption' => 'Moon.jpg', 'size' => '873727'],
 //                        ],
                         'overwriteInitial' => true,
-                        'maxFileSize' => 2800
+                        'maxFileSize' => 5000
                     ]
                 ]) ?>
             </div>

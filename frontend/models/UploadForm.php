@@ -27,21 +27,23 @@ class UploadForm extends Model
     public function upload($actionParams = [])
     {
         if ($this->validate()) {
-            if (!is_dir('uploads/')) {// Tells whether the filename is a directory
-                mkdir('uploads/');//Makes directory
+//            $rootDir = 'skipIT/frontend/web/'; // for live
+            $rootDir = '';
+            if (!is_dir($rootDir . 'uploads/')) {// Tells whether the filename is a directory
+                mkdir($rootDir . 'uploads/');//Makes directory
             }
 
-            if (!is_dir('uploads/profiles')) {// Tells whether the filename is a directory
-                mkdir('uploads/profiles');//Makes directory
+            if (!is_dir($rootDir . 'uploads/profiles')) {// Tells whether the filename is a directory
+                mkdir($rootDir . 'uploads/profiles');//Makes directory
             }
 
-            if (!is_dir('uploads/profiles/' . $this->id . '/')) {// Tells whether the filename is a directory{
-                mkdir('uploads/profiles/' . $this->id . '/');//Makes directory
+            if (!is_dir($rootDir . 'uploads/profiles/' . $this->id . '/')) {// Tells whether the filename is a directory{
+                mkdir($rootDir . 'uploads/profiles/' . $this->id . '/');//Makes directory
             }
 
             $this->filename = uniqid('', TRUE) . '.' . $this->imageFile->extension;
-            $this->filepath = 'uploads/profiles/' . $this->id . '/';
-            $this->imageFile->saveAs('uploads/profiles/' . $this->id . '/' . $this->filename);
+            $this->filepath = $rootDir . 'uploads/profiles/' . $this->id . '/';
+            $this->imageFile->saveAs($rootDir . 'uploads/profiles/' . $this->id . '/' . $this->filename);
 
             $action = new Actions();
             $action->user_id = Yii::$app->user->identity->id;
