@@ -378,7 +378,7 @@ $this->title = 'Profile';
             </div>
 
             <div class="col-md-6">
-                <?= Html::submitButton('Update', ['class' => 'btn btn-danger edit-profile-save col-xs-8 col-xs-offset-2', 'data-method' => 'post']) ?>
+                <?= Html::submitButton('Update', ['class' => 'btn btn-danger edit-profile-save col-xs-8 col-xs-offset-2', 'data-method' => 'post', 'onclick' => "$('body .loading').addClass('active');",]) ?>
             </div>
         </div>
 

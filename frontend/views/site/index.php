@@ -80,6 +80,7 @@ $this->title = Translations::translate('app', 'Home');
                                         'class' => 'btn btn-orange col-xs-12',
                                         'name' => 'action-edit-button',
                                         'onclick' => "
+                                                            $('body .loading').addClass('active');
 //                                                        var formData = $('#add-post-form').serializeArray().reduce(function(obj, item) {
 //                                                                    obj[item.name.replace('Actions[', '')] = item.value;
 //                                                                    return obj;

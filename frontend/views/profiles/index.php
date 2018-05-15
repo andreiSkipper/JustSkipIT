@@ -260,7 +260,7 @@ $currentUser = User::findOne(Yii::$app->user->getId());
                                     [
                                         'class' => 'btn btn-orange col-xs-12',
                                         'name' => 'action-edit-button',
-                                        'onclick' => "",
+                                        'onclick' => "$('body .loading').addClass('active');",
                                     ]) ?>
                             </div>
                         </div>
