@@ -6,6 +6,7 @@ use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;
 use common\models\Actions;
+use bigbrush\tinypng\TinyPng;
 
 class UploadForm extends Model
 {
@@ -45,12 +46,16 @@ class UploadForm extends Model
             $this->filepath = $rootDir . 'uploads/profiles/' . $this->id . '/';
             $this->imageFile->saveAs($rootDir . 'uploads/profiles/' . $this->id . '/' . $this->filename);
 
+            $tiny = new TinyPng(['apiKey' => 'dT4RNuAbcQ-39GR4vnHqAhOXf4IBBnuK']);
+            $tiny->compress($rootDir . 'uploads/profiles/' . $this->id . '/' . $this->filename);
+            $tiny->resize($rootDir . 'uploads/profiles/' . $this->id . '/' . $this->filename, null, ['method' => 'fit', 'width' => 700, 'height' => 700]);
+
             $action = new Actions();
             $action->user_id = Yii::$app->user->identity->id;
             $action->type = isset($actionParams['type']) ? $actionParams['type'] : $action->typeEnum['Photo'];
             $action->imagePath = $this->filepath . $this->filename;
             $action->privacy = $action->privacyEnum['Public'];
-            if($action->type == 'Cover' OR $action->type == 'Avatar'){
+            if ($action->type == 'Cover' OR $action->type == 'Avatar') {
                 $action->save();
             }
 
