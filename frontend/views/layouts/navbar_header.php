@@ -185,7 +185,7 @@ if (Yii::$app->user->isGuest) {
                 [
                     'alt' => '',
                     'class' => 'navbar-avatar'
-                ]) . ' <strong>' . $profile->firstname . '</strong>',
+                ]) . ' <strong id="user_name">' . $profile->firstname . '</strong>',
         'url' => ['/profiles/my-profile']
     ];
     $menuItems[] = [

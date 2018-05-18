@@ -247,6 +247,12 @@ a.desc:after {
     padding: 10px;
 }
 
+#general-chat .chat-avatar {
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+}
+
 #messages {
     list-style-type: none;
 }

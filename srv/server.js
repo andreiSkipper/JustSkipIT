@@ -6,9 +6,9 @@ var users = {};
 
 app.use(require('express').static(__dirname));
 
-app.get('/', function(req, res) {
-	res.sendFile(__dirname + '/index.html');
-});
+// app.get('/', function(req, res) {
+// 	res.sendFile(__dirname + '/index.html');
+// });
 
 io.sockets.on('connection', function(client) {
 	client.on('join', function(username) {
@@ -28,6 +28,6 @@ io.sockets.on('connection', function(client) {
 	});
 });
 
-server.listen(8080, function() {
+server.listen(3001, function() {
 	console.log('The server is running ...');
 });
