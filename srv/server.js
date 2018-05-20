@@ -23,6 +23,14 @@ io.sockets.on('connection', function (client) {
         console.log('message        ' + data.user.email + ': ' + data.message);
         io.sockets.emit('chat message', data);
     });
+
+    client.on('typing', function (data) {
+        io.sockets.emit('typing', data);
+    });
+
+    client.on('not-typing', function (data) {
+        io.sockets.emit('not-typing', data);
+    });
 });
 
 server.listen(3002, function () {

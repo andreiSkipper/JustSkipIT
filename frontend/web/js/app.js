@@ -105,6 +105,11 @@ $(document).ready(function () {
                         friend_requests_button.find('.badge-notify').addClass('hidden');
                     }
                     $('#friend-requests-dropdown').find('.dropdown-menu')[0].innerHTML = result.friend_requests.html;
+
+                    $('.navbar-nav ul.dropdown-menu li.friend-request img').on('click', function (event) {
+                        $('body .loading').addClass('active');
+                        location.replace($(this).attr('data-url'));
+                    });
                 }
             },
             error: function (request, status, error) {

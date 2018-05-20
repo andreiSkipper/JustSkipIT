@@ -10,7 +10,7 @@ if (empty($friendships['Requests'])) {
         ?>
         <li class="friend-request">
             <a href="#" tabindex="-1">
-                <img src='/<?= $friendRequest->getUserFrom()->one()->getProfile()->one()->avatar ?>'
+                <img src='/<?= $friendRequest->getUserFrom()->one()->getProfile()->one()->avatar ?>' alt=''
                      data-url='<?= \common\models\Profiles::getProfileLinkByUserID($friendRequest->user_from) ?>'>
                 <?= $friendRequest->getUserFrom()->one()->getFullName() ?>
                 <span class='fa fa-check-circle-o fa-2x' data-user_id='<?= $friendRequest->user_from ?>'
@@ -29,7 +29,7 @@ if (empty($friendships['Requests'])) {
 <?php foreach ($friendships['Requested'] as $friendRequest) { ?>
     <li class="friend-request">
         <a href="#" tabindex="-1">
-            <img src='/<?= $friendRequest->getUserTo()->one()->getProfile()->one()->avatar ?>'
+            <img src='/<?= $friendRequest->getUserTo()->one()->getProfile()->one()->avatar ?>' alt=''
                  data-url='<?= \common\models\Profiles::getProfileLinkByUserID($friendRequest->user_to) ?>'>
             <?= $friendRequest->getUserTo()->one()->getFullName() ?>
             <span class='fa fa-times-circle-o fa-2x' data-user_id='<?= $friendRequest->user_to ?>'

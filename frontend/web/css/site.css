@@ -247,7 +247,7 @@ a.desc:after {
     padding: 10px;
 }
 
-#general-chat .chat-avatar {
+.chat-avatar {
     height: 30px;
     width: auto;
     margin-right: 10px;
@@ -268,6 +268,8 @@ a.desc:after {
 
 #users-list {
     list-style-type: none;
+    padding-left: 0;
+    text-align: center;
 }
 
 #users-list li {
@@ -1010,7 +1012,7 @@ ul.social-share > li > a {
     bottom: 0;
     background-color: black;
     left: 0;
-    z-index: 1100;
+    z-index: 100041;
     opacity: 0.7;
     display: block;
 }

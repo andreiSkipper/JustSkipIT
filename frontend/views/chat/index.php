@@ -44,7 +44,7 @@ use yii\widgets\ActiveForm;
         </div>
     </div>
 </div>
-<div class="col-xs-3">
+<div class="col-xs-3 no-padding">
     <div class="text-center" id="users">
         <p>Users Online</p>
         <ul id="users-list">
@@ -55,7 +55,6 @@ use yii\widgets\ActiveForm;
 <script src='/js/socket.io.js'></script>
 
 <script>
-    //    todo: fix user find and profile
     var model_user = <?= json_encode(\common\models\User::find()->where(['id' => Yii::$app->user->identity->id])->one()->toArray()) ?>;
     var model_profile = <?= json_encode(\common\models\Profiles::find()->where(['user_id' => Yii::$app->user->identity->id])->one()->toArray()) ?>;
     var socket = io('http://localhost:3002');
@@ -76,8 +75,8 @@ use yii\widgets\ActiveForm;
     });
     socket.on('update', function (users) {
         $('#users-list').empty();
-        $.each(users, function (index, value) {
-            $('#users-list').append($('<li>').text(value.profile.lastname + ' ' + value.profile.firstname));
+        $.each(users, function (index, data) {
+            $('#users-list').append($('<li>').html('<img class="chat-avatar" alt="" src="' + data.profile.avatar + '">' + data.profile.lastname + ' ' + data.profile.firstname));
         });
     });
 
@@ -89,8 +88,7 @@ use yii\widgets\ActiveForm;
             socket.emit('chat message', {
                 user: model_user,
                 profile: model_profile,
-                message: message,
-                avatar: '/' + model_profile.avatar
+                message: message
             });
             $('#message').val('');
         }
@@ -98,8 +96,40 @@ use yii\widgets\ActiveForm;
         return false;
     });
 
+    $('#message').on('input', function (e) {
+        if ($(this).val().length) {
+            socket.emit('typing', {
+                user: model_user,
+                profile: model_profile
+            });
+        } else {
+            socket.emit('not-typing', {
+                user: model_user,
+                profile: model_profile
+            });
+        }
+    });
+
+    socket.on('typing', function (data) {
+        if ($('#messages li#' + data.user.id).length === 0 && data.user.id !== model_user.id) {
+            $('#messages').append($("<li id='" + data.user.id + "' class='typing'>").html('<img class="chat-avatar" alt="" src="' + data.profile.avatar + '">' + data.profile.lastname + ' ' + data.profile.firstname + ' is typing...'));
+        }
+    });
+
+    socket.on('not-typing', function (data) {
+        if ($('#messages li#' + data.user.id).length !== 0) {
+            $('#messages li#' + data.user.id).remove();
+        }
+    });
+
     socket.on('chat message', function (data) {
-        $('#messages').append($('<li>').html('<img class="chat-avatar" alt="" src="' + data.avatar + '">' + data.profile.lastname + ' ' + data.profile.firstname + ': ' + data.message));
+        $('#messages li#' + data.user.id).remove();
+        let html = '<img class="chat-avatar" alt="" src="' + data.profile.avatar + '">' + data.profile.lastname + ' ' + data.profile.firstname + ': ' + data.message;
+        if ($('ul#messages > li.typing').length) {
+            $('<li>').html(html).insertBefore($('ul#messages > li.typing'));
+        } else {
+            $('ul#messages').append($('<li>').html(html));
+        }
         $('ul#messages').parent()[0].scrollTop = $('ul#messages').parent()[0].scrollHeight;
     });
 </script>

@@ -77,6 +77,7 @@ if (Yii::$app->user->isGuest) {
                         loginNotice.get().find('form#login-form').on('click', '[name=cancel-button]', function() {
                             loginNotice.remove();
                         }).submit(function() {
+                            $('body .loading').addClass('active');
                             var formData = $(this).serializeArray().reduce(function(obj, item) {
                                         obj[item.name] = item.value;
                                         return obj;
@@ -90,6 +91,7 @@ if (Yii::$app->user->isGuest) {
                                success: function(response) {
                                     result = JSON.parse(response);
                                     if (result != null) {
+                                        $('body .loading').removeClass('active');
                                         loginNotice.attention('" . \common\models\Actions::getNotificationAnimation('attention') . "');
                                         for (var k in $('.help-block')) {
                                             $('.help-block')[k].innerText = '';
@@ -144,6 +146,7 @@ if (Yii::$app->user->isGuest) {
                         signupNotice.get().find('form#signup-form').on('click', '[name=cancel-button]', function() {
                             signupNotice.remove();
                         }).submit(function() {
+                            $('body .loading').addClass('active');
                             var formData = $(this).serializeArray().reduce(function(obj, item) {
                                         obj[item.name] = item.value;
                                         return obj;
@@ -157,6 +160,7 @@ if (Yii::$app->user->isGuest) {
                                success: function(response) {
                                     result = JSON.parse(response);
                                     if (result != null) {
+                                        $('body .loading').removeClass('active');
                                         signupNotice.attention('" . \common\models\Actions::getNotificationAnimation('attention') . "');
                                         for (var k in $('.help-block')) {
                                             $('.help-block')[k].innerText = '';
@@ -261,7 +265,8 @@ if (Yii::$app->user->isGuest) {
         'linkOptions' => [
             'data-method' => 'post',
             'class' => 'faa-parent animated-hover',
-        ]
+            'onclick' => "$('body .loading').addClass('active');"
+        ],
     ];
 }
 echo \yii\bootstrap\Nav::widget([
