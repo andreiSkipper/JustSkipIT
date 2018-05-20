@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use common\models\User;
 use Yii;
 use app\models\Genre;
 use yii\data\ActiveDataProvider;
@@ -25,8 +26,10 @@ class ChatController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index', [
+        if (\Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
 
-        ]);
+        return $this->render('index', []);
     }
 }

@@ -19,19 +19,27 @@ use yii\widgets\ActiveForm;
         </div>
         <div class="panel-footer">
             <div class="row">
+                <?php $form = ActiveForm::begin([
+                    'id' => 'send-message-form',
+                    'options' => [
+                        'onsubmit' => 'return false;'
+                    ]
+                ]); ?>
                 <div class="col-xs-9">
                     <?= Html::input('text', 'chat-input', '', [
                         'class' => 'form-control',
                         'id' => 'message',
-                        'placeholder' => 'Send a message...'
+                        'placeholder' => 'Send a message...',
+                        'autocomplete' => 'off'
                     ]) ?>
                 </div>
                 <div class="col-xs-3">
-                    <?= Html::Button('Send', [
+                    <?= Html::submitButton('Send', [
                         'class' => 'btn btn-danger col-xs-12',
                         'id' => 'send-message'
                     ]) ?>
                 </div>
+                <?php ActiveForm::end(); ?>
             </div>
         </div>
     </div>
@@ -44,15 +52,13 @@ use yii\widgets\ActiveForm;
     </div>
 </div>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js'></script>
+<script src='/js/socket.io.js'></script>
 
 <script>
-//    todo: fix user find and profile
-    var model_user = <?= json_encode(\common\models\User::find(Yii::$app->user->identity->id)->one()->toArray()) ?>;
-    var model_profile = <?= json_encode(\common\models\Profiles::find(['user_id' => Yii::$app->user->identity->id])->one()->toArray()) ?>;
-    console.log(model_user);
-    console.log(model_profile);
-    var socket = io('http://localhost:3001');
+    //    todo: fix user find and profile
+    var model_user = <?= json_encode(\common\models\User::find()->where(['id' => Yii::$app->user->identity->id])->one()->toArray()) ?>;
+    var model_profile = <?= json_encode(\common\models\Profiles::find()->where(['user_id' => Yii::$app->user->identity->id])->one()->toArray()) ?>;
+    var socket = io('http://localhost:3002');
     var user;
 
     if ($('#user_name').length) {
@@ -64,36 +70,36 @@ use yii\widgets\ActiveForm;
         } while (user.length == 0);
     }
 
-    socket.emit('join', user);
-    socket.on('update', function (user) {
+    socket.emit('join', {
+        user: model_user,
+        profile: model_profile
+    });
+    socket.on('update', function (users) {
         $('#users-list').empty();
-        $.each(user, function (index, value) {
-            $('#users-list').append($('<li>').text(value));
+        $.each(users, function (index, value) {
+            $('#users-list').append($('<li>').text(value.profile.lastname + ' ' + value.profile.firstname));
         });
     });
 
-    $('#send-message').click(function () {
-        var $message = $('#message').val();
-        var $username = user;
-        if (jQuery.trim($username).length > 0) {
-            if (jQuery.trim($message).length > 0) {
-                socket.emit('chat message', {
-                    username: model_profile.lastname + ' ' + model_profile.firstname,
-                    message: $('#message').val(),
-                    avatar: '/' + model_profile.avatar
-                });
-                $('#message').val('');
-                return false;
-            } else {
-                alert('The message can not be empty');
-            }
+    $('#send-message-form').on('submit', function (event) {
+        event.preventDefault();
+
+        var message = $('#message').val();
+        if (jQuery.trim(message).length > 0) {
+            socket.emit('chat message', {
+                user: model_user,
+                profile: model_profile,
+                message: message,
+                avatar: '/' + model_profile.avatar
+            });
+            $('#message').val('');
         }
-        else {
-            prompt('The username can not be empty, please choose a username: ');
-        }
+
+        return false;
     });
 
     socket.on('chat message', function (data) {
-        $('#messages').append($('<li>').html('<img class="chat-avatar" src="' + data.avatar + '">' + data.username + ': ' + data.message));
+        $('#messages').append($('<li>').html('<img class="chat-avatar" alt="" src="' + data.avatar + '">' + data.profile.lastname + ' ' + data.profile.firstname + ': ' + data.message));
+        $('ul#messages').parent()[0].scrollTop = $('ul#messages').parent()[0].scrollHeight;
     });
 </script>
