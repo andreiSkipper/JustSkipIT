@@ -60,6 +60,8 @@ use yii\widgets\ActiveForm;
     var socket = io('http://localhost:3002');
     var user;
 
+    var audio_new_message = new Audio('/sounds/notification_message.mp3');
+
     if ($('#user_name').length) {
         user = jQuery.trim($('#user_name').html());
     } else {
@@ -73,11 +75,23 @@ use yii\widgets\ActiveForm;
         user: model_user,
         profile: model_profile
     });
-    socket.on('update', function (users) {
+    socket.on('update', function (request) {
         $('#users-list').empty();
-        $.each(users, function (index, data) {
-            $('#users-list').append($('<li>').html('<img class="chat-avatar" alt="" src="' + data.profile.avatar + '">' + data.profile.lastname + ' ' + data.profile.firstname));
+        $.each(request.users, function (index, user) {
+            if ($('#users-list li#' + user.user.id).length === 0) {
+                $('#users-list').append($("<li id='" + user.user.id + "'>").html('<img class="chat-avatar" alt="" src="' + user.profile.avatar + '">' + user.profile.lastname + ' ' + user.profile.firstname));
+            }
         });
+
+        if ($('#users-list li#' + request.user.user.id).length === 0) {
+            $('#messages').append($("<li>").html('<img class="chat-avatar" alt="" src="' + request.user.profile.avatar + '">' + request.user.profile.lastname + ' ' + request.user.profile.firstname + ' has left the chat...'));
+            scrollChatBottom();
+        } else {
+            if (request.user.user.id !== model_user.id) {
+                $('#messages').append($("<li>").html('<img class="chat-avatar" alt="" src="' + request.user.profile.avatar + '">' + request.user.profile.lastname + ' ' + request.user.profile.firstname + ' has joined the chat...'));
+                scrollChatBottom();
+            }
+        }
     });
 
     $('#send-message-form').on('submit', function (event) {
@@ -110,26 +124,35 @@ use yii\widgets\ActiveForm;
         }
     });
 
-    socket.on('typing', function (data) {
-        if ($('#messages li#' + data.user.id).length === 0 && data.user.id !== model_user.id) {
-            $('#messages').append($("<li id='" + data.user.id + "' class='typing'>").html('<img class="chat-avatar" alt="" src="' + data.profile.avatar + '">' + data.profile.lastname + ' ' + data.profile.firstname + ' is typing...'));
+    socket.on('typing', function (request) {
+        if ($('#messages li#' + request.user.id).length === 0 && request.user.id !== model_user.id) {
+            $('#messages').append($("<li id='" + request.user.id + "' class='typing'>").html('<img class="chat-avatar" alt="" src="' + request.profile.avatar + '">' + request.profile.lastname + ' ' + request.profile.firstname + ' is typing...'));
+            scrollChatBottom();
         }
     });
 
-    socket.on('not-typing', function (data) {
-        if ($('#messages li#' + data.user.id).length !== 0) {
-            $('#messages li#' + data.user.id).remove();
+    socket.on('not-typing', function (request) {
+        if ($('#messages li#' + request.user.id).length !== 0) {
+            $('#messages li#' + request.user.id).remove();
+            scrollChatBottom();
         }
     });
 
-    socket.on('chat message', function (data) {
-        $('#messages li#' + data.user.id).remove();
-        let html = '<img class="chat-avatar" alt="" src="' + data.profile.avatar + '">' + data.profile.lastname + ' ' + data.profile.firstname + ': ' + data.message;
+    socket.on('chat message', function (request) {
+        $('#messages li#' + request.user.id).remove();
+        let html = '<img class="chat-avatar" alt="" src="' + request.profile.avatar + '">' + request.profile.lastname + ' ' + request.profile.firstname + ': ' + request.message;
         if ($('ul#messages > li.typing').length) {
-            $('<li>').html(html).insertBefore($('ul#messages > li.typing'));
+            $('<li>').html(html).insertBefore($('ul#messages > li.typing')[0]);
         } else {
             $('ul#messages').append($('<li>').html(html));
         }
-        $('ul#messages').parent()[0].scrollTop = $('ul#messages').parent()[0].scrollHeight;
+        if (request.user.id !== model_user.id) {
+            audio_new_message.cloneNode().play();
+        }
+        scrollChatBottom();
     });
+
+    function scrollChatBottom() {
+        $('ul#messages').parent()[0].scrollTop = $('ul#messages').parent()[0].scrollHeight;
+    }
 </script>
