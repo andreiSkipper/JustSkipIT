@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74bf72ab-bf50-4f95-bab0-3555bfa04124" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/web/sounds/notification_message.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/JustSkipIT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JustSkipIT.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/chat/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/chat/index.php" afterDir="false" />
@@ -79,8 +80,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/views/chat/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="59" column="37" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="37" />
+            <state relative-caret-position="319">
+              <caret line="65" column="51" lean-forward="true" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -88,8 +89,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/srv/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="47" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="47" />
+            <state relative-caret-position="663">
+              <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -376,7 +377,7 @@
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -580,15 +581,15 @@
       <workItem from="1526649498364" duration="3115000" />
       <workItem from="1526810883323" duration="5650000" />
       <workItem from="1526831077905" duration="5133000" />
-      <workItem from="1526879510270" duration="6414000" />
+      <workItem from="1526879510270" duration="6423000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192624000" />
+    <option name="totallyTimeSpent" value="192633000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2531983" />
@@ -925,15 +926,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/chat/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="59" column="37" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="37" />
+        <state relative-caret-position="319">
+          <caret line="65" column="51" lean-forward="true" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/srv/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="47" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="47" />
+        <state relative-caret-position="663">
+          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
         </state>
       </provider>
     </entry>
