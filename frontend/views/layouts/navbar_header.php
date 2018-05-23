@@ -223,7 +223,7 @@ if (Yii::$app->user->isGuest) {
     } else {
         foreach ($friendships['Requests'] as $friendRequest) {
             /* @var $friendRequest \common\models\Friendship */
-            $items[] = ['label' => "<img src='/" . $friendRequest->getUserFrom()->one()->getProfile()->one()->avatar . "' data-url='" . \common\models\Profiles::getProfileLinkByUserID($friendRequest->user_from) . "'>" . $friendRequest->getUserFrom()->one()->getFullName() . "<span class='fa fa-check-circle-o fa-2x' data-user_id='" . $friendRequest->user_from . "' onclick='return acceptFriendAJAX(this);'></span> <span class='fa fa-times-circle-o fa-2x' data-user_id='" . $friendRequest->user_from . "' onclick='return refuseFriendAJAX(this);'></span>", 'url' => '#', 'options' => ['class' => 'friend-request']];
+            $items[] = ['label' => "<img src='/" . $friendRequest->getUserFrom()->one()->getProfile()->one()->avatar . "' alt='' data-url='" . \common\models\Profiles::getProfileLinkByUserID($friendRequest->user_from) . "'>" . $friendRequest->getUserFrom()->one()->getFullName() . "<span class='fa fa-check-circle-o fa-2x' data-user_id='" . $friendRequest->user_from . "' onclick='return acceptFriendAJAX(this);'></span> <span class='fa fa-times-circle-o fa-2x' data-user_id='" . $friendRequest->user_from . "' onclick='return refuseFriendAJAX(this);'></span>", 'url' => '#', 'options' => ['class' => 'friend-request']];
         }
     }
     if (!empty($friendships['Requested'])) {
@@ -231,7 +231,7 @@ if (Yii::$app->user->isGuest) {
     }
     foreach ($friendships['Requested'] as $friendRequest) {
         /* @var $friendRequest \common\models\Friendship */
-        $items[] = ['label' => "<img src='/" . $friendRequest->getUserTo()->one()->getProfile()->one()->avatar . "' data-url='" . \common\models\Profiles::getProfileLinkByUserID($friendRequest->user_to) . "'>" . $friendRequest->getUserTo()->one()->getFullName() . "<span class='fa fa-times-circle-o fa-2x' data-user_id='" . $friendRequest->user_to . "' onclick='return removeFriendAJAX(this);'></span>", 'url' => '#', 'options' => ['class' => 'friend-request']];
+        $items[] = ['label' => "<img src='/" . $friendRequest->getUserTo()->one()->getProfile()->one()->avatar . "' alt='' data-url='" . \common\models\Profiles::getProfileLinkByUserID($friendRequest->user_to) . "'>" . $friendRequest->getUserTo()->one()->getFullName() . "<span class='fa fa-times-circle-o fa-2x' data-user_id='" . $friendRequest->user_to . "' onclick='return removeFriendAJAX(this);'></span>", 'url' => '#', 'options' => ['class' => 'friend-request']];
     }
     if (empty($friendships['Requests'])) {
         $menuItems[] = [
