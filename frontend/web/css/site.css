@@ -885,6 +885,24 @@ ul.social-share > li > a {
     .stack-modal.ui-pnotify-mobile-able.ui-pnotify {
         left: 150px !important;
     }
+
+    #send-message-form input#message {
+        margin-bottom: 10px;
+    }
+
+    #chat-section {
+        width: 100% !important;
+        padding: 0;
+    }
+
+    #chat-section #chat > .panel-body {
+        height: 330px !important;
+        min-height: 330px !important;
+    }
+
+    #chat-section #chat > .panel-body > #general-chat {
+        height: 300px !important;
+    }
 }
 
 .comment-buttons {

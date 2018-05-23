@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 ?>
-<div class="col-xs-9" id="chat-section">
+<div class="col-sm-9" id="chat-section">
     <div class="panel panel-default" id="chat">
         <div class="panel-heading text-center">
             <!--            Chat Box --->
@@ -25,7 +25,7 @@ use yii\widgets\ActiveForm;
                         'onsubmit' => 'return false;'
                     ]
                 ]); ?>
-                <div class="col-xs-9">
+                <div class="col-xs-12 col-sm-9">
                     <?= Html::input('text', 'chat-input', '', [
                         'class' => 'form-control',
                         'id' => 'message',
@@ -33,7 +33,7 @@ use yii\widgets\ActiveForm;
                         'autocomplete' => 'off'
                     ]) ?>
                 </div>
-                <div class="col-xs-3">
+                <div class="col-xs-12 col-sm-3">
                     <?= Html::submitButton('Send', [
                         'class' => 'btn btn-danger col-xs-12',
                         'id' => 'send-message'
@@ -44,7 +44,8 @@ use yii\widgets\ActiveForm;
         </div>
     </div>
 </div>
-<div class="col-xs-3 no-padding">
+<div class="clearfix hidden-sm hidden-md hidden-lg"></div>
+<div class="col-sm-3 no-padding">
     <div class="text-center" id="users">
         <p>Users Online</p>
         <ul id="users-list">
