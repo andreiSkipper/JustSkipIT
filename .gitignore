@@ -9,3 +9,11 @@ vendor/*
 /vendor
 /vendor/*
 /frontend/web/uploads/*
+
+frontend/web/.htaccess
+frontend/web/uploads/profiles
+frontend/web/uploads/profiles/
+frontend/web/uploads/profiles/*
+
+nohup.out
+.nohup.out.swp
