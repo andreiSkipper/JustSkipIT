@@ -62,21 +62,21 @@ class Country extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Code' => Yii::t('app', 'Code'),
-            'Name' => Yii::t('app', 'Name'),
-            'Continent' => Yii::t('app', 'Continent'),
-            'Region' => Yii::t('app', 'Region'),
-            'SurfaceArea' => Yii::t('app', 'Surface Area'),
-            'IndepYear' => Yii::t('app', 'Indep Year'),
-            'Population' => Yii::t('app', 'Population'),
-            'LifeExpectancy' => Yii::t('app', 'Life Expectancy'),
-            'GNP' => Yii::t('app', 'Gnp'),
-            'GNPOld' => Yii::t('app', 'Gnpold'),
-            'LocalName' => Yii::t('app', 'Local Name'),
-            'GovernmentForm' => Yii::t('app', 'Government Form'),
-            'HeadOfState' => Yii::t('app', 'Head Of State'),
-            'Capital' => Yii::t('app', 'Capital'),
-            'Code2' => Yii::t('app', 'Code2'),
+            'Code' => Translations::translate('app', 'Code'),
+            'Name' => Translations::translate('app', 'Name'),
+            'Continent' => Translations::translate('app', 'Continent'),
+            'Region' => Translations::translate('app', 'Region'),
+            'SurfaceArea' => Translations::translate('app', 'Surface Area'),
+            'IndepYear' => Translations::translate('app', 'Indep Year'),
+            'Population' => Translations::translate('app', 'Population'),
+            'LifeExpectancy' => Translations::translate('app', 'Life Expectancy'),
+            'GNP' => Translations::translate('app', 'Gnp'),
+            'GNPOld' => Translations::translate('app', 'Gnpold'),
+            'LocalName' => Translations::translate('app', 'Local Name'),
+            'GovernmentForm' => Translations::translate('app', 'Government Form'),
+            'HeadOfState' => Translations::translate('app', 'Head Of State'),
+            'Capital' => Translations::translate('app', 'Capital'),
+            'Code2' => Translations::translate('app', 'Code2'),
         ];
     }
 

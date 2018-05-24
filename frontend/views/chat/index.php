@@ -9,7 +9,7 @@ use yii\widgets\ActiveForm;
         <div class="panel-heading text-center">
             <!--            Chat Box --->
             <!--            <input type="text" id="username" disabled/>-->
-            Global Chat
+            <?= \common\models\Translations::translate('app', 'Global Chat') ?>
         </div>
         <div class="panel-body" style="min-height: 450px">
             <div id="general-chat">
@@ -29,12 +29,12 @@ use yii\widgets\ActiveForm;
                     <?= Html::input('text', 'chat-input', '', [
                         'class' => 'form-control',
                         'id' => 'message',
-                        'placeholder' => 'Send a message...',
+                        'placeholder' => \common\models\Translations::translate('app', 'Send a message...'),
                         'autocomplete' => 'off'
                     ]) ?>
                 </div>
                 <div class="col-xs-12 col-sm-3">
-                    <?= Html::submitButton('Send', [
+                    <?= Html::submitButton(\common\models\Translations::translate('app', 'Send'), [
                         'class' => 'btn btn-danger col-xs-12',
                         'id' => 'send-message'
                     ]) ?>
@@ -47,7 +47,7 @@ use yii\widgets\ActiveForm;
 <div class="clearfix hidden-sm hidden-md hidden-lg"></div>
 <div class="col-sm-3 no-padding">
     <div class="text-center" id="users">
-        <p>Users Online</p>
+        <p><?= \common\models\Translations::translate('app', 'Users Online') ?></p>
         <ul id="users-list">
         </ul>
     </div>

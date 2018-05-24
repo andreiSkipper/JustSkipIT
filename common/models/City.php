@@ -45,11 +45,11 @@ class City extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => Yii::t('app', 'ID'),
-            'Name' => Yii::t('app', 'Name'),
-            'CountryCode' => Yii::t('app', 'Country Code'),
-            'District' => Yii::t('app', 'District'),
-            'Population' => Yii::t('app', 'Population'),
+            'ID' => Translations::translate('app', 'ID'),
+            'Name' => Translations::translate('app', 'Name'),
+            'CountryCode' => Translations::translate('app', 'Country Code'),
+            'District' => Translations::translate('app', 'District'),
+            'Population' => Translations::translate('app', 'Population'),
         ];
     }
 

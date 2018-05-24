@@ -8,16 +8,18 @@ app.use(require('express').static(__dirname));
 
 io.sockets.on('connection', function (client) {
     client.on('join', function (request) {
-        console.log('connected      ' + request.user.email);
-        users[client.id] = request;
-        var result = {
-            user: request,
-            users: users
-        };
-        io.sockets.emit('update', result);
+        if (!(client.id in users)) {
+            console.log('connected      ' + request.user.email);
+            users[client.id] = request;
+            var result = {
+                user: request,
+                users: users
+            };
+            io.sockets.emit('update', result);
+        }
     });
     client.on('disconnect', function () {
-        if(client.id in users) {
+        if (client.id in users) {
             console.log('disconnected   ' + users[client.id].user.email);
             var request = {
                 user: users[client.id]

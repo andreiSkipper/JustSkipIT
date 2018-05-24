@@ -81,18 +81,18 @@ class Actions extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'user_id' => Yii::t('app', 'User ID'),
-            'type' => Yii::t('app', 'Type'),
-            'imagePath' => Yii::t('app', 'Image Path'),
-            'description' => Yii::t('app', 'Description'),
-            'location' => Yii::t('app', 'Location'),
-            'privacy' => Yii::t('app', 'Privacy'),
-            'fealing' => Yii::t('app', 'Fealing'),
-            'tags' => Yii::t('app', 'Tags'),
-            'likes' => Yii::t('app', 'Likes'),
-            'created_at' => Yii::t('app', 'Created At'),
-            'updated_at' => Yii::t('app', 'Updated At'),
+            'id' => Translations::translate('app', 'ID'),
+            'user_id' => Translations::translate('app', 'User ID'),
+            'type' => Translations::translate('app', 'Type'),
+            'imagePath' => Translations::translate('app', 'Image Path'),
+            'description' => Translations::translate('app', 'Description'),
+            'location' => Translations::translate('app', 'Location'),
+            'privacy' => Translations::translate('app', 'Privacy'),
+            'fealing' => Translations::translate('app', 'Fealing'),
+            'tags' => Translations::translate('app', 'Tags'),
+            'likes' => Translations::translate('app', 'Likes'),
+            'created_at' => Translations::translate('app', 'Created At'),
+            'updated_at' => Translations::translate('app', 'Updated At'),
         ];
     }
 

@@ -45,10 +45,10 @@ class Countrylanguage extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'CountryCode' => Yii::t('app', 'Country Code'),
-            'Language' => Yii::t('app', 'Language'),
-            'IsOfficial' => Yii::t('app', 'Is Official'),
-            'Percentage' => Yii::t('app', 'Percentage'),
+            'CountryCode' => Translations::translate('app', 'Country Code'),
+            'Language' => Translations::translate('app', 'Language'),
+            'IsOfficial' => Translations::translate('app', 'Is Official'),
+            'Percentage' => Translations::translate('app', 'Percentage'),
         ];
     }
 

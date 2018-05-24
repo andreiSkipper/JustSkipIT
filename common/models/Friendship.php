@@ -59,10 +59,10 @@ class Friendship extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => Yii::t('app', 'ID'),
-            'user_from' => Yii::t('app', 'From user'),
-            'user_to' => Yii::t('app', 'To user'),
-            'status' => Yii::t('app', 'Status'),
+            'ID' => Translations::translate('app', 'ID'),
+            'user_from' => Translations::translate('app', 'From user'),
+            'user_to' => Translations::translate('app', 'To user'),
+            'status' => Translations::translate('app', 'Status'),
         ];
     }
 

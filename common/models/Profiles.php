@@ -5,6 +5,7 @@ namespace common\models;
 use Yii;
 use yii\helpers\Url;
 use common\models\User;
+use common\models\Translations;
 
 /**
  * This is the model class for table "Profiles".
@@ -92,24 +93,24 @@ class Profiles extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'user_id' => Yii::t('app', 'User ID'),
-            'firstname' => Yii::t('app', 'First Name'),
-            'lastname' => Yii::t('app', 'Last Name'),
-            'nickname' => Yii::t('app', 'Nick'),
-            'avatar' => Yii::t('app', 'Avatar'),
-            'cover' => Yii::t('app', 'Cover'),
-            'address' => Yii::t('app', 'Address'),
-            'phoneNumber' => Yii::t('app', 'Phone Number'),
-            'currentCity' => Yii::t('app', 'Current City'),
-            'birthCity' => Yii::t('app', 'Birth City'),
-            'work' => Yii::t('app', 'Work'),
-            'birthday' => Yii::t('app', 'Birthday'),
-            'sex' => Yii::t('app', 'Sex'),
-            'interestedIn' => Yii::t('app', 'Interested In'),
-            'knownLanguages' => Yii::t('app', 'Known Languages'),
-            'relationship' => Yii::t('app', 'Relationship Status'),
-            'description' => Yii::t('app', 'Description'),
-            'shortUrl' => Yii::t('app', 'Short Url'),
+            'user_id' => Translations::translate('app', 'User ID'),
+            'firstname' => Translations::translate('app', 'First Name'),
+            'lastname' => Translations::translate('app', 'Last Name'),
+            'nickname' => Translations::translate('app', 'Nick'),
+            'avatar' => Translations::translate('app', 'Avatar'),
+            'cover' => Translations::translate('app', 'Cover'),
+            'address' => Translations::translate('app', 'Address'),
+            'phoneNumber' => Translations::translate('app', 'Phone Number'),
+            'currentCity' => Translations::translate('app', 'Current City'),
+            'birthCity' => Translations::translate('app', 'Birth City'),
+            'work' => Translations::translate('app', 'Work'),
+            'birthday' => Translations::translate('app', 'Birthday'),
+            'sex' => Translations::translate('app', 'Sex'),
+            'interestedIn' => Translations::translate('app', 'Interested In'),
+            'knownLanguages' => Translations::translate('app', 'Known Languages'),
+            'relationship' => Translations::translate('app', 'Relationship Status'),
+            'description' => Translations::translate('app', 'Description'),
+            'shortUrl' => Translations::translate('app', 'Short Url'),
         ];
     }
 
