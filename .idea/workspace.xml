@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="74bf72ab-bf50-4f95-bab0-3555bfa04124" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/Actions.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/Actions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/City.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/Country.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/Country.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/Countrylanguage.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/Countrylanguage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/Friendship.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/Friendship.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/Profiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/Profiles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/chat/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/chat/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srv/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/srv/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/profiles/modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/profiles/modal.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,19 +47,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modal.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="modal.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/views/profiles/modal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="211" column="49" selection-start-line="211" selection-start-column="49" selection-end-line="211" selection-end-column="49" />
+            <state relative-caret-position="252">
+              <caret line="341" column="65" lean-forward="true" selection-start-line="341" selection-start-column="65" selection-end-line="341" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Profiles.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Profiles.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/models/Profiles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
+            <state relative-caret-position="189">
               <caret line="112" column="49" selection-start-line="112" selection-start-column="49" selection-end-line="112" selection-end-column="49" />
               <folding>
                 <element signature="e#33#41#0#PHP" expanded="true" />
@@ -96,7 +89,7 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/srv/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
+            <state relative-caret-position="139">
               <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
             </state>
           </provider>
@@ -113,7 +106,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>current</find>
       <find>avatar</find>
       <find>profile</find>
       <find>before</find>
@@ -143,6 +135,7 @@
       <find>Translations::translate</find>
       <find>Yii::t</find>
       <find>select</find>
+      <find>placeholder</find>
     </findStrings>
     <replaceStrings>
       <replace>Translations::translate</replace>
@@ -210,7 +203,6 @@
         <option value="$PROJECT_DIR$/frontend/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/srv/server.js" />
         <option value="$PROJECT_DIR$/frontend/views/chat/index.php" />
-        <option value="$PROJECT_DIR$/frontend/views/profiles/modal.php" />
         <option value="$PROJECT_DIR$/common/models/Country.php" />
         <option value="$PROJECT_DIR$/common/models/Friendship.php" />
         <option value="$PROJECT_DIR$/common/models/City.php" />
@@ -218,6 +210,7 @@
         <option value="$PROJECT_DIR$/common/models/Actions.php" />
         <option value="$PROJECT_DIR$/common/models/Countrylanguage.php" />
         <option value="$PROJECT_DIR$/common/models/Profiles.php" />
+        <option value="$PROJECT_DIR$/frontend/views/profiles/modal.php" />
       </list>
     </option>
   </component>
@@ -349,7 +342,7 @@
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -612,12 +605,12 @@
       <workItem from="1526831077905" duration="5133000" />
       <workItem from="1526879510270" duration="6519000" />
       <workItem from="1527066898709" duration="3919000" />
-      <workItem from="1527144429786" duration="3727000" />
+      <workItem from="1527144429786" duration="4935000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200375000" />
+    <option name="totallyTimeSpent" value="201583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -628,8 +621,8 @@
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Run" order="5" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.32897604" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2585288" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.32897604" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2585288" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" weight="0.3297568" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.32951653" />
@@ -893,13 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srv/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
@@ -956,13 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/profiles/modal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="211" column="49" selection-start-line="211" selection-start-column="49" selection-end-line="211" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/chat/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -972,11 +951,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/models/Profiles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
+        <state relative-caret-position="189">
           <caret line="112" column="49" selection-start-line="112" selection-start-column="49" selection-end-line="112" selection-end-column="49" />
           <folding>
             <element signature="e#33#41#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srv/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/profiles/modal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="341" column="65" lean-forward="true" selection-start-line="341" selection-start-column="65" selection-end-line="341" selection-end-column="65" />
         </state>
       </provider>
     </entry>

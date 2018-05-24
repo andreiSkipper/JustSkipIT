@@ -46,7 +46,7 @@ Modal::begin([
                     ])->textInput(
                         [
                             'maxlength' => true,
-                            'placeholder' => 'Insert Firstname...'
+                            'placeholder' => \common\models\Translations::translate('app', 'Insert Firstname...')
                         ]);
                     ?>
                 </div>
@@ -63,7 +63,7 @@ Modal::begin([
                     ])->textInput(
                         [
                             'maxlength' => true,
-                            'placeholder' => 'Insert Lastname...'
+                            'placeholder' => \common\models\Translations::translate('app', 'Insert Lastname...')
                         ]);
                     ?>
                 </div>
@@ -80,7 +80,7 @@ Modal::begin([
                     ])->textInput(
                         [
                             'maxlength' => true,
-                            'placeholder' => 'Insert Nickname...'
+                            'placeholder' => \common\models\Translations::translate('app', 'Insert Nickname...')
                         ]);
                     ?>
                 </div>
@@ -101,7 +101,7 @@ Modal::begin([
                     ])->textInput(
                         [
                             'maxlength' => true,
-                            'placeholder' => 'Insert Phone Number...',
+                            'placeholder' => \common\models\Translations::translate('app', 'Insert Phone Number...'),
                         ]);
                     ?>
                 </div>
@@ -132,7 +132,7 @@ Modal::begin([
                     ])->textInput(
                         [
                             'maxlength' => true,
-                            'placeholder' => 'Insert work...'
+                            'placeholder' => \common\models\Translations::translate('app', 'Insert work...')
                         ]);
                     ?>
                 </div>
@@ -280,7 +280,7 @@ Modal::begin([
                 ])->textInput(
                     [
                         'maxlength' => true,
-                        'placeholder' => 'Insert short url...'
+                        'placeholder' => \common\models\Translations::translate('app', 'Insert short url...')
                     ]);
                 ?>
             </div>
@@ -298,7 +298,7 @@ Modal::begin([
                     ])->textarea(
                         [
                             'maxlength' => true,
-                            'placeholder' => 'Insert Address...'
+                            'placeholder' => \common\models\Translations::translate('app', 'Insert Address...')
                         ]);
                     ?>
                 </div>
@@ -315,7 +315,7 @@ Modal::begin([
                     ])->textarea(
                         [
                             'maxlength' => true,
-                            'placeholder' => 'Insert description...'
+                            'placeholder' => \common\models\Translations::translate('app', 'Insert description...')
                         ]);
                     ?>
                 </div>
