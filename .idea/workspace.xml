@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74bf72ab-bf50-4f95-bab0-3555bfa04124" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/profiles/modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/profiles/modal.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +49,8 @@
       <file leaf-file-name="modal.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/views/profiles/modal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="341" column="65" lean-forward="true" selection-start-line="341" selection-start-column="65" selection-end-line="341" selection-end-column="65" />
+            <state relative-caret-position="180">
+              <caret line="113" column="86" lean-forward="true" selection-start-line="113" selection-start-column="86" selection-end-line="113" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -605,12 +604,12 @@
       <workItem from="1526831077905" duration="5133000" />
       <workItem from="1526879510270" duration="6519000" />
       <workItem from="1527066898709" duration="3919000" />
-      <workItem from="1527144429786" duration="4935000" />
+      <workItem from="1527144429786" duration="5130000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201583000" />
+    <option name="totallyTimeSpent" value="201778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -968,8 +967,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/profiles/modal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="341" column="65" lean-forward="true" selection-start-line="341" selection-start-column="65" selection-end-line="341" selection-end-column="65" />
+        <state relative-caret-position="180">
+          <caret line="113" column="86" lean-forward="true" selection-start-line="113" selection-start-column="86" selection-end-line="113" selection-end-column="86" />
         </state>
       </provider>
     </entry>

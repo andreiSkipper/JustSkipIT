@@ -46,7 +46,7 @@ Modal::begin([
                     ])->textInput(
                         [
                             'maxlength' => true,
-                            'placeholder' => \common\models\Translations::translate('app', 'Insert Firstname...')
+//                            'placeholder' => \common\models\Translations::translate('app', 'Insert Firstname...')
                         ]);
                     ?>
                 </div>
@@ -63,7 +63,7 @@ Modal::begin([
                     ])->textInput(
                         [
                             'maxlength' => true,
-                            'placeholder' => \common\models\Translations::translate('app', 'Insert Lastname...')
+//                            'placeholder' => \common\models\Translations::translate('app', 'Insert Lastname...')
                         ]);
                     ?>
                 </div>
@@ -80,7 +80,7 @@ Modal::begin([
                     ])->textInput(
                         [
                             'maxlength' => true,
-                            'placeholder' => \common\models\Translations::translate('app', 'Insert Nickname...')
+//                            'placeholder' => \common\models\Translations::translate('app', 'Insert Nickname...')
                         ]);
                     ?>
                 </div>
@@ -101,7 +101,7 @@ Modal::begin([
                     ])->textInput(
                         [
                             'maxlength' => true,
-                            'placeholder' => \common\models\Translations::translate('app', 'Insert Phone Number...'),
+//                            'placeholder' => \common\models\Translations::translate('app', 'Insert Phone Number...'),
                         ]);
                     ?>
                 </div>
@@ -111,7 +111,7 @@ Modal::begin([
                 <div class="form-group">
                     <?= $form->field($profile, 'birthday')->widget(DatePicker::classname(), [
                         'options' => [
-                            'placeholder' => $profile->getAttributeLabel('birthday')
+//                            'placeholder' => $profile->getAttributeLabel('birthday')
                         ],
                         'pluginOptions' => [
                             'autoclose' => true,
@@ -132,7 +132,7 @@ Modal::begin([
                     ])->textInput(
                         [
                             'maxlength' => true,
-                            'placeholder' => \common\models\Translations::translate('app', 'Insert work...')
+//                            'placeholder' => \common\models\Translations::translate('app', 'Insert work...')
                         ]);
                     ?>
                 </div>
@@ -148,7 +148,7 @@ Modal::begin([
                         'theme' => Select2::THEME_BOOTSTRAP,
                         'hideSearch' => false,
                         'options' => [
-                            'placeholder' => $profile->getAttributeLabel('currentCity'),
+//                            'placeholder' => $profile->getAttributeLabel('currentCity'),
                         ],
                         'pluginOptions' => [
                             'allowClear' => true
@@ -169,7 +169,7 @@ Modal::begin([
                         'theme' => Select2::THEME_BOOTSTRAP,
                         'hideSearch' => false,
                         'options' => [
-                            'placeholder' => $profile->getAttributeLabel('birthCity'),
+//                            'placeholder' => $profile->getAttributeLabel('birthCity'),
                         ],
                         'pluginOptions' => [
                             'allowClear' => true
@@ -190,7 +190,7 @@ Modal::begin([
                         'theme' => Select2::THEME_BOOTSTRAP,
                         'hideSearch' => false,
                         'options' => [
-                            'placeholder' => $profile->getAttributeLabel('knownLanguages'),
+//                            'placeholder' => $profile->getAttributeLabel('knownLanguages'),
                         ],
                         'pluginOptions' => [
                             'allowClear' => true
@@ -213,7 +213,7 @@ Modal::begin([
                         'theme' => Select2::THEME_BOOTSTRAP,
                         'hideSearch' => true,
                         'options' => [
-                            'placeholder' => $profile->getAttributeLabel('sex'),
+//                            'placeholder' => $profile->getAttributeLabel('sex'),
                         ],
                         'pluginOptions' => [
                             'allowClear' => true
@@ -234,7 +234,7 @@ Modal::begin([
                         'theme' => Select2::THEME_BOOTSTRAP,
                         'hideSearch' => true,
                         'options' => [
-                            'placeholder' => $profile->getAttributeLabel('interestedIn'),
+//                            'placeholder' => $profile->getAttributeLabel('interestedIn'),
                         ],
                         'pluginOptions' => [
                             'allowClear' => true
@@ -255,7 +255,7 @@ Modal::begin([
                         'theme' => Select2::THEME_BOOTSTRAP,
                         'hideSearch' => true,
                         'options' => [
-                            'placeholder' => $profile->getAttributeLabel('relationship'),
+//                            'placeholder' => $profile->getAttributeLabel('relationship'),
                         ],
                         'pluginOptions' => [
                             'allowClear' => true
@@ -280,7 +280,7 @@ Modal::begin([
                 ])->textInput(
                     [
                         'maxlength' => true,
-                        'placeholder' => \common\models\Translations::translate('app', 'Insert short url...')
+//                        'placeholder' => \common\models\Translations::translate('app', 'Insert short url...')
                     ]);
                 ?>
             </div>
@@ -298,7 +298,7 @@ Modal::begin([
                     ])->textarea(
                         [
                             'maxlength' => true,
-                            'placeholder' => \common\models\Translations::translate('app', 'Insert Address...')
+//                            'placeholder' => \common\models\Translations::translate('app', 'Insert Address...')
                         ]);
                     ?>
                 </div>
@@ -315,7 +315,7 @@ Modal::begin([
                     ])->textarea(
                         [
                             'maxlength' => true,
-                            'placeholder' => \common\models\Translations::translate('app', 'Insert description...')
+//                            'placeholder' => \common\models\Translations::translate('app', 'Insert description...')
                         ]);
                     ?>
                 </div>
