@@ -49,8 +49,8 @@
       <file leaf-file-name="modal.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/views/profiles/modal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="113" column="86" lean-forward="true" selection-start-line="113" selection-start-column="86" selection-end-line="113" selection-end-column="86" />
+            <state relative-caret-position="248">
+              <caret line="147" column="60" selection-start-line="147" selection-start-column="60" selection-end-line="147" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -133,8 +133,8 @@
       <find>linkedin</find>
       <find>Translations::translate</find>
       <find>Yii::t</find>
-      <find>select</find>
       <find>placeholder</find>
+      <find>select</find>
     </findStrings>
     <replaceStrings>
       <replace>Translations::translate</replace>
@@ -604,12 +604,12 @@
       <workItem from="1526831077905" duration="5133000" />
       <workItem from="1526879510270" duration="6519000" />
       <workItem from="1527066898709" duration="3919000" />
-      <workItem from="1527144429786" duration="5130000" />
+      <workItem from="1527144429786" duration="5387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201778000" />
+    <option name="totallyTimeSpent" value="202035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -967,8 +967,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/profiles/modal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="113" column="86" lean-forward="true" selection-start-line="113" selection-start-column="86" selection-end-line="113" selection-end-column="86" />
+        <state relative-caret-position="248">
+          <caret line="147" column="60" selection-start-line="147" selection-start-column="60" selection-end-line="147" selection-end-column="60" />
         </state>
       </provider>
     </entry>

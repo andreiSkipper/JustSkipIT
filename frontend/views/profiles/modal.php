@@ -149,6 +149,7 @@ Modal::begin([
                         'hideSearch' => false,
                         'options' => [
 //                            'placeholder' => $profile->getAttributeLabel('currentCity'),
+                            'placeholder' => '',
                         ],
                         'pluginOptions' => [
                             'allowClear' => true
@@ -170,6 +171,7 @@ Modal::begin([
                         'hideSearch' => false,
                         'options' => [
 //                            'placeholder' => $profile->getAttributeLabel('birthCity'),
+                            'placeholder' => '',
                         ],
                         'pluginOptions' => [
                             'allowClear' => true
@@ -191,6 +193,7 @@ Modal::begin([
                         'hideSearch' => false,
                         'options' => [
 //                            'placeholder' => $profile->getAttributeLabel('knownLanguages'),
+                            'placeholder' => '',
                         ],
                         'pluginOptions' => [
                             'allowClear' => true
@@ -214,6 +217,7 @@ Modal::begin([
                         'hideSearch' => true,
                         'options' => [
 //                            'placeholder' => $profile->getAttributeLabel('sex'),
+                            'placeholder' => '',
                         ],
                         'pluginOptions' => [
                             'allowClear' => true
@@ -235,6 +239,7 @@ Modal::begin([
                         'hideSearch' => true,
                         'options' => [
 //                            'placeholder' => $profile->getAttributeLabel('interestedIn'),
+                            'placeholder' => '',
                         ],
                         'pluginOptions' => [
                             'allowClear' => true
@@ -256,6 +261,7 @@ Modal::begin([
                         'hideSearch' => true,
                         'options' => [
 //                            'placeholder' => $profile->getAttributeLabel('relationship'),
+                            'placeholder' => '',
                         ],
                         'pluginOptions' => [
                             'allowClear' => true
