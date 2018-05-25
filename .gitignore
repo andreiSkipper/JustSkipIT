@@ -9,6 +9,7 @@ vendor/*
 /vendor
 /vendor/*
 /frontend/web/uploads/*
+node_modules
 
 frontend/web/.htaccess
 frontend/web/uploads/profiles

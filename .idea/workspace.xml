@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74bf72ab-bf50-4f95-bab0-3555bfa04124" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/views/profiles/modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/profiles/modal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/models/UploadForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/models/UploadForm.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,11 +48,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modal.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modal.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/views/profiles/modal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
+            <state relative-caret-position="2329">
               <caret line="147" column="60" selection-start-line="147" selection-start-column="60" selection-end-line="147" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadForm.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/models/UploadForm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="51" column="139" selection-start-line="51" selection-start-column="139" selection-end-line="51" selection-end-column="139" />
             </state>
           </provider>
         </entry>
@@ -58,7 +78,7 @@
       <file leaf-file-name="Profiles.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/models/Profiles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="1853">
               <caret line="112" column="49" selection-start-line="112" selection-start-column="49" selection-end-line="112" selection-end-column="49" />
               <folding>
                 <element signature="e#33#41#0#PHP" expanded="true" />
@@ -70,7 +90,7 @@
       <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
+            <state relative-caret-position="5593">
               <caret line="350" column="73" selection-start-line="350" selection-start-column="73" selection-end-line="350" selection-end-column="73" />
             </state>
           </provider>
@@ -79,7 +99,7 @@
       <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
+            <state relative-caret-position="289">
               <caret line="29" column="76" selection-start-line="29" selection-start-column="76" selection-end-line="29" selection-end-column="76" />
             </state>
           </provider>
@@ -88,7 +108,7 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/srv/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
+            <state relative-caret-position="272">
               <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
             </state>
           </provider>
@@ -178,7 +198,6 @@
         <option value="$PROJECT_DIR$/frontend/controllers/FriendshipsController.php" />
         <option value="$PROJECT_DIR$/common/config/main-local.php" />
         <option value="$PROJECT_DIR$/frontend/web/.gitignore" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/frontend/views/comments/comment-details.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/login.php" />
         <option value="$PROJECT_DIR$/frontend/models/SignupForm.php" />
@@ -187,7 +206,6 @@
         <option value="$PROJECT_DIR$/frontend/views/actions/panel.php" />
         <option value="$PROJECT_DIR$/frontend/config/main.php" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
-        <option value="$PROJECT_DIR$/frontend/models/UploadForm.php" />
         <option value="$PROJECT_DIR$/frontend/views/profiles/index.php" />
         <option value="$PROJECT_DIR$/frontend/views/profiles/update.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/index.php" />
@@ -210,6 +228,8 @@
         <option value="$PROJECT_DIR$/common/models/Countrylanguage.php" />
         <option value="$PROJECT_DIR$/common/models/Profiles.php" />
         <option value="$PROJECT_DIR$/frontend/views/profiles/modal.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/frontend/models/UploadForm.php" />
       </list>
     </option>
   </component>
@@ -352,6 +372,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -385,6 +406,12 @@
               <item name="JustSkipIT" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="JustSkipIT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JustSkipIT" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="JustSkipIT" type="b2602c69:ProjectViewProjectNode" />
@@ -442,7 +469,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -605,27 +631,28 @@
       <workItem from="1526879510270" duration="6519000" />
       <workItem from="1527066898709" duration="3919000" />
       <workItem from="1527144429786" duration="5387000" />
+      <workItem from="1527225648386" duration="430000" />
+      <workItem from="1527226102251" duration="183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202035000" />
+    <option name="totallyTimeSpent" value="202648000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.26385927" />
       <window_info anchor="bottom" id="TODO" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
+      <window_info anchor="right" id="Database" order="0" weight="0.3297568" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Run" order="5" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.32897604" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2585288" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="0" weight="0.3297568" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.32951653" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.32897604" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -634,6 +661,7 @@
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32951653" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -713,13 +741,6 @@
     <entry file="file://$PROJECT_DIR$/vendor/yiimaker/yii2-social-share/src/drivers/LinkedIn.php" />
     <entry file="file://$PROJECT_DIR$/vendor/yiimaker/yii2-social-share/src/drivers/Facebook.php" />
     <entry file="file://$PROJECT_DIR$/vendor/yiimaker/yii2-social-share/src/widgets/SocialShare.php" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_real.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51" />
@@ -771,13 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="156" column="51" lean-forward="true" selection-start-line="156" selection-start-column="51" selection-end-line="156" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/models/UploadForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="46" column="105" selection-start-line="46" selection-start-column="105" selection-end-line="46" selection-end-column="105" />
         </state>
       </provider>
     </entry>
@@ -880,14 +894,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
+        <state relative-caret-position="289">
           <caret line="29" column="76" selection-start-line="29" selection-start-column="76" selection-end-line="29" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
+        <state relative-caret-position="5593">
           <caret line="350" column="73" selection-start-line="350" selection-start-column="73" selection-end-line="350" selection-end-column="73" />
         </state>
       </provider>
@@ -950,7 +964,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/models/Profiles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
+        <state relative-caret-position="1853">
           <caret line="112" column="49" selection-start-line="112" selection-start-column="49" selection-end-line="112" selection-end-column="49" />
           <folding>
             <element signature="e#33#41#0#PHP" expanded="true" />
@@ -960,15 +974,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srv/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
+        <state relative-caret-position="272">
           <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/profiles/modal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
+        <state relative-caret-position="2329">
           <caret line="147" column="60" selection-start-line="147" selection-start-column="60" selection-end-line="147" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/models/UploadForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="51" column="139" selection-start-line="51" selection-start-column="139" selection-end-line="51" selection-end-column="139" />
         </state>
       </provider>
     </entry>

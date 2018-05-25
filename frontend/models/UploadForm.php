@@ -48,7 +48,11 @@ class UploadForm extends Model
 
             $tiny = new TinyPng(['apiKey' => 'dT4RNuAbcQ-39GR4vnHqAhOXf4IBBnuK']);
             $tiny->compress($rootDir . 'uploads/profiles/' . $this->id . '/' . $this->filename);
-            $tiny->resize($rootDir . 'uploads/profiles/' . $this->id . '/' . $this->filename, null, ['method' => 'fit', 'width' => 700, 'height' => 700]);
+            if ($actionParams['type'] === 'Cover') {
+                $tiny->resize($rootDir . 'uploads/profiles/' . $this->id . '/' . $this->filename, null, ['method' => 'fit', 'width' => 1150, 'height' => 700]);
+            } else {
+                $tiny->resize($rootDir . 'uploads/profiles/' . $this->id . '/' . $this->filename, null, ['method' => 'fit', 'width' => 700, 'height' => 700]);
+            }
 
             $action = new Actions();
             $action->user_id = Yii::$app->user->identity->id;
