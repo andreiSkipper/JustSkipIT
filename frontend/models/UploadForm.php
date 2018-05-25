@@ -28,7 +28,7 @@ class UploadForm extends Model
     public function upload($actionParams = [])
     {
         if ($this->validate()) {
-//            $rootDir = 'skipIT/frontend/web/'; // for live
+            //$rootDir = '/var/www/skipIT/frontend/web/'; // for live
             $rootDir = '';
             if (!is_dir($rootDir . 'uploads/')) {// Tells whether the filename is a directory
                 mkdir($rootDir . 'uploads/');//Makes directory
