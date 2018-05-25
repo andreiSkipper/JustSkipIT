@@ -87,6 +87,23 @@ $(document).mousemove(function (e) {
 });
 
 $(document).ready(function () {
+    socket.on('users', function (request) {
+        var chat_users = Object.keys(request.users).length;
+        if (chat_users) {
+            if ($('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').length) {
+                $('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').html(Object.keys(request.users).length);
+            } else {
+                $('nav.navbar ul.navbar-nav li#chat-button > a').append('<span class="badge badge-notify">' + Object.keys(request.users).length + '</span>');
+            }
+        } else {
+            if ($('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').length) {
+                $('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').remove();
+            }
+        }
+    });
+
+    socket.emit('users');
+
     setInterval(function () {
         $.ajax({
             url: 'notifications',

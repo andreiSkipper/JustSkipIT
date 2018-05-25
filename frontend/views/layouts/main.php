@@ -26,8 +26,8 @@ $this->title = "JustSkipIT | " . $this->title;
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link rel="icon" href="/Icons/bomb-explosion-1.ico">
     <!--    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
     <!--    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>-->
@@ -35,6 +35,22 @@ $this->title = "JustSkipIT | " . $this->title;
 
     <link rel="stylesheet" href="/js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="/js/jquery-1.11.3.min.js"></script>
+
+    <script src='/js/socket.io.js'></script>
+    <script>
+        // var socket = io('http://ec2-35-159-26-29.eu-central-1.compute.amazonaws.com:3002');
+        var socket = io('http://localhost:3002');
+        //$(document).ready(function () {
+        //    var model_user = <?//= json_encode(\common\models\User::find()->where(['id' => Yii::$app->user->identity->id])->one()->toArray()) ?>//;
+        //    var model_profile = <?//= json_encode(\common\models\Profiles::find()->where(['user_id' => Yii::$app->user->identity->id])->one()->toArray()) ?>//;
+        //
+        //    socket.emit('join', {
+        //        user: model_user,
+        //        profile: model_profile
+        //    });
+        //});
+    </script>
+
     <script src="/js/app.js"></script>
     <script src="/js/typed-js/typed.min.js"></script>
     <!--    <script src="/js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
@@ -50,7 +66,6 @@ $this->title = "JustSkipIT | " . $this->title;
 </div>
 
 <?php $this->beginBody() ?>
-
 
 
 <div class="wrap">

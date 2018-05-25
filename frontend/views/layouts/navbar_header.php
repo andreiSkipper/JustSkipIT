@@ -204,6 +204,9 @@ if (Yii::$app->user->isGuest) {
         'url' => ['/chat/index'],
         'linkOptions' => [
             'class' => 'faa-parent animated-hover',
+        ],
+        'options' => [
+            'id' => 'chat-button'
         ]
     ];
     $languageItems = array();
