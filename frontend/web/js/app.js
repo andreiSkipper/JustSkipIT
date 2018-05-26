@@ -59,7 +59,6 @@ $(document).ready(function () {
         socket.emit('users');
 
         socket.on('notification', function (request) {
-            console.log(request);
             if (request.from === model_user.id || request.to === model_user.id) {
                 $.ajax({
                     url: 'notifications',
@@ -121,6 +120,22 @@ $(document).ready(function () {
     $('.navbar-nav ul.dropdown-menu li.notification img').on('click', function (event) {
         $('body .loading').addClass('active');
         location.replace($(this).attr('data-url'));
+    });
+    $('.navbar-nav li#notifications-dropdown').on('click', function (event) {
+        if ($(this).find('.badge-notify').html() !== '0') {
+            $(this).find('.badge-notify').addClass('hidden').html(0);
+
+            $.ajax({
+                url: 'notifications/read',
+                type: 'GET',
+                success: function (response) {
+                    result = JSON.parse(response);
+                },
+                error: function (request, status, error) {
+                    console.log(error);
+                }
+            });
+        }
     });
 
     var back = ["#22A7F0", "#8E44AD", "#AEA8D3", "#F62459", "#DB0A5B", "#D64541", "#D2527F", "#2C3E50", "#1E8BC3", "#87D37C", "#4ECDC4", "#3FC380", "#E87E04", "#F9690E", "#F9BF3B"];

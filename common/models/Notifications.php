@@ -15,6 +15,7 @@ use common\models\Translations;
  * @property string $model
  * @property string $type
  * @property string $status
+ * @property boolean $read
  * @property integer $created_at
  * @property integer $updated_at
  */
@@ -46,7 +47,7 @@ class Notifications extends \yii\db\ActiveRecord
         return [
             [['user_id', 'status'], 'required'],
             [['user_id'], 'integer'],
-            [['model', 'type', 'status'], 'safe']
+            [['model', 'type', 'status', 'read'], 'safe']
         ];
     }
 

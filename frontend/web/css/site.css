@@ -514,6 +514,10 @@ i.fa, span.fa {
     align-items: center;
 }
 
+.navbar-nav ul.dropdown-menu li.notification.active > a {
+    background-color: darkgrey;
+}
+
 .navbar-nav ul.dropdown-menu li.notification > a > span {
     display: block;
     float: right;

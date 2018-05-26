@@ -74,6 +74,7 @@ return [
                 'refuse-friend' => 'friendships/refuse',
                 // notifications
                 'notifications' => 'site/notifications',
+                'notifications/read' => 'site/read-notifications',
                 // profile shortURL
                 '<any>' => 'profiles/find-by-username',
             ],

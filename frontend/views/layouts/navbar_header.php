@@ -262,7 +262,7 @@ if (Yii::$app->user->isGuest) {
             $notificationItems[] = [
                 'label' => "<img src='/" . $notificationUser->profile->avatar . "' alt='' data-url='" . \common\models\Profiles::getProfileLinkByUserID($notificationUser->id) . "'>" . $notification->description . "<span>" . date('d m Y H:i', $notification->created_at) . "</span>",
                 'url' => '#',
-                'options' => ['class' => 'notification'],
+                'options' => ['class' => 'notification ' . ($notification->read ? '' : 'active')],
             ];
         } else {
             $notificationsCount--;
@@ -270,8 +270,9 @@ if (Yii::$app->user->isGuest) {
     }
     if ($notificationsCount) {
         // has notifications
+        $readNotificationsCount = \common\models\Notifications::find()->where(['user_id' => Yii::$app->user->identity->id, 'read' => false])->count();
         $menuItems[] = [
-            'label' => '<span class="fa fa-bell faa-ring animated"></span><span class="badge badge-notify">' . $notificationsCount . '</span>',
+            'label' => '<span class="fa fa-bell faa-ring ' . ($readNotificationsCount ? 'animated' : '') . '"></span><span class="badge badge-notify ' . ($readNotificationsCount ? '' : 'hidden') . '">' . $readNotificationsCount . '</span>',
             'items' => $notificationItems,
             'options' => [
                 'id' => 'notifications-dropdown'
@@ -280,7 +281,7 @@ if (Yii::$app->user->isGuest) {
     } else {
         // doesn't have notifications
         $menuItems[] = [
-            'label' => '<span class="fa fa-bell"></span>',
+            'label' => '<span class="fa fa-bell"></span><span class="badge badge-notify hidden">0</span>',
             'items' => [
                 [
                     'label' => \common\models\Translations::translate('app', 'No notifications.'),

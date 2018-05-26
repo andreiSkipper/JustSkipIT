@@ -319,13 +319,24 @@ class SiteController extends Controller
                 'html' => $this->renderPartial('/layouts/navbar_header_friend_requests'),
             ];
             $result['notifications'] = [
-                'count' => Notifications::find()->where(['user_id' => Yii::$app->user->id])->count(),
+                'count' => Notifications::find()->where(['user_id' => Yii::$app->user->id, 'read' => false])->count(),
                 'html' => $this->renderPartial('/layouts/navbar_header_notifications'),
             ];
 
             return json_encode($result);
         }
         return $this->redirect('/');
+    }
+
+    public function actionReadNotifications()
+    {
+        $notifications = Notifications::find()->where(['user_id' => Yii::$app->user->id, 'read' => false])->all();
+        foreach ($notifications as $notification) {
+            $notification->read = true;
+            $notification->save();
+        }
+
+        return json_encode($notifications);
     }
 
     public function actionPrivacyPolicy()

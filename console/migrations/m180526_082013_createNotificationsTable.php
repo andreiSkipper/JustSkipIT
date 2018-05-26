@@ -18,6 +18,7 @@ class m180526_082013_createNotificationsTable extends Migration
             'model' => $this->text(),
             'type' => $this->string(30),
             'status' => "enum('Added', 'Removed', 'Pending') default 'Added'",
+            'read' => $this->boolean()->defaultValue(false),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB');
