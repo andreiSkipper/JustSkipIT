@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use common\models\Notifications;
 use Yii;
 use common\models\Comments;
 use common\models\Profiles;
@@ -23,12 +24,21 @@ class CommentsController extends \yii\web\Controller
         $model->user_id = Yii::$app->user->identity->getId();
         if ($model->load($post)) {
             if ($model->save()) {
+                if ($model->action->user_id != Yii::$app->user->identity->id) {
+                    $notification = new Notifications();
+                    $notification->user_id = $model->action->user_id;
+                    $notification->model = json_encode($model->toArray());
+                    $notification->type = Comments::tableName();
+                    $notification->status = 'Added';
+                    $notification->save();
+                }
                 if (Yii::$app->request->isAjax) {
                     $result = array();
                     $html = $this->renderPartial('/comments/comment-details', ['comment' => $model]);
                     $modalHtml = $this->renderPartial('/comments/comment-details', ['comment' => $model, 'modal' => true]);
                     $result['html'] = preg_replace('#\s+#', ' ', trim($html));
                     $result['modalHtml'] = preg_replace('#\s+#', ' ', trim($modalHtml));
+                    $result['action'] = $model->action->toArray();
 
                     return json_encode($result);
                 } else {
@@ -55,6 +65,15 @@ class CommentsController extends \yii\web\Controller
             /* @var $reply Comments */
             foreach ($comment->replies as $reply) {
                 $reply->delete();
+            }
+
+            if ($comment->action->user_id != Yii::$app->user->identity->id) {
+                $notification = new Notifications();
+                $notification->user_id = $comment->action->user_id;
+                $notification->model = json_encode($comment->toArray());
+                $notification->type = Comments::tableName();
+                $notification->status = 'Removed';
+                $notification->save();
             }
         }
 

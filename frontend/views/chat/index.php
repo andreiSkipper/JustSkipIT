@@ -45,7 +45,7 @@ use yii\widgets\ActiveForm;
     </div>
 </div>
 <div class="clearfix hidden-sm hidden-md hidden-lg"></div>
-<div class="col-sm-3 no-padding">
+<div class="col-sm-3 no-padding" id="chat-users">
     <div class="text-center" id="users">
         <p><?= \common\models\Translations::translate('app', 'Users Online') ?></p>
         <ul id="users-list">

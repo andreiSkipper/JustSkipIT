@@ -49,7 +49,16 @@ $this->title = "JustSkipIT | " . $this->title;
         //        profile: model_profile
         //    });
         //});
+
+        <?php if (!Yii::$app->user->isGuest) { ?>
+        var guest = false;
+        var model_user = <?= json_encode(\common\models\User::find()->where(['id' => Yii::$app->user->identity->id])->one()->toArray()) ?>;
+        var model_profile = <?= json_encode(\common\models\Profiles::find()->where(['user_id' => Yii::$app->user->identity->id])->one()->toArray()) ?>;
+        <?php } else { ?>
+        var guest = true;
+        <?php } ?>
     </script>
+
 
     <script src="/js/app.js"></script>
     <script src="/js/typed-js/typed.min.js"></script>

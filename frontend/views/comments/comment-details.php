@@ -98,6 +98,11 @@ $modalClass = empty($modal) ? '' : 'modal-';
                                });
                                $('#comment-<?= $comment->id ?>').animate({height: 'toggle'});
                                $('#modal-comment-<?= $comment->id ?>').animate({height: 'toggle'});
+
+                               socket.emit('notification', {
+                               from: model_user.id,
+                               to: parseInt(<?= $comment->action->user_id ?>)
+                               });
                                },
                                error: function (request, status, error) {
                                window.alert(error);

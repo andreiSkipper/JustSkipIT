@@ -2,53 +2,6 @@
  * Created by andrei on 16/08/2017.
  */
 
-// $.ajax({
-//     url: window.location.origin + '/index.php/site/notifications',
-//     type: "POST",
-//     success: function (data) {
-//         var messages = jQuery.parseJSON(data);
-//         if (messages.length !== 0) {
-//             $.each(messages, function (index, message) {
-//                 var notification = new Notification(message.title, {
-//                     body: message.body,
-//                     icon: message.icon,
-//                     requireInteraction: true
-//                 });
-//                 notification.onclick = function (event) {
-//                     window.open(message.url, '_blank');
-//                 }
-//             });
-//         }
-//     }
-// });
-// setInterval(function () {
-//     $.ajax({
-//         url: window.location.origin + '/index.php/site/notifications',
-//         type: "POST",
-//         success: function (data) {
-//             var messages = jQuery.parseJSON(data);
-//             if (messages.length !== 0) {
-//                 var notification_count = $(".notification-count");
-//                 notification_count = parseInt(notification_count[0].innerHTML);
-//                 notification_count[0].innerHTML = notification_count + messages.length;
-//                 notification_count[1].innerHTML = notification_count + messages.length;
-//                 if (notification_count.hasClass('hidden')) {
-//                     notification_count.removeClass('hidden');
-//                 }
-//                 $.each(messages, function (index, message) {
-//                     var notification = new Notification(message.title, {
-//                         body: message.body,
-//                         icon: message.icon,
-//                         requireInteraction: true
-//                     });
-//                     notification.onclick = function (event) {
-//                         window.open(message.url, '_blank');
-//                     }
-//                 });
-//             }
-//         }
-//     });
-// }, 10000);
 
 $(document).on('mouseover', '.action-tooltip', function () {
     var tooltip = new PNotify({
@@ -87,58 +40,85 @@ $(document).mousemove(function (e) {
 });
 
 $(document).ready(function () {
-    socket.on('users', function (request) {
-        var chat_users = Object.keys(request.users).length;
-        if (chat_users) {
-            if ($('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').length) {
-                $('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').html(Object.keys(request.users).length);
-            } else {
-                $('nav.navbar ul.navbar-nav li#chat-button > a').append('<span class="badge badge-notify">' + Object.keys(request.users).length + '</span>');
-            }
-        } else {
-            if ($('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').length) {
-                $('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').remove();
-            }
-        }
-    });
-
-    socket.emit('users');
-
-    setInterval(function () {
-        $.ajax({
-            url: 'notifications',
-            type: 'GET',
-            success: function (response) {
-                result = JSON.parse(response);
-                if (result.friend_requests.length !== 0 && $('#friend-requests-dropdown').length) {
-                    var friend_requests_button = $('#friend-requests-dropdown').find('a.dropdown-toggle');
-                    if (result.friend_requests.count !== "0") {
-                        friend_requests_button.find('.fa').addClass('faa-pulse animated');
-                        friend_requests_button.find('.badge-notify')[0].innerHTML = result.friend_requests.count;
-                        friend_requests_button.find('.badge-notify').removeClass('hidden');
-                    } else {
-                        friend_requests_button.find('.fa').removeClass('faa-pulse animated');
-                        friend_requests_button.find('.badge-notify')[0].innerHTML = result.friend_requests.count;
-                        friend_requests_button.find('.badge-notify').addClass('hidden');
-                    }
-                    $('#friend-requests-dropdown').find('.dropdown-menu')[0].innerHTML = result.friend_requests.html;
-
-                    $('.navbar-nav ul.dropdown-menu li.friend-request img').on('click', function (event) {
-                        $('body .loading').addClass('active');
-                        location.replace($(this).attr('data-url'));
-                    });
+    if (!guest) {
+        socket.on('users', function (request) {
+            var chat_users = Object.keys(request.users).length;
+            if (chat_users) {
+                if ($('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').length) {
+                    $('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').html(Object.keys(request.users).length);
+                } else {
+                    $('nav.navbar ul.navbar-nav li#chat-button > a').append('<span class="badge badge-notify">' + Object.keys(request.users).length + '</span>');
                 }
-            },
-            error: function (request, status, error) {
-                console.log(error);
+            } else {
+                if ($('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').length) {
+                    $('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').remove();
+                }
             }
         });
-    }, 10000);
+
+        socket.emit('users');
+
+        socket.on('notification', function (request) {
+            console.log(request);
+            if (request.from === model_user.id || request.to === model_user.id) {
+                $.ajax({
+                    url: 'notifications',
+                    type: 'GET',
+                    success: function (response) {
+                        result = JSON.parse(response);
+                        if (result.friend_requests.length !== 0 && $('#friend-requests-dropdown').length) {
+                            var friend_requests_button = $('#friend-requests-dropdown').find('a.dropdown-toggle');
+                            if (result.friend_requests.count !== "0") {
+                                friend_requests_button.find('.fa').addClass('faa-pulse animated');
+                                friend_requests_button.find('.badge-notify')[0].innerHTML = result.friend_requests.count;
+                                friend_requests_button.find('.badge-notify').removeClass('hidden');
+                            } else {
+                                friend_requests_button.find('.fa').removeClass('faa-pulse animated');
+                                friend_requests_button.find('.badge-notify')[0].innerHTML = result.friend_requests.count;
+                                friend_requests_button.find('.badge-notify').addClass('hidden');
+                            }
+                            $('#friend-requests-dropdown').find('.dropdown-menu')[0].innerHTML = result.friend_requests.html;
+
+                            $('.navbar-nav ul.dropdown-menu li.friend-request img').on('click', function (event) {
+                                $('body .loading').addClass('active');
+                                location.replace($(this).attr('data-url'));
+                            });
+                        }
+                        if (result.notifications.length !== 0 && $('#notifications-dropdown').length) {
+                            var notifications_button = $('#notifications-dropdown').find('a.dropdown-toggle');
+                            if (result.notifications.count !== "0") {
+                                notifications_button.find('.fa').addClass('faa-ring animated');
+                                notifications_button.find('.badge-notify')[0].innerHTML = result.notifications.count;
+                                notifications_button.find('.badge-notify').removeClass('hidden');
+                            } else {
+                                notifications_button.find('.fa').removeClass('faa-ring animated');
+                                notifications_button.find('.badge-notify')[0].innerHTML = result.notifications.count;
+                                notifications_button.find('.badge-notify').addClass('hidden');
+                            }
+                            $('#notifications-dropdown').find('.dropdown-menu')[0].innerHTML = result.notifications.html;
+
+                            $('.navbar-nav ul.dropdown-menu li.notification img').on('click', function (event) {
+                                $('body .loading').addClass('active');
+                                location.replace($(this).attr('data-url'));
+                            });
+                        }
+                    },
+                    error: function (request, status, error) {
+                        console.log(error);
+                    }
+                });
+            }
+        });
+    }
 
     $('.navbar-nav ul.dropdown-menu').on('click', function (event) {
         event.stopPropagation();
     });
     $('.navbar-nav ul.dropdown-menu li.friend-request img').on('click', function (event) {
+        $('body .loading').addClass('active');
+        location.replace($(this).attr('data-url'));
+    });
+    $('.navbar-nav ul.dropdown-menu li.notification img').on('click', function (event) {
         $('body .loading').addClass('active');
         location.replace($(this).attr('data-url'));
     });
@@ -234,6 +214,11 @@ function addFriendAJAX(_this) {
                 }
             }
             $('body .loading').removeClass('active');
+
+            socket.emit('notification', {
+                from: model_user.id,
+                to: parseInt($(_this).attr('data-user_id'))
+            });
         },
         error: function (request, status, error) {
             window.alert(error);
@@ -260,6 +245,11 @@ function removeFriendAJAX(_this) {
                     if ($(".profile-button[data-user_id='" + $(_this).attr('data-user_id') + "']").length) {
                         $('.profile-button').replaceWith(result.html);
                     }
+
+                    socket.emit('notification', {
+                        from: model_user.id,
+                        to: parseInt($(_this).attr('data-user_id'))
+                    });
                 }
             },
             error: function (request, status, error) {
@@ -284,6 +274,11 @@ function removeFriendAJAX(_this) {
                     parent.append('<span data-user_id="' + $(_this).attr('data-user_id') + '" style="margin-top: 0">Removed</span>');
                 }
                 $('body .loading').removeClass('active');
+
+                socket.emit('notification', {
+                    from: model_user.id,
+                    to: parseInt($(_this).attr('data-user_id'))
+                });
             },
             error: function (request, status, error) {
                 window.alert(error);
@@ -305,6 +300,11 @@ function acceptFriendAJAX(_this) {
                 var parent = $(_this).parent();
                 parent.find('span.fa').remove();
                 parent.append('<span data-user_id="' + $(_this).attr('data-user_id') + '" style="margin-top: 0">Accepted</span>');
+
+                socket.emit('notification', {
+                    from: model_user.id,
+                    to: parseInt($(_this).attr('data-user_id'))
+                });
             }
         },
         error: function (request, status, error) {
@@ -325,6 +325,11 @@ function refuseFriendAJAX(_this) {
                 var parent = $(_this).parent();
                 parent.find('span.fa').remove();
                 parent.append('<span data-user_id="' + $(_this).attr('data-user_id') + '" style="margin-top: 0">Refused</span>');
+
+                socket.emit('notification', {
+                    from: model_user.id,
+                    to: parseInt($(_this).attr('data-user_id'))
+                });
             }
         },
         error: function (request, status, error) {
@@ -357,6 +362,11 @@ function addCommentAJAX(_this) {
                     }
                     $('body .loading').removeClass('active');
                     checkTyping();
+
+                    socket.emit('notification', {
+                        from: model_user.id,
+                        to: parseInt(result.action.user_id)
+                    });
                 },
                 error: function (request, status, error) {
                     window.alert(error);
@@ -393,6 +403,11 @@ function addReplyAJAX(_this) {
                         _this.reset();
                         $('body .loading').removeClass('active');
                         checkTyping();
+
+                        socket.emit('notification', {
+                            from: model_user.id,
+                            to: parseInt(result.action.user_id)
+                        });
                     }
                 },
                 error: function (request, status, error) {

@@ -113,6 +113,7 @@ function emitNewOrder(http_server) {
 
         socket.on('notification', function (request) {
             logger.info(request);
+            io.sockets.emit('notification', request);
         });
     });
 }

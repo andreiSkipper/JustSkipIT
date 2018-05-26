@@ -253,15 +253,46 @@ if (Yii::$app->user->isGuest) {
             ]
         ];
     }
-    $menuItems[] = [
-        'label' => '<span class="fa fa-bell faa-ring animated"></span><span class="badge badge-notify">7</span>',
-        'items' => [
-            ['label' => 'Notification 1', 'url' => '#'],
-            ['label' => 'Notification 2', 'url' => '#'],
-            ['label' => 'Notification 3', 'url' => '#'],
-            ['label' => 'Notification 4', 'url' => '#'],
-        ],
-    ];
+    $notifications = \common\models\Notifications::find()->where(['user_id' => Yii::$app->user->identity->id])->orderBy(['created_at' => SORT_DESC])->all();
+    $notificationItems = array();
+    $notificationsCount = count($notifications);
+    foreach ($notifications as $notification) {
+        $notificationUser = \common\models\User::find()->where(['id' => $notification->getModel()->user_id])->one();
+        if ($notificationUser->id != Yii::$app->user->identity->id) {
+            $notificationItems[] = [
+                'label' => "<img src='/" . $notificationUser->profile->avatar . "' alt='' data-url='" . \common\models\Profiles::getProfileLinkByUserID($notificationUser->id) . "'>" . $notification->description . "<span>" . date('d m Y H:i', $notification->created_at) . "</span>",
+                'url' => '#',
+                'options' => ['class' => 'notification'],
+            ];
+        } else {
+            $notificationsCount--;
+        }
+    }
+    if ($notificationsCount) {
+        // has notifications
+        $menuItems[] = [
+            'label' => '<span class="fa fa-bell faa-ring animated"></span><span class="badge badge-notify">' . $notificationsCount . '</span>',
+            'items' => $notificationItems,
+            'options' => [
+                'id' => 'notifications-dropdown'
+            ]
+        ];
+    } else {
+        // doesn't have notifications
+        $menuItems[] = [
+            'label' => '<span class="fa fa-bell"></span>',
+            'items' => [
+                [
+                    'label' => \common\models\Translations::translate('app', 'No notifications.'),
+                    'url' => '#',
+                    'options' => ['class' => 'notification text-center no-padding']
+                ],
+            ],
+            'options' => [
+                'id' => 'notifications-dropdown'
+            ]
+        ];
+    }
     $menuItems[] = [
         'label' => '<i class="fa fa-power-off faa-pulse"></i>',
         'url' => ['/site/logout'],

@@ -4,6 +4,7 @@ namespace frontend\controllers;
 
 use app\models\Movies;
 use common\models\Friendship;
+use common\models\Notifications;
 use common\models\User;
 use Yii;
 use common\models\LoginForm;
@@ -316,6 +317,10 @@ class SiteController extends Controller
             $result['friend_requests'] = [
                 'count' => Friendship::find()->where(['user_to' => Yii::$app->user->id, 'status' => Friendship::STATUS_REQUESTED])->count(),
                 'html' => $this->renderPartial('/layouts/navbar_header_friend_requests'),
+            ];
+            $result['notifications'] = [
+                'count' => Notifications::find()->where(['user_id' => Yii::$app->user->id])->count(),
+                'html' => $this->renderPartial('/layouts/navbar_header_notifications'),
             ];
 
             return json_encode($result);
