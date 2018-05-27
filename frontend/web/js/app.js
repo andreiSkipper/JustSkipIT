@@ -60,7 +60,7 @@ $(document).ready(function () {
         socket.on('notification', function (request) {
             if (request.from === model_user.id || request.to === model_user.id) {
                 $.ajax({
-                    url: 'notifications',
+                    url: '/notifications',
                     type: 'GET',
                     success: function (response) {
                         result = JSON.parse(response);
@@ -150,7 +150,7 @@ $(document).ready(function () {
             $(this).find('.badge-notify').addClass('hidden').html(0);
 
             $.ajax({
-                url: 'notifications/read',
+                url: '/notifications/read',
                 type: 'GET',
                 success: function (response) {
                     result = JSON.parse(response);
@@ -234,7 +234,7 @@ function checkTyping() {
 function addFriendAJAX(_this) {
     $('body .loading').addClass('active');
     $.ajax({
-        url: 'add-friend',
+        url: '/add-friend',
         type: 'POST',
         data: {
             'Friendship': {
@@ -270,7 +270,7 @@ function removeFriendAJAX(_this) {
     if ($(_this).closest('.navbar-nav').length) {
         // requested from navbar dropdown
         $.ajax({
-            url: 'delete-friend',
+            url: '/delete-friend',
             type: 'GET',
             data: {
                 'user_id': $(_this).attr('data-user_id')
@@ -299,7 +299,7 @@ function removeFriendAJAX(_this) {
         // requested from user profile
         $('body .loading').addClass('active');
         $.ajax({
-            url: 'delete-friend',
+            url: '/delete-friend',
             type: 'GET',
             data: {
                 'user_id': $(_this).attr('data-user_id')
@@ -329,7 +329,7 @@ function removeFriendAJAX(_this) {
 
 function acceptFriendAJAX(_this) {
     $.ajax({
-        url: 'accept-friend',
+        url: '/accept-friend',
         type: 'GET',
         data: {
             'user_id': $(_this).attr('data-user_id')
@@ -354,7 +354,7 @@ function acceptFriendAJAX(_this) {
 
 function refuseFriendAJAX(_this) {
     $.ajax({
-        url: 'refuse-friend',
+        url: '/refuse-friend',
         type: 'GET',
         data: {
             'user_id': $(_this).attr('data-user_id')

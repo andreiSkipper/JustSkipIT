@@ -56,6 +56,7 @@ return [
                 'add-post' => 'actions/create',
                 'delete-post' => 'actions/delete',
                 'edit-post' => 'actions/edit',
+                'post/<id>' => 'actions/view',
                 // movies routes
                 'movies' => 'movies/index',
                 'movies/index' => 'movies/index',

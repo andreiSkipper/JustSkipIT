@@ -112,6 +112,13 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
                                     'onclick' => "event.preventDefault();$('#action-modal-" . $action->id . "').modal();",
                                 ],
                             ],
+                            [
+                                'label' => 'View',
+                                'url' => '/post/' . $action->id,
+                                'options' => [
+                                    'id' => 'view-' . $action->id
+                                ],
+                            ],
                         ],
                     ],
                 ]);
@@ -130,55 +137,15 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
                     <img src="<?= Url::base() . '/' . $action->imagePath; ?>" class="action-photo" alt=""
                          onclick="$('#action-modal-<?= $action->id ?>').modal()">
                 </div>
-                <?php if (!Yii::$app->user->isGuest AND $action->user_id == Yii::$app->user->identity->getId()) { ?>
-                    <!--                    <div class="col-xs-12 no-padding action-buttons">-->
-                    <!--                        <div class="col-xs-6">-->
-                    <!--                            <div class="form-group">-->
-                    <!--                                --><?php //echo Html::button('<i class="fa fa-close"></i> Delete',
-//                                    [
-//                                        'class' => 'btn btn-danger col-xs-12',
-//                                        'name' => 'action-edit-button',
-//                                        'onclick' => "
-//                                                if(confirm('Are you sure you want to delete this comment?'))
-//                                                   {
-//                                                       $.ajax({
-//                                                           url:'" . Url::to(['/delete-post', 'id' => $action->id]) . "',
-//                                                           type: 'GET',
-//                                                           success: function(response) {
-//                                                                $('#action-" . $action->id . "').animate({height: 'toggle'});
-//                                                           },
-//                                                           error: function (request, status, error) {
-//                                                                window.alert(error);
-//                                                           }
-//                                                       });
-//                                                   }
-//                                        "
-//                                    ]) ?>
-                    <!--                            </div>-->
-                    <!--                        </div>-->
-                    <!--                        <div class="col-xs-6">-->
-                    <!--                            <div class="form-group">-->
-                    <!--                                --><?php //echo Html::button('<i class="fa fa-pencil-square-o"></i> Edit',
-//                                    [
-//                                        'class' => 'btn btn-orange col-xs-12',
-//                                        'name' => 'action-edit-button',
-//                                        'onclick' => "
-//                                            $('#action-modal-" . $action->id . "').modal();
-//                                        ",
-//                                    ]) ?>
-                    <!--                            </div>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                <?php } ?>
                 <div class="clearfix"></div>
                 <div class="social-share">
                     <?= \common\models\Translations::translate('app', 'Share on:') ?>
                     <?= \ymaker\social\share\widgets\SocialShare::widget([
                         'configurator' => 'socialShare',
-                        'url' => \yii\helpers\Url::to('absolute/route/to/page', true),
-                        'title' => 'Title of the page',
-                        'description' => 'Description of the page...',
-                        'imageUrl' => \yii\helpers\Url::to('absolute/route/to/image.png', true),
+                        'url' => Url::to('/post/' . $action->id, true),
+                        'title' => 'SkipIT.ro',
+                        'description' => $profile->firstname . ' ' . $profile->lastname . ' ' . $action->getActionTextByType($action->type) . ' ' . date('d M Y H:i', $action->created_at),
+                        'imageUrl' => $action->imagePath ? Url::to('/uploads/logos/JustSkipIT_logo1.png', true) : Url::to('/' . $action->imagePath, true),
                     ]); ?>
                 </div>
             </div>

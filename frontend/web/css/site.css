@@ -507,7 +507,7 @@ i.fa, span.fa {
 
 .navbar-nav ul.dropdown-menu li.notification > a {
     min-height: 84px;
-    cursor: default;
+    cursor: pointer;
     white-space: normal;
 
     display: flex;

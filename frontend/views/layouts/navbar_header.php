@@ -261,7 +261,7 @@ if (Yii::$app->user->isGuest) {
         if ($notificationUser->id != Yii::$app->user->identity->id) {
             $notificationItems[] = [
                 'label' => "<img src='/" . $notificationUser->profile->avatar . "' alt='' data-url='" . \common\models\Profiles::getProfileLinkByUserID($notificationUser->id) . "'>" . $notification->description . "<span>" . date('d m Y H:i', $notification->created_at) . "</span>",
-                'url' => '#',
+                'url' => '/post/' . $notification->getModel()->action_id . '#comment-' . $notification->getModel()->id,
                 'options' => ['class' => 'notification ' . ($notification->read ? '' : 'active')],
             ];
         } else {

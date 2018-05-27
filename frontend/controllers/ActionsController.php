@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use common\models\Translations;
 use Yii;
 use common\models\Actions;
 use common\models\Profiles;
@@ -86,4 +87,19 @@ class ActionsController extends \yii\web\Controller
         ]);
     }
 
+    public function actionView($id)
+    {
+        $action = Actions::findOne($id);
+        if (empty($action)) {
+            $notification = [
+                'title' => Translations::translate('app', 'Error') . '!',
+                'text' => Translations::translate('app', 'The post you are trying to access has been deleted.'),
+                'icon' => '',
+            ];
+            Yii::$app->session->setFlash('success', $notification);
+            return $this->goHome();
+        }
+
+        return $this->render('panel', ['action' => $action]);
+    }
 }

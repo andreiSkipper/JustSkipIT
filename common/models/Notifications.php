@@ -91,9 +91,13 @@ class Notifications extends \yii\db\ActiveRecord
     {
         switch ($this->type) {
             case Comments::tableName():
-//                $comment = Comments::find()->where(['id' => $this->getModel()->id])->one();
+                $comment = Comments::find()->where(['id' => $this->getModel()->id])->one();
                 $user = User::find()->where(['id' => $this->getModel()->user_id])->one();
-                return $user->fullName . ' ' . strtolower($this->status) . ' a comment to your post.';
+                if ($this->status == 'Removed') {
+                    return $user->fullName . ' ' . strtolower($this->status) . ' a comment from your post.';
+                } else {
+                    return $user->fullName . ' ' . strtolower($this->status) . ' comment "' . $comment->content . '" to your post.';
+                }
                 break;
             case Friendship::tableName():
                 break;
