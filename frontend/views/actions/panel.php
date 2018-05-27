@@ -92,7 +92,9 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
                                                            url:'" . Url::to(['/delete-post', 'id' => $action->id]) . "',
                                                            type: 'GET',
                                                            success: function(response) {
-                                                                $('#action-" . $action->id . "').animate({height: 'toggle'});
+                                                                socket.emit('remove-comment', {
+                                                                    element: '#action-" . $action->id . "'
+                                                                });
                                                            },
                                                            error: function (request, status, error) {
                                                                 window.alert(error);

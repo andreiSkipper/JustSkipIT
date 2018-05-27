@@ -76,6 +76,10 @@ class ProfilesController extends \yii\web\Controller
 
     public function actionMyProfile()
     {
+        if (\Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
         $id = Yii::$app->user->identity->id;
         $profile = Profiles::findOne($id);
 

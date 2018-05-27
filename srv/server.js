@@ -114,6 +114,18 @@ function emitNewOrder(http_server) {
         socket.on('notification', function (request) {
             io.sockets.emit('notification', request);
         });
+
+        socket.on('comment', function (request) {
+            io.sockets.emit('comment', request);
+        });
+
+        socket.on('remove-comment', function (request) {
+            io.sockets.emit('remove-comment', request);
+        });
+
+        socket.on('remove-action', function (request) {
+            io.sockets.emit('remove-action', request);
+        });
     });
 }
 

@@ -964,6 +964,11 @@ ul.social-share > li > a {
     }
 }
 
+.action-comments {
+    /*max-height: 300px;*/
+    /*overflow-y: auto;*/
+}
+
 .comment-buttons {
     cursor: default;
 }

@@ -39,6 +39,7 @@ class CommentsController extends \yii\web\Controller
                     $result['html'] = preg_replace('#\s+#', ' ', trim($html));
                     $result['modalHtml'] = preg_replace('#\s+#', ' ', trim($modalHtml));
                     $result['action'] = $model->action->toArray();
+                    $result['comment'] = $model->toArray();
 
                     return json_encode($result);
                 } else {

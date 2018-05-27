@@ -96,8 +96,11 @@ $modalClass = empty($modal) ? '' : 'modal-';
                                out_class: '<?= Actions::getNotificationAnimation('out') ?>'
                                }
                                });
-                               $('#comment-<?= $comment->id ?>').animate({height: 'toggle'});
-                               $('#modal-comment-<?= $comment->id ?>').animate({height: 'toggle'});
+
+                               socket.emit('remove-comment', {
+                               element: '#comment-<?= $comment->id ?>',
+                               modal_element: '#modal-comment-<?= $comment->id ?>'
+                               });
 
                                socket.emit('notification', {
                                from: model_user.id,

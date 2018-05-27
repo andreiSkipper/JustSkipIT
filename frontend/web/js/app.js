@@ -55,7 +55,6 @@ $(document).ready(function () {
                 }
             }
         });
-
         socket.emit('users');
 
         socket.on('notification', function (request) {
@@ -109,6 +108,31 @@ $(document).ready(function () {
             }
         });
     }
+
+    socket.on('comment', function (request) {
+        if (request.html.length !== 0) {
+            $(request.element).append(request.html).show('slow');
+            $(request.modal_element).append(request.modalHtml).show('slow');
+            if (guest) {
+                $('form.add-comment-reply-form').remove();
+                $(request.element).find('#comment-' + request.comment.id + ' .comment-buttons').remove();
+                $(request.modal_element).find('#comment-' + request.comment.id + ' .comment-buttons').remove();
+            } else if (model_user.id !== request.comment.user_id) {
+                $(request.element).find('#comment-' + request.comment.id + ' .comment-buttons').remove();
+                $(request.modal_element).find('#comment-' + request.comment.id + ' .comment-buttons').remove();
+            }
+        }
+        checkTyping();
+    });
+
+    socket.on('remove-comment', function (request) {
+        $(request.element).animate({height: 'toggle'});
+        $(request.modal_element).animate({height: 'toggle'});
+    });
+
+    socket.on('remove-action', function (request) {
+        $(request.element).animate({height: 'toggle'});
+    });
 
     $('.navbar-nav ul.dropdown-menu').on('click', function (event) {
         event.stopPropagation();
@@ -371,12 +395,16 @@ function addCommentAJAX(_this) {
                 success: function (response) {
                     result = JSON.parse(response);
                     if (result.html.length !== 0) {
-                        $('#comments-' + commentActionID).append(result.html).show('slow');
-                        $('#modal-comments-' + commentActionID).append(result.modalHtml).show('slow');
+                        // $('#comments-' + commentActionID).append(result.html).show('slow');
+                        // $('#modal-comments-' + commentActionID).append(result.modalHtml).show('slow');
                         _this.reset();
                     }
                     $('body .loading').removeClass('active');
-                    checkTyping();
+                    // checkTyping();
+
+                    result.element = '#comments-' + commentActionID;
+                    result.modal_element = '#modal-comments-' + commentActionID;
+                    socket.emit('comment', result);
 
                     socket.emit('notification', {
                         from: model_user.id,
@@ -413,11 +441,15 @@ function addReplyAJAX(_this) {
                 success: function (response) {
                     result = JSON.parse(response);
                     if (result.html.length !== 0) {
-                        $('#modal-comments-reply-' + commentReplyID).append(result.html).show('slow');
-                        $('#comments-reply-' + commentReplyID).append(result.modalHtml).show('slow');
+                        // $('#modal-comments-reply-' + commentReplyID).append(result.html).show('slow');
+                        // $('#comments-reply-' + commentReplyID).append(result.modalHtml).show('slow');
                         _this.reset();
                         $('body .loading').removeClass('active');
-                        checkTyping();
+                        // checkTyping();
+
+                        result.element = '#comments-reply-' + commentReplyID;
+                        result.modal_element = '#modal-comments-reply-' + commentReplyID;
+                        socket.emit('comment', result);
 
                         socket.emit('notification', {
                             from: model_user.id,
