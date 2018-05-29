@@ -40,15 +40,6 @@ $this->title = "JustSkipIT | " . $this->title;
     <script>
         // var socket = io('http://ec2-35-159-26-29.eu-central-1.compute.amazonaws.com:3002');
         var socket = io('http://localhost:3002');
-        //$(document).ready(function () {
-        //    var model_user = <?//= json_encode(\common\models\User::find()->where(['id' => Yii::$app->user->identity->id])->one()->toArray()) ?>//;
-        //    var model_profile = <?//= json_encode(\common\models\Profiles::find()->where(['user_id' => Yii::$app->user->identity->id])->one()->toArray()) ?>//;
-        //
-        //    socket.emit('join', {
-        //        user: model_user,
-        //        profile: model_profile
-        //    });
-        //});
 
         <?php if (!Yii::$app->user->isGuest) { ?>
         var guest = false;

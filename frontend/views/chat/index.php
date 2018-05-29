@@ -70,7 +70,7 @@ use yii\widgets\ActiveForm;
         } while (user.length == 0);
     }
 
-    socket.emit('join', {
+    socket.emit('chat join', {
         user: model_user,
         profile: model_profile
     });

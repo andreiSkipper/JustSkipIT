@@ -43,23 +43,24 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
             <?= date('d M Y H:i', $action->created_at); ?>
             <?php
             if (!Yii::$app->user->isGuest AND $action->user_id == Yii::$app->user->identity->getId()) {
-                echo ButtonDropdown::widget([
-                    'label' => '<span class="fa fa-ellipsis-h"></span>',
-                    'encodeLabel' => false,
-                    'containerOptions' => [
-                        'class' => 'pull-right',
-                    ],
-                    'options' => [
-                        'class' => 'action-drop-button',
-                    ],
-                    'dropdown' => [
-                        'items' => [
-                            [
-                                'label' => 'Delete',
-                                'url' => '#',
-                                'options' => [
-                                    'id' => 'delete-' . $action->id,
-                                    'onclick' => "
+                try {
+                    echo ButtonDropdown::widget([
+                        'label' => '<span class="fa fa-ellipsis-h"></span>',
+                        'encodeLabel' => false,
+                        'containerOptions' => [
+                            'class' => 'pull-right',
+                        ],
+                        'options' => [
+                            'class' => 'action-drop-button',
+                        ],
+                        'dropdown' => [
+                            'items' => [
+                                [
+                                    'label' => 'Delete',
+                                    'url' => '#',
+                                    'options' => [
+                                        'id' => 'delete-' . $action->id,
+                                        'onclick' => "
                                                 event.preventDefault();
                                                 (new PNotify({
                                                     title: 'Confirmation Needed',
@@ -102,26 +103,55 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
                                                        });
                                                 });
                                 ",
+                                    ],
                                 ],
-                            ],
-                            [
-                                'label' => 'Edit',
-                                'url' => '#',
-                                'options' => [
-                                    'id' => 'edit-' . $action->id,
-                                    'onclick' => "event.preventDefault();$('#action-modal-" . $action->id . "').modal();",
+                                [
+                                    'label' => 'Edit',
+                                    'url' => '#',
+                                    'options' => [
+                                        'id' => 'edit-' . $action->id,
+                                        'onclick' => "event.preventDefault();$('#action-modal-" . $action->id . "').modal();",
+                                    ],
                                 ],
-                            ],
-                            [
-                                'label' => 'View',
-                                'url' => '/post/' . $action->id,
-                                'options' => [
-                                    'id' => 'view-' . $action->id
+                                [
+                                    'label' => 'View',
+                                    'url' => '/post/' . $action->id,
+                                    'options' => [
+                                        'id' => 'view-' . $action->id
+                                    ],
                                 ],
                             ],
                         ],
-                    ],
-                ]);
+                    ]);
+                } catch (Exception $e) {
+                    var_dump($e->getMessage());
+                }
+            } else {
+                try {
+                    echo ButtonDropdown::widget([
+                        'label' => '<span class="fa fa-ellipsis-h"></span>',
+                        'encodeLabel' => false,
+                        'containerOptions' => [
+                            'class' => 'pull-right',
+                        ],
+                        'options' => [
+                            'class' => 'action-drop-button',
+                        ],
+                        'dropdown' => [
+                            'items' => [
+                                [
+                                    'label' => 'View',
+                                    'url' => '/post/' . $action->id,
+                                    'options' => [
+                                        'id' => 'view-' . $action->id
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ]);
+                } catch (Exception $e) {
+                    var_dump($e->getMessage());
+                }
             } ?>
             <div class="clearfix"></div>
         </div>

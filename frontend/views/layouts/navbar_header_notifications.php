@@ -12,7 +12,8 @@ if (!$notificationsCount) {
         $notificationUser = \common\models\User::find()->where(['id' => $notification->getModel()->user_id])->one();
         ?>
         <li class="notification <?= $notification->read ? '' : 'active' ?>">
-            <a href="#" tabindex="-1">
+            <a href="<?= '/post/' . $notification->getModel()->action_id . '#comment-' . $notification->getModel()->id ?>"
+               tabindex="-1">
                 <img src='/<?= $notificationUser->profile->avatar ?>' alt=''
                      data-url='<?= \common\models\Profiles::getProfileLinkByUserID($notificationUser->id) ?>'>
                 <?= $notification->description ?>

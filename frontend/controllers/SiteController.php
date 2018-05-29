@@ -353,7 +353,7 @@ class SiteController extends Controller
         switch (strtolower($client->getTitle())) {
             case 'google':
                 $params['SignupForm'] = [
-                    'username' => $attributes['emails'][0]['value'],
+                    'username' => strtok($attributes['emails'][0]['value'], '@'),
                     'email' => $attributes['emails'][0]['value'],
                     'password' => Yii::$app->getSecurity()->generateRandomString(12),
                     'firstname' => $attributes['name']['givenName'],
@@ -408,7 +408,8 @@ class SiteController extends Controller
                         }
                     }
                 } else {
-                    var_dump($model->getErrors());die();
+                    var_dump($model->getErrors());
+                    die();
                     return json_encode($model->getErrors());
                 }
             } else {

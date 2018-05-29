@@ -41,13 +41,21 @@ $(document).mousemove(function (e) {
 
 $(document).ready(function () {
     if (!guest) {
-        socket.on('users', function (request) {
-            var chat_users = Object.keys(request.users).length;
-            if (chat_users) {
+        socket.on('online', function (request) {
+            // console.log(Object.keys(request.users).length);
+        });
+        socket.emit('online', {
+            user: model_user,
+            profile: model_profile
+        });
+
+        socket.on('chat users', function (request) {
+            var chat_users_count = Object.keys(request.users).length;
+            if (chat_users_count) {
                 if ($('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').length) {
-                    $('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').html(Object.keys(request.users).length);
+                    $('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').html(chat_users_count);
                 } else {
-                    $('nav.navbar ul.navbar-nav li#chat-button > a').append('<span class="badge badge-notify">' + Object.keys(request.users).length + '</span>');
+                    $('nav.navbar ul.navbar-nav li#chat-button > a').append('<span class="badge badge-notify">' + chat_users_count + '</span>');
                 }
             } else {
                 if ($('nav.navbar ul.navbar-nav li#chat-button > a > span.badge-notify').length) {
@@ -55,8 +63,9 @@ $(document).ready(function () {
                 }
             }
         });
-        socket.emit('users');
+        socket.emit('chat users');
 
+        var audio_new_notification = new Audio('/sounds/notification_new.mp3');
         socket.on('notification', function (request) {
             if (request.from === model_user.id || request.to === model_user.id) {
                 $.ajax({
@@ -99,6 +108,7 @@ $(document).ready(function () {
                                 $('body .loading').addClass('active');
                                 location.replace($(this).attr('data-url'));
                             });
+                            audio_new_notification.cloneNode().play();
                         }
                     },
                     error: function (request, status, error) {
@@ -147,7 +157,7 @@ $(document).ready(function () {
     });
     $('.navbar-nav li#notifications-dropdown').on('click', function (event) {
         if ($(this).find('.badge-notify').html() !== '0') {
-            $(this).find('.badge-notify').addClass('hidden').html(0);
+            $(this).find('.badge-notify').addClass('hidden').html(0).parent().find('.animated').removeClass('animated');
 
             $.ajax({
                 url: '/notifications/read',
@@ -441,11 +451,8 @@ function addReplyAJAX(_this) {
                 success: function (response) {
                     result = JSON.parse(response);
                     if (result.html.length !== 0) {
-                        // $('#modal-comments-reply-' + commentReplyID).append(result.html).show('slow');
-                        // $('#comments-reply-' + commentReplyID).append(result.modalHtml).show('slow');
                         _this.reset();
                         $('body .loading').removeClass('active');
-                        // checkTyping();
 
                         result.element = '#comments-reply-' + commentReplyID;
                         result.modal_element = '#modal-comments-reply-' + commentReplyID;

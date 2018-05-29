@@ -266,7 +266,6 @@ $currentUser = User::findOne(Yii::$app->user->getId());
                         </div>
                     </div>
                 </div>
-                <!--            <div class="panel-footer"></div>-->
             </div>
             <?php ActiveForm::end(); ?>
         <?php } ?>
@@ -276,16 +275,10 @@ $currentUser = User::findOne(Yii::$app->user->getId());
                 echo $this->render('/actions/panel', ['action' => $action]);
             } ?>
         </div>
-        <p id="loading" class="text-center" data-offset="<?= count($actions) ?>" style="display: none;">
-            <img src="/Icons/loading3.gif" alt="Loading…"/>
+        <p id="loading" class="text-center" data-offset="<?= count($actions) ?>" data-total="<?= $pages->totalCount ?>"
+           style="display: none;">
+            <span class="fa fa-spinner fa-pulse fa-4x"></span>
         </p>
-        <!--        <div class="text-center">-->
-        <!--            --><?php
-        //            echo LinkPager::widget([
-        //                'pagination' => $pages,
-        //            ]);
-        //            ?>
-        <!--        </div>-->
     </div>
 </div>
 
@@ -297,28 +290,31 @@ $currentUser = User::findOne(Yii::$app->user->getId());
         win.scroll(function () {
             // End of the document reached?
             var loading = $('#loading');
-            if ($(document).height() - win.height() == win.scrollTop() && !loading.is(":visible")) {
+            if ($(document).height() - win.height() === win.scrollTop() && !loading.is(":visible")) {
                 var offset = loading.data('offset');
-                loading.show();
+                var total = loading.data('total');
 
-                $.ajax({
-                    url: '',
-                    type: 'POST',
-                    data: {
-                        offset: offset
-                    },
-                    success: function (response) {
-                        result = JSON.parse(response);
-                        if (result.html.length != 0) {
-                            $("#actions-group").append(result.html).fadeIn(10000);
-                            loading.data('offset', offset + result.actions);
+                if (offset < total) {
+                    loading.show();
+                    $.ajax({
+                        url: '',
+                        type: 'POST',
+                        data: {
+                            offset: offset
+                        },
+                        success: function (response) {
+                            result = JSON.parse(response);
+                            if (result.html.length !== 0) {
+                                $("#actions-group").append(result.html).fadeIn(10000);
+                                loading.data('offset', offset + result.actions);
+                            }
+                            loading.hide();
+                        },
+                        error: function (request, status, error) {
+                            window.alert(error);
                         }
-                        loading.hide();
-                    },
-                    error: function (request, status, error) {
-                        window.alert(error);
-                    }
-                });
+                    });
+                }
             }
         });
     });

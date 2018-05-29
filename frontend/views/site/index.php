@@ -135,7 +135,7 @@ $this->title = Translations::translate('app', 'Home');
         win.scroll(function () {
             // End of the document reached?
             var loading = $('#loading');
-            if ($(document).height() - win.height() == win.scrollTop() && !loading.is(":visible")) {
+            if ($(document).height() - win.height() === win.scrollTop() && !loading.is(":visible")) {
                 var offset = loading.data('offset');
                 var total = loading.data('total');
 
@@ -149,7 +149,7 @@ $this->title = Translations::translate('app', 'Home');
                         },
                         success: function (response) {
                             result = JSON.parse(response);
-                            if (result.html.length != 0) {
+                            if (result.html.length !== 0) {
                                 $("#actions-group").append(result.html).fadeIn(10000);
                                 loading.data('offset', offset + result.actions);
                             }

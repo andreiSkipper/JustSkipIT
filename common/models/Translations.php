@@ -128,31 +128,31 @@ class Translations extends \yii\db\ActiveRecord
             Yii::$app->session['language'] = $currentUser->language;
         }
 
-        $translation = Translations::find()->where(['category' => $category, 'message' => $message])->one();
-
-        if (empty($translation)) {
-            $translation = new Translations();
-            $translation->category = $category;
-            $translation->message = $message;
-            $translation->en = $message;
-            $translation->ro = GoogleTranslate::translate('en', 'ro', $message);
-            $translation->save();
-        }
-
-        if ($translation->en == $translation->ro) {
-            $translation->ro = GoogleTranslate::translate('en', 'ro', $message);
-            $translation->save();
-        }
-
         switch (Yii::$app->session['language']) {
             case 'en-US':
-                return $translation->en;
+                return $message;
                 break;
             case 'ro-RO':
+                $translation = Translations::find()->where(['category' => $category, 'message' => $message])->one();
+
+                if (empty($translation)) {
+                    $translation = new Translations();
+                    $translation->category = $category;
+                    $translation->message = $message;
+                    $translation->en = $message;
+                    $translation->ro = GoogleTranslate::translate('en', 'ro', $message);
+                    $translation->save();
+                }
+
+                if ($translation->en == $translation->ro) {
+                    $translation->ro = GoogleTranslate::translate('en', 'ro', $message);
+                    $translation->save();
+                }
+
                 return $translation->ro;
                 break;
             default:
-                return $translation->message;
+                return $message;
                 break;
         }
     }
