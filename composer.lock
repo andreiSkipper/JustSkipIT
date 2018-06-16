@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "b7f318f665bed4fee243fb8f855508e9",
@@ -48,7 +48,7 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2018-01-11 22:59:59"
+            "time": "2018-01-11T22:59:59+00:00"
         },
         {
             "name": "andrewblake1/yii2-credit-card",
@@ -104,7 +104,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2016-06-28 23:14:46"
+            "time": "2016-06-28T23:14:46+00:00"
         },
         {
             "name": "bigbrush/yii2-tinypng",
@@ -147,7 +147,7 @@
                 "optimization",
                 "yii2"
             ],
-            "time": "2017-03-23 10:13:51"
+            "time": "2017-03-23T10:13:51+00:00"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -196,7 +196,8 @@
                 "mobile-first",
                 "responsive",
                 "web"
-            ]
+            ],
+            "time": "2016-07-25T15:51:55+00:00"
         },
         {
             "name": "bower-asset/bootstrap3-dialog",
@@ -249,7 +250,8 @@
                 "mobile-first",
                 "responsive",
                 "web"
-            ]
+            ],
+            "time": "2017-03-24T01:21:30+00:00"
         },
         {
             "name": "bower-asset/font-awesome",
@@ -286,7 +288,8 @@
                 "MIT",
                 "CC-BY-3.0"
             ],
-            "description": "Font Awesome"
+            "description": "Font Awesome",
+            "time": "2016-10-24T15:52:54+00:00"
         },
         {
             "name": "bower-asset/highcharts",
@@ -308,7 +311,8 @@
             },
             "license": [
                 "https://www.highcharts.com/license"
-            ]
+            ],
+            "time": "2018-04-13T08:58:13+00:00"
         },
         {
             "name": "bower-asset/inputmask",
@@ -451,7 +455,8 @@
             "type": "bower-asset-library",
             "extra": {
                 "bower-asset-main": "lib/jquery.payment.js"
-            }
+            },
+            "time": "2016-08-15T21:27:47+00:00"
         },
         {
             "name": "bower-asset/punycode",
@@ -479,7 +484,8 @@
                     "node_modules",
                     "package.json"
                 ]
-            }
+            },
+            "time": "2014-10-22T12:02:42+00:00"
         },
         {
             "name": "bower-asset/yii2-pjax",
@@ -1006,7 +1012,7 @@
                 "extension",
                 "yii2"
             ],
-            "time": "2018-04-08 05:59:29"
+            "time": "2018-04-08T05:59:29+00:00"
         },
         {
             "name": "intervention/httpauth",
@@ -1489,7 +1495,7 @@
                 "state",
                 "three"
             ],
-            "time": "2018-02-07 11:45:16"
+            "time": "2018-02-07T11:45:16+00:00"
         },
         {
             "name": "kartik-v/yii2-date-range",
@@ -1543,7 +1549,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2018-03-15 08:22:53"
+            "time": "2018-03-15T08:22:53+00:00"
         },
         {
             "name": "kartik-v/yii2-datecontrol",
@@ -1595,7 +1601,7 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2018-01-06 13:08:48"
+            "time": "2018-01-06T13:08:48+00:00"
         },
         {
             "name": "kartik-v/yii2-detail-view",
@@ -1650,7 +1656,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2018-04-29 05:15:28"
+            "time": "2018-04-29T05:15:28+00:00"
         },
         {
             "name": "kartik-v/yii2-dialog",
@@ -1862,7 +1868,7 @@
                 "popover-x",
                 "widget"
             ],
-            "time": "2017-06-28 05:11:45"
+            "time": "2017-06-28T05:11:45+00:00"
         },
         {
             "name": "kartik-v/yii2-export",
@@ -1923,7 +1929,7 @@
                 "xlsx",
                 "yii2"
             ],
-            "time": "2018-02-24 05:10:17"
+            "time": "2018-02-24T05:10:17+00:00"
         },
         {
             "name": "kartik-v/yii2-field-range",
@@ -1981,7 +1987,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2017-09-06 14:54:49"
+            "time": "2017-09-06T14:54:49+00:00"
         },
         {
             "name": "kartik-v/yii2-grid",
@@ -2034,7 +2040,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2018-05-03 13:25:56"
+            "time": "2018-05-03T13:25:56+00:00"
         },
         {
             "name": "kartik-v/yii2-helpers",
@@ -2138,20 +2144,20 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2018-03-09 09:01:11"
+            "time": "2018-03-09T09:01:11+00:00"
         },
         {
             "name": "kartik-v/yii2-krajee-base",
-            "version": "dev-master",
+            "version": "v1.8.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-krajee-base.git",
-                "reference": "1d729cdfe224f736941e69ec41f7052170526515"
+                "reference": "0cafe6376780cedcd00f52c9d82b172d5851f6b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/1d729cdfe224f736941e69ec41f7052170526515",
-                "reference": "1d729cdfe224f736941e69ec41f7052170526515",
+                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/0cafe6376780cedcd00f52c9d82b172d5851f6b0",
+                "reference": "0cafe6376780cedcd00f52c9d82b172d5851f6b0",
                 "shasum": ""
             },
             "require": {
@@ -2160,7 +2166,7 @@
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9.x-dev"
+                    "dev-master": "1.8.x-dev"
                 }
             },
             "autoload": {
@@ -2189,7 +2195,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2018-04-23 04:29:46"
+            "time": "2017-09-29T06:18:14+00:00"
         },
         {
             "name": "kartik-v/yii2-mpdf",
@@ -2293,7 +2299,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2018-02-07 11:44:23"
+            "time": "2018-02-07T11:44:23+00:00"
         },
         {
             "name": "kartik-v/yii2-password",
@@ -2344,7 +2350,7 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2018-04-03 18:56:33"
+            "time": "2018-04-03T18:56:33+00:00"
         },
         {
             "name": "kartik-v/yii2-popover-x",
@@ -2492,7 +2498,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2018-02-26 17:43:03"
+            "time": "2018-02-26T17:43:03+00:00"
         },
         {
             "name": "kartik-v/yii2-sortable",
@@ -2587,7 +2593,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2015-04-21 15:23:11"
+            "time": "2015-04-21T15:23:11+00:00"
         },
         {
             "name": "kartik-v/yii2-tabs-x",
@@ -2692,7 +2698,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2018-03-17 05:06:02"
+            "time": "2018-03-17T05:06:02+00:00"
         },
         {
             "name": "kartik-v/yii2-widget-affix",
@@ -3057,7 +3063,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2017-12-06 12:34:31"
+            "time": "2017-12-06T12:34:31+00:00"
         },
         {
             "name": "kartik-v/yii2-widget-growl",
@@ -3264,7 +3270,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2018-02-24 05:28:25"
+            "time": "2018-02-24T05:28:25+00:00"
         },
         {
             "name": "kartik-v/yii2-widget-sidenav",
@@ -3725,7 +3731,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2017-10-27 13:56:43"
+            "time": "2017-10-27T13:56:43+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -4041,25 +4047,28 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e"
+                "reference": "478465659fd987669df0bd8a9bf22a8710e5f1b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e",
-                "reference": "3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/478465659fd987669df0bd8a9bf22a8710e5f1b6",
+                "reference": "478465659fd987669df0bd8a9bf22a8710e5f1b6",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0"
+                "php": "^7.1"
+            },
+            "replace": {
+                "myclabs/deep-copy": "self.version"
             },
             "require-dev": {
                 "doctrine/collections": "^1.0",
                 "doctrine/common": "^2.6",
-                "phpunit/phpunit": "^4.1"
+                "phpunit/phpunit": "^7.1"
             },
             "type": "library",
             "autoload": {
@@ -4082,20 +4091,20 @@
                 "object",
                 "object graph"
             ],
-            "time": "2017-10-19T19:58:43+00:00"
+            "time": "2018-05-29T17:25:09+00:00"
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.12",
+            "version": "v2.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb"
+                "reference": "10bcb46e8f3d365170f6de9d05245aa066b81f09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
-                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/10bcb46e8f3d365170f6de9d05245aa066b81f09",
+                "reference": "10bcb46e8f3d365170f6de9d05245aa066b81f09",
                 "shasum": ""
             },
             "require": {
@@ -4127,10 +4136,11 @@
             "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
             "keywords": [
                 "csprng",
+                "polyfill",
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-04-04T21:24:14+00:00"
+            "time": "2018-06-08T15:26:40+00:00"
         },
         {
             "name": "paypal/rest-api-sdk-php",
@@ -5308,15 +5318,11 @@
             "require": {
                 "bower-asset/jquery": ">=1.7"
             },
-            "require-dev": {
-                "bower-asset/jasmine-ajax": "~1.3.1",
-                "bower-asset/jasmine-jquery": "~1.5.2",
-                "bower-asset/jquery": "~1.7"
-            },
             "type": "bower-asset-library",
             "extra": {
                 "bower-asset-main": "dist/typeahead.bundle.js"
-            }
+            },
+            "time": "2015-04-27T04:02:14+00:00"
         },
         {
             "name": "fzaninotto/faker",
