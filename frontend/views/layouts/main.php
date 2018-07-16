@@ -38,8 +38,8 @@ $this->title = "JustSkipIT | " . $this->title;
 
     <script src='/js/socket.io.js'></script>
     <script>
-        // var socket = io('http://ec2-35-159-26-29.eu-central-1.compute.amazonaws.com:3002');
-        var socket = io('http://localhost:3002');
+        var socket = io('http://ec2-35-159-26-29.eu-central-1.compute.amazonaws.com:3002');
+        // var socket = io('http://localhost:3002');
 
         <?php if (!Yii::$app->user->isGuest) { ?>
         var guest = false;
