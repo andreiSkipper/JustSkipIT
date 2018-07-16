@@ -5,7 +5,11 @@ $notificationsCount = count($notifications);
 
 if (!$notificationsCount) {
     ?>
-    <li class="notification text-center no-padding"><a href="#" tabindex="-1">No notifications.</a></li>
+    <li class="notification text-center no-padding">
+        <a href="#" tabindex="-1">
+            <?= \common\models\Translations::translate('app', 'No notifications.') ?>
+        </a>
+    </li>
     <?php
 } else {
     foreach ($notifications as $notification) {
@@ -16,7 +20,7 @@ if (!$notificationsCount) {
                tabindex="-1">
                 <img src='/<?= $notificationUser->profile->avatar ?>' alt=''
                      data-url='<?= \common\models\Profiles::getProfileLinkByUserID($notificationUser->id) ?>'>
-                <?= $notification->description ?>
+                <?= \common\models\Translations::translate('app', $notification->description) ?>
                 <span><?= date("d m Y H:i", $notification->created_at) ?></span>
             </a>
         </li>

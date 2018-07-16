@@ -230,7 +230,7 @@ if (Yii::$app->user->isGuest) {
         }
     }
     if (!empty($friendships['Requested'])) {
-        $items[] = '<li class="dropdown-header">Requested:</li>';
+        $items[] = '<li class="dropdown-header">' . \common\models\Translations::translate('app', 'Requested') . ':</li>';
     }
     foreach ($friendships['Requested'] as $friendRequest) {
         /* @var $friendRequest \common\models\Friendship */
@@ -260,7 +260,7 @@ if (Yii::$app->user->isGuest) {
         $notificationUser = \common\models\User::find()->where(['id' => $notification->getModel()->user_id])->one();
         if ($notificationUser->id != Yii::$app->user->identity->id) {
             $notificationItems[] = [
-                'label' => "<img src='/" . $notificationUser->profile->avatar . "' alt='' data-url='" . \common\models\Profiles::getProfileLinkByUserID($notificationUser->id) . "'>" . $notification->description . "<span>" . date('d m Y H:i', $notification->created_at) . "</span>",
+                'label' => "<img src='/" . $notificationUser->profile->avatar . "' alt='' data-url='" . \common\models\Profiles::getProfileLinkByUserID($notificationUser->id) . "'>" . \common\models\Translations::translate('app', $notification->description) . "<span>" . date('d m Y H:i', $notification->created_at) . "</span>",
                 'url' => '/post/' . $notification->getModel()->action_id . '#comment-' . $notification->getModel()->id,
                 'options' => ['class' => 'notification ' . ($notification->read ? '' : 'active')],
             ];

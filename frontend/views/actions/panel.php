@@ -56,7 +56,7 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
                         'dropdown' => [
                             'items' => [
                                 [
-                                    'label' => 'Delete',
+                                    'label' => \common\models\Translations::translate('app', 'Delete'),
                                     'url' => '#',
                                     'options' => [
                                         'id' => 'delete-' . $action->id,
@@ -106,7 +106,7 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
                                     ],
                                 ],
                                 [
-                                    'label' => 'Edit',
+                                    'label' => \common\models\Translations::translate('app', 'Edit'),
                                     'url' => '#',
                                     'options' => [
                                         'id' => 'edit-' . $action->id,
@@ -114,7 +114,7 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
                                     ],
                                 ],
                                 [
-                                    'label' => 'View',
+                                    'label' => \common\models\Translations::translate('app', 'View'),
                                     'url' => '/post/' . $action->id,
                                     'options' => [
                                         'id' => 'view-' . $action->id
@@ -215,7 +215,7 @@ $avatar = $profile->avatar ? Url::base() . '/' . $profile->avatar : '';
 //                            'asButton' => true
 //                        ]
                         ]
-                    ])->textInput(['placeholder' => "Click to add Comment...", 'autocomplete' => "off"])->label(false) ?>
+                    ])->textInput(['placeholder' => \common\models\Translations::translate('app', "Click to add Comment..."), 'autocomplete' => "off"])->label(false) ?>
                     <?php
                     ActiveForm::end();
                 }

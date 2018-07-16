@@ -33,7 +33,7 @@ $modalClass = empty($modal) ? '' : 'modal-';
                     <?= (isset($profile->lastname) AND isset($profile->firstname)) ? $profile->lastname . ' ' . $profile->firstname : $user->username ?>
                 </a>
             </div>
-            added comment
+            <?= \common\models\Translations::translate('app', 'added comment') ?>
             <?= date("d m Y H:i", $comment->updated_at) ?>
             <?php
             if ($comment->user_id == Yii::$app->user->getId()) { ?>
@@ -169,7 +169,7 @@ $modalClass = empty($modal) ? '' : 'modal-';
                 //                                        'content' => Html::submitButton('Go', ['class' => 'btn btn-default', 'id' => 'add_comment']),
                 //                                        'asButton' => true
                 //                                    ]
-            ]])->textInput(['placeholder' => "Click to add reply...", 'autocomplete' => "off"])->label(false) ?>
+            ]])->textInput(['placeholder' => \common\models\Translations::translate('app', "Click to add reply..."), 'autocomplete' => "off"])->label(false) ?>
             <?php
             ActiveForm::end();
 

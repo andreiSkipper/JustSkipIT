@@ -3,7 +3,11 @@ $friendships = \common\models\Friendship::getFriendRequestsForCurrent();
 
 if (empty($friendships['Requests'])) {
     ?>
-    <li class="friend-request text-center no-padding"><a href="#" tabindex="-1">No friend requests.</a></li>
+    <li class="friend-request text-center no-padding">
+        <a href="#" tabindex="-1">
+            <?= \common\models\Translations::translate('app', 'No friend requests.') ?>
+        </a>
+    </li>
     <?php
 } else {
     foreach ($friendships['Requests'] as $friendRequest) {
@@ -23,7 +27,7 @@ if (empty($friendships['Requests'])) {
 } ?>
 
 <?php if (!empty($friendships['Requested'])) { ?>
-    <li class="dropdown-header">Requested:</li>
+    <li class="dropdown-header"><?= \common\models\Translations::translate('app', 'Requested') ?>:</li>
 <?php } ?>
 
 <?php foreach ($friendships['Requested'] as $friendRequest) { ?>
