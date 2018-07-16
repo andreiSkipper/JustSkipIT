@@ -128,7 +128,7 @@ $modalClass = empty($modal) ? '' : 'modal-';
                 </div>
 <!--                --><?php //if ($comment->location) { ?>
 <!--                    <div class="pull-right">-->
-<!--                        --><?//= $comment->getLocation()->city . ', ' . $comment->getLocation()->country ?>
+<!--                        --><?php //echo $comment->getLocation()->city . ', ' . $comment->getLocation()->country ?>
 <!--                    </div>-->
 <!--                --><?php //} ?>
             </div>
