@@ -126,11 +126,11 @@ $modalClass = empty($modal) ? '' : 'modal-';
                     </div>
                     <span class="typed"></span>
                 </div>
-                <?php if ($comment->location) { ?>
-                    <div class="pull-right">
-                        <?= $comment->getLocation()->city . ', ' . $comment->getLocation()->country ?>
-                    </div>
-                <?php } ?>
+<!--                --><?php //if ($comment->location) { ?>
+<!--                    <div class="pull-right">-->
+<!--                        --><?//= $comment->getLocation()->city . ', ' . $comment->getLocation()->country ?>
+<!--                    </div>-->
+<!--                --><?php //} ?>
             </div>
         </div>
     </div>

@@ -127,11 +127,11 @@ return [
 //                    'label' => '',
 //                    'options' => ['class' => 'wp fa fa-whatsapp'],
 //                ],
-                'pinterest' => [
-                    'class' => \ymaker\social\share\drivers\Pinterest::class,
-                    'label' => '',
-                    'options' => ['class' => 'pn fa fa-pinterest'],
-                ],
+//                'pinterest' => [
+//                    'class' => \ymaker\social\share\drivers\Pinterest::class,
+//                    'label' => '',
+//                    'options' => ['class' => 'pn fa fa-pinterest'],
+//                ],
                 'linkedin' => [
                     'class' => \ymaker\social\share\drivers\LinkedIn::class,
                     'label' => '',

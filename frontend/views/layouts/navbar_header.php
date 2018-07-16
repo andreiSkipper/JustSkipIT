@@ -192,13 +192,13 @@ if (Yii::$app->user->isGuest) {
                 ]) . ' <strong id="user_name">' . $profile->firstname . '</strong>',
         'url' => ['/profiles/my-profile']
     ];
-    $menuItems[] = [
-        'label' => '<i class="fa fa-tv faa-tada"></i>',
-        'url' => ['/movies/index'],
-        'linkOptions' => [
-            'class' => 'faa-parent animated-hover',
-        ]
-    ];
+//    $menuItems[] = [
+//        'label' => '<i class="fa fa-tv faa-tada"></i>',
+//        'url' => ['/movies/index'],
+//        'linkOptions' => [
+//            'class' => 'faa-parent animated-hover',
+//        ]
+//    ];
     $menuItems[] = [
         'label' => '<i class="fa fa-comments faa-shake"></i>',
         'url' => ['/chat/index'],
